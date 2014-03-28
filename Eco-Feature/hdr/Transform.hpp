@@ -22,14 +22,14 @@
 namespace Transforms
 {
 #define GABOR_FILTER_PARAMETER_NUMBER 6
-#define MORPHOLOGICAL_ERODE_PARAMETER_NUMBER 1
+#define MORPHOLOGICAL_ERODE_PARAMETER_NUMBER 2
 #define HAUSSIAN_BLUR_PARAMETER_NUMBER 1
 #define HISTOGRAM_PARAMETER_NUMBER 1
 #define HOUGH_CIRCLES_PARAMETER_NUMBER 2
 #define NORMALIZE_PARAMETER_NUMBER 3
 #define DISCRETE_FOURIER_TRANSFORM_PARAMETER_NUMBER 1
 #define SQUARE_ROOT_PARAMETER_NUMBER 0
-#define CANNY_EDGE_PARAMETER_NUMBER 4
+#define CANNY_EDGE_PARAMETER_NUMBER 1
 #define INTEGRAL_IMAGE_PARAMETER_NUMBER 1
 #define DIFFERENCE_GAUSSIANS_PARAMETER_NUMBER 2
 #define CENSUS_TRANSFORM_PARAMETER_NUMBER 0
@@ -56,7 +56,7 @@ typedef enum _TRANFORM_TYPE {
     NIL = 0,
     GABOR_FILTER,
     MORPHOLOGICAL_ERODE,
-    HAUSSIAN_BLUR,
+    GAUSSIAN_BLUR,
     HISTOGRAM,
     HOUGH_CIRCLES,
     NORMALIZE,
@@ -115,7 +115,7 @@ class Transform
         
         void gabor_filter ( cv::Mat );
         void morphological_erode ( cv::Mat );
-        void haussian_blur ( cv::Mat );
+        void gaussian_blur ( cv::Mat );
         void histogram ( cv::Mat );
         void hough_circles ( cv::Mat );
         void normalize  ( cv::Mat );

@@ -144,8 +144,8 @@ void Transform::perform_transform ( Mat src )
         case MORPHOLOGICAL_ERODE:
             morphological_erode(src);
             break;
-        case HAUSSIAN_BLUR:
-            haussian_blur(src);
+        case GAUSSIAN_BLUR:
+            gaussian_blur(src);
             break;
         case HISTOGRAM:
             histogram(src);
@@ -232,8 +232,8 @@ void Transform::perform_transform ( Mat src, TRANFORM_TYPE _transform_type )
         case MORPHOLOGICAL_ERODE:
             morphological_erode(src);
             break;
-        case HAUSSIAN_BLUR:
-            haussian_blur(src);
+        case GAUSSIAN_BLUR:
+            gaussian_blur(src);
             break;
         case HISTOGRAM:
             histogram(src);

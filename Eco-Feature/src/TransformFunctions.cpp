@@ -14,6 +14,7 @@
 #include <opencv2/core/core.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 #include <cstdlib>
+#include <iostream>
 
 /************************************
  * Namespaces 
@@ -71,8 +72,6 @@ void Transform::gabor_filter ( Mat src )
         paramaters[5] = 0;
      if ( paramaters[5] > 360 )
         paramaters[5] = 360;
-        
-        
     
     Size size(paramaters[0],paramaters[0]);
     double sigma  = paramaters[1]/((paramaters[0]==0)?1:paramaters[0]);
@@ -81,42 +80,8 @@ void Transform::gabor_filter ( Mat src )
     double gamma  = paramaters[4];
     double psi    = paramaters[5]*CV_PI/180;
     
-#if DEFINE_COMPUTE_GF_KERNEL
-    int ks=21;
-        
-    double sig = 5;             // 0 - kernel_size
-    double lm = 0.5+50.0/100.0; // 0 - 100
-    double th = 0;              // 0 - 180
-    double ps = 90;             // 0 - 360
-    
-    
-    if (!ks%2)
-    {
-        ks+=1;
-    }      
-    int hks = (ks-1)/2;
-    double theta = th*CV_PI/180;
-    double psi = ps*CV_PI/180;
-    double del = 2.0/(ks-1);
-    double lmbd = lm;
-    double sigma = sig/ks;
-    double x_theta;
-    double y_theta;
-    
-    Mat kernel(ks,ks, CV_32F);
-    for (int y=-hks; y<=hks; y++)
-    {
-        for (int x=-hks; x<=hks; x++)
-        {
-            x_theta = x*del*cos(theta)+y*del*sin(theta);
-            y_theta = -x*del*sin(theta)+y*del*cos(theta);
-            kernel.at<float>(hks+y,hks+x) = (float)exp(-0.5*(pow(x_theta,2)+pow(y_theta,2))/pow(sigma,2))* cos(2*CV_PI*x_theta/lmbd + psi);
-        }
-    }
-    filter2D(tmp, transformed_image, CV_32F, kernel);    
-#else
-    filter2D(tmp, transformed_image, CV_32F, getGaborKernel(size,sigma,theta,lambda,gamma,psi,CV_32F));
-#endif    
+
+    filter2D(tmp, transformed_image, CV_32F, getGaborKernel(size,sigma,theta,lambda,gamma,psi,CV_32F));   
 }
 /*******************************************************************************
 * Function     : 
@@ -127,7 +92,36 @@ void Transform::gabor_filter ( Mat src )
 ********************************************************************************/
 void Transform::morphological_erode ( cv::Mat src )
 {
+    Mat tmp;    
+    cvtColor(src, transformed_image, CV_BGR2GRAY);
+    transformed_image.convertTo(tmp, CV_32F, 1.0/255.0, 0);
+
+    if ( paramaters.size() != MORPHOLOGICAL_ERODE_PARAMETER_NUMBER )
+        return;
     
+    switch (int(paramaters[0]))/* erode type */
+    {
+        case MORPH_RECT:
+            break;
+        case MORPH_CROSS:
+            break;
+        case MORPH_ELLIPSE:
+            break;
+        default:
+            paramaters[0] = MORPH_RECT;
+    }
+    
+    if ( paramaters[1] < 0 ) /* kernel size */
+        paramaters[1] = 0;
+    if ( paramaters[1] > 21 )
+        paramaters[1] = 21;
+    
+
+    int erosion_type = paramaters[0];    
+    Size size(2*paramaters[1]+1,2*paramaters[1]+1);
+    Point point(paramaters[1],paramaters[1]);
+    
+    erode( transformed_image, transformed_image, getStructuringElement( erosion_type, size, point ) );
 }
 /*******************************************************************************
 * Function     : 
@@ -136,9 +130,14 @@ void Transform::morphological_erode ( cv::Mat src )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-void Transform::haussian_blur ( cv::Mat src )
+void Transform::gaussian_blur ( cv::Mat src )
 {
-    
+    Mat tmp;    
+    cvtColor(src, transformed_image, CV_BGR2GRAY);
+    transformed_image.convertTo(tmp, CV_32F, 1.0/255.0, 0);
+
+    if ( paramaters.size() != GAUSSIAN_BLUR )
+        return;
 }
 /*******************************************************************************
 * Function     : 
@@ -202,9 +201,26 @@ void Transform::square_root ( cv::Mat src )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-void Transform::canny_edge ( cv::Mat src )
+void Transform::canny_edge ( Mat src )
 {
+    Mat tmp;    
+    cvtColor(src, transformed_image, CV_BGR2GRAY);
+    //transformed_image.create(src.cols,src.rows,CV_8UC4);
+    //transformed_image.convertTo(tmp, CV_32F, 1.0/255.0, 0);
+
+    if ( paramaters.size() != CANNY_EDGE_PARAMETER_NUMBER )
+        return; 
     
+    if ( paramaters[0] < 0 )
+        paramaters[0] = 0;
+    if ( paramaters[0] > 100 )
+        paramaters[0] = 100;
+    
+    blur( transformed_image, tmp, Size(3,3) );
+    
+    Canny( tmp, tmp, paramaters[0], paramaters[0]*3, 3 );
+    
+    src.copyTo(transformed_image,tmp);
 }
 /*******************************************************************************
 * Function     : 

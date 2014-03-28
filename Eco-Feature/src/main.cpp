@@ -14,6 +14,7 @@
 #include <ctime>
 #include <iostream>
 #include <cmath>
+#include <valarray>
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
@@ -41,11 +42,14 @@ int main ( int argc, char* argv[] )
 {
     srand((unsigned)time(NULL));
     
-    Transform transform(GABOR_FILTER);
-    Mat image = imread("data/lena1.png", CV_LOAD_IMAGE_COLOR);    
+    Transform transform(CANNY_EDGE);
+    Mat image = imread("data/image.jpg", CV_LOAD_IMAGE_COLOR);    
         
     namedWindow( "Display window", WINDOW_AUTOSIZE );
     
+    valarray<double> tmp(1);
+    tmp[0] = 50;
+    transform.set_parameters(tmp);
     transform.perform_transform(image);
     
     imshow( "Display window", transform.get_transform() );
