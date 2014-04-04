@@ -42,18 +42,20 @@ int main ( int argc, char* argv[] )
 {
     srand((unsigned)time(NULL));
     
-    Transform transform(CANNY_EDGE);
-    Mat image = imread("data/image.jpg", CV_LOAD_IMAGE_COLOR);    
+    Transform transform(INTEGRAL_IMAGE);
+    Mat image = imread("data/lena1.png", CV_LOAD_IMAGE_COLOR);    
         
     namedWindow( "Display window", WINDOW_AUTOSIZE );
     
     valarray<double> tmp(1);
-    tmp[0] = 50;
+    tmp[0] = 12;
     transform.set_parameters(tmp);
     transform.perform_transform(image);
     
     imshow( "Display window", transform.get_transform() );
 
+    imshow( "Display window Original", image );
+    
     waitKey(0);
     
     return 0;
