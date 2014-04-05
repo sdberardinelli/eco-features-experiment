@@ -42,13 +42,13 @@ int main ( int argc, char* argv[] )
 {
     srand((unsigned)time(NULL));
     
-    Transform transform(INTEGRAL_IMAGE);
-    Mat image = imread("data/lena1.png", CV_LOAD_IMAGE_COLOR);    
+    Transform transform(DISCRETE_FOURIER_TRANSFORM);
+    Mat image = imread("data/image.jpg", CV_LOAD_IMAGE_COLOR);    
         
     namedWindow( "Display window", WINDOW_AUTOSIZE );
     
     valarray<double> tmp(1);
-    tmp[0] = 12;
+    tmp[0] = 2;
     transform.set_parameters(tmp);
     transform.perform_transform(image);
     

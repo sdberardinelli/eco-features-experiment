@@ -288,7 +288,7 @@ void Transform::normalize ( Mat src )
 * Description  : 
 * Arguments    : 
 * Returns      : 
-* Remarks      : 
+* Remarks      : (future testing) http://www.juergenwiki.de/work/wiki/doku.php?id=public:dft_dct_dst
 ********************************************************************************/
 void Transform::discrete_fourier_transform ( Mat src )
 {
@@ -445,8 +445,38 @@ void Transform::integral_image ( cv::Mat src )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-void Transform::difference_gaussians ( cv::Mat src )
+void Transform::difference_gaussians ( Mat src )
 {
+    Mat tmp;    
+    cvtColor(src, transformed_image, CV_BGR2GRAY);
+    transformed_image.convertTo(tmp, CV_32F, 1.0/255.0, 0);    
+    
+    if ( paramaters.size() != DIFFERENCE_GAUSSIANS_PARAMETER_NUMBER )
+        return;   
+    
+    if ( !(int(paramaters[0])%2) )
+        paramaters[0]++; 
+    
+    if ( !(int(paramaters[1])%2) )
+        paramaters[1]++;     
+    
+    if ( paramaters[0] < 0 )
+        paramaters[0] = 0;
+    if ( paramaters[0] > 25 )
+        paramaters[0] = 25; 
+    if ( paramaters[1] < 0 )
+        paramaters[1] = 0;
+    if ( paramaters[1] > 25 )
+        paramaters[1] = 25; 
+  
+    Mat g1, g2;
+    int kern1 = paramaters[0];
+    int kern2 = paramaters[1];
+
+    GaussianBlur(tmp, g1, Size(kern1,kern1), 0);
+    GaussianBlur(tmp, g2, Size(kern2,kern2), 0);
+    
+    transformed_image = g1-g2;
     
 }
 /*******************************************************************************
@@ -454,11 +484,61 @@ void Transform::difference_gaussians ( cv::Mat src )
 * Description  : 
 * Arguments    : 
 * Returns      : 
-* Remarks      : 
+* Remarks      : http://hangyinuml.wordpress.com/2012/09/08/census-transform-c-implementation/
 ********************************************************************************/
 void Transform::census_transform ( cv::Mat src )
 {
+    Mat tmp;    
+    cvtColor(src, transformed_image, CV_BGR2GRAY);
+    transformed_image.convertTo(tmp, CV_8U, 1.0/255.0, 0);    
     
+    if ( paramaters.size() != CENSUS_TRANSFORM_PARAMETER_NUMBER )
+        return;  
+
+    if ( !(int(paramaters[0])%2) )
+        paramaters[0]++;
+    
+    if ( paramaters[0] < 0 )
+        paramaters[0] = 0;
+    if ( paramaters[0] > 25 )
+        paramaters[0] = 25;     
+    
+    Size imgSize = tmp.size();
+    transformed_image = Mat::zeros(imgSize, CV_8U);
+
+    unsigned int census = 0;
+    unsigned int bit = 0;
+    int m = paramaters[0];
+    int n = paramaters[0];//window size
+    int i,j,x,y;
+    int shiftCount = 0;
+    for (x = m/2; x < imgSize.height - m/2; x++)
+    {
+      for(y = n/2; y < imgSize.width - n/2; y++)
+      {
+        census = 0;
+        shiftCount = 0;
+        for (i = x - m/2; i <= x + m/2; i++)
+        {
+          for (j = y - n/2; j <= y + n/2; j++)
+          {
+
+            if( shiftCount != m*n/2 )//skip the center pixel
+            {
+                census <<= 1;
+                if( tmp.at<uchar>(i,j) < tmp.at<uchar>(x,y) )//compare pixel values in the neighborhood
+                    bit = 1;
+                else
+                    bit = 0;
+                census = census + bit;
+            }
+            shiftCount ++;
+          }
+        }
+
+       transformed_image.ptr<uchar>(x)[y] = census;
+      }
+    } 
 }
 /*******************************************************************************
 * Function     : 
