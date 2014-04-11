@@ -119,48 +119,23 @@ void GA::initialize ( int size )
     
     for ( int i = 0; i < size; i++ )
     {
-        Creature current_creature;
-        cout << "working on current_creature (" << i << ")" << endl;
-        
+        Creature current_creature;       
         TRANSORMS transforms;
         int transform_count = trans1_dist(rnd);
-        cout << "chose " << transform_count << " transforms" << endl;
         for ( int j = 0; j < transform_count; j++ )
         {
             Transform transform((TRANFORM_TYPE)trans_dist(rnd));  
             
             valarray<double> parameters(ParamterSize(transform.get_transform_type()));
-            
-            cout << "transform " << j << " is " << transform.get_transform_type()
-                 << " with " << parameters.size() << " paramters( ";
 
             for ( int k = 0; k < parameters.size(); k++ )
             {
                 parameters[k] = param_dist(rnd);
-                cout << parameters[k] << " ";
             }
-            cout << ")" << endl;
-            
             transform.set_parameters(parameters);
             
             transforms.push_back(transform);
         }
-        cout << "verifying transforms vector has values" << endl;
-        for ( int j = 0; j < transform_count; j++ )
-        {
-            valarray<double> tmp = transforms[j].get_paramaters();
-            
-            cout << "transform " << j << " is " << transforms[j].get_transform_type()
-                 << " with paramters( ";
-            for ( int k = 0; k < tmp.size(); k++ )
-            {
-                cout << tmp[k] << " ";
-            }
-            cout << ")" << endl;
-        }
-        getchar();
-        
-        cout << "picking subregion" << endl;
         uniform_int_distribution<int> x1_dist(0,MAXIMUM_WIDTH);
         int x1 = x1_dist(rnd);
         uniform_int_distribution<int> x2_dist(x1,MAXIMUM_WIDTH);
@@ -169,30 +144,11 @@ void GA::initialize ( int size )
         int y1 = y1_dist(rnd);
         uniform_int_distribution<int> y2_dist(0,MAXIMUM_HEIGHT);        
         int y2 = y2_dist(rnd);
-        
-        cout << "x1 = " << x1 << endl;
-        cout << "x2 = " << x2 << endl;
-        cout << "y1 = " << y1 << endl;
-        cout << "y2 = " << y2 << endl;
         Subregion subregion(x1,x2,y1,y2);
-        
-        
-        
         current_creature.set_subregion(subregion);
         current_creature.set_transforms(transforms);
-        
         population.push_back(current_creature);
     }
-    
-    
-    cout << "Checking creatures now" << endl;
-    
-        for ( vector<int>::size_type creature_i = 0; 
-              creature_i < population.size(); 
-              creature_i++ )
-        {
-            cout << population[creature_i].to_string() << endl;
-        }
 }
 /*******************************************************************************
 * Function     : 
