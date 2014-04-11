@@ -9,6 +9,7 @@
       <itemPath>hdr/Creature.hpp</itemPath>
       <itemPath>hdr/Feature.hpp</itemPath>
       <itemPath>hdr/GA.hpp</itemPath>
+      <itemPath>hdr/Subregion.hpp</itemPath>
       <itemPath>hdr/Transform.hpp</itemPath>
       <itemPath>hdr/main.hpp</itemPath>
       <itemPath>hdr/typedefs.hpp</itemPath>
@@ -17,7 +18,8 @@
                    displayName="Resource Files"
                    projectFiles="true">
       <itemPath>data/image.jpg</itemPath>
-      <itemPath>data/lena1.png</itemPath>
+      <itemPath>data/image1.jpg</itemPath>
+      <itemPath>data/lena.png</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
@@ -27,6 +29,7 @@
       <itemPath>src/Creature.cpp</itemPath>
       <itemPath>src/Feature.cpp</itemPath>
       <itemPath>src/GA.cpp</itemPath>
+      <itemPath>src/Subregion.cpp</itemPath>
       <itemPath>src/Transform.cpp</itemPath>
       <itemPath>src/TransformFunctions.cpp</itemPath>
       <itemPath>src/main.cpp</itemPath>
@@ -64,7 +67,9 @@
       </compileType>
       <item path="data/image.jpg" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="data/lena1.png" ex="false" tool="3" flavor2="0">
+      <item path="data/image1.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/lena.png" ex="false" tool="3" flavor2="0">
       </item>
       <item path="hdr/AdaBoost.hpp" ex="false" tool="3" flavor2="0">
       </item>
@@ -75,6 +80,8 @@
       <item path="hdr/Feature.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="hdr/GA.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="hdr/Subregion.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="hdr/Transform.hpp" ex="false" tool="3" flavor2="0">
       </item>
@@ -91,6 +98,8 @@
       <item path="src/Feature.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/GA.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Subregion.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Transform.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -121,7 +130,9 @@
       </compileType>
       <item path="data/image.jpg" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="data/lena1.png" ex="false" tool="3" flavor2="0">
+      <item path="data/image1.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/lena.png" ex="false" tool="3" flavor2="0">
       </item>
       <item path="hdr/AdaBoost.hpp" ex="false" tool="3" flavor2="0">
       </item>
@@ -132,6 +143,8 @@
       <item path="hdr/Feature.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="hdr/GA.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="hdr/Subregion.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="hdr/Transform.hpp" ex="false" tool="3" flavor2="0">
       </item>
@@ -148,6 +161,8 @@
       <item path="src/Feature.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/GA.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Subregion.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Transform.cpp" ex="false" tool="1" flavor2="0">
       </item>

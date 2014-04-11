@@ -1,24 +1,25 @@
 /******************************************************************************
- * Filename      : GA.hpp
- * Source File(s): GA.cpp
+ * Filename      : Subregion.hpp
+ * Source File(s): Subregion.cpp
  * Description   :
  * Authors(s)    : 
  * Date Created  : 
  * Date Modified :
  * Modifier(s)   :
  *******************************************************************************/
-#ifndef GA_H
-#define GA_H
+#ifndef SUBREGION_H
+#define SUBREGION_H
 
 /*******************************************************************************
 *  INCLUDES
 ********************************************************************************/
-#include "Creature.hpp"
-#include <vector>
+#include <opencv2/core/core.hpp>
 
 /*******************************************************************************
 *  DEFINES
 ********************************************************************************/
+namespace Subregions
+{
 
 /*******************************************************************************
 *  MACROS
@@ -35,23 +36,30 @@
 /*******************************************************************************
 *  CLASS DEFINITIONS
 ********************************************************************************/
-class GA
+class Subregion
 {
     public: 
         /* constructors */
-        GA ( void ); /* default */
-        GA ( GA& ); /* copy */
-        GA& operator= ( const GA& ); /* assign */
-        ~GA ( void );
+        Subregion ( void ); /* default */
+        Subregion ( cv::Mat ); 
+        Subregion ( cv::Mat,int,int,int,int ); 
+        Subregion ( Subregion& ); /* copy */
+        Subregion& operator= ( const Subregion& ); /* assign */
+        ~Subregion ( void );
         
         /* functions */
-        Creature crossover  ( Creature, Creature );
-        void     mutate     ( Creature );
-        double   fitness    ( Creature );
-        void     initialize ( int );
-        void     run        ( int );
+        void    set_subregion ( int,int,int,int );
+        cv::Mat get_subregion ( void );      
         
     private:
-        std::vector<Creature> population;
+        
+        void    construct_subregion ( void );
+        int     x1;
+        int     x2;
+        int     y1;
+        int     y2;      
+        cv::Mat original;
+        cv::Mat subregion;      
 };
+}
 #endif

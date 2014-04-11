@@ -65,3 +65,36 @@ Creature& Creature::operator=( const Creature& obj )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
+void Creature::set_fitness ( double _fitness )
+{
+    fitness = _fitness;
+}
+/*******************************************************************************
+* Function     : 
+* Description  : 
+* Arguments    : 
+* Returns      : 
+* Remarks      : 
+********************************************************************************/
+double Creature::get_fitness ( void )
+{
+    return fitness;
+}
+/*******************************************************************************
+* Function     : 
+* Description  : 
+* Arguments    : 
+* Returns      : 
+* Remarks      : 
+********************************************************************************/
+void Creature::initialize ( void )
+{
+    ;
+}
+/*******************************************************************************
+* Function     : 
+* Description  : 
+* Arguments    : 
+* Returns      : 
+* Remarks      : 
+********************************************************************************/

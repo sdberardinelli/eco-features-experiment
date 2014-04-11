@@ -183,7 +183,7 @@ void Transform::histogram ( Mat src )
 {
     Mat tmp;    
     cvtColor(src, transformed_image, CV_BGR2GRAY);
-    transformed_image.convertTo(tmp, CV_32F, 1.0/255.0, 0);
+    transformed_image.convertTo(tmp, CV_8U, 1.0/255.0, 0);
 
     if ( paramaters.size() != HISTOGRAM_PARAMETER_NUMBER )
         return;
@@ -201,7 +201,6 @@ void Transform::hough_circles ( Mat src )
 {
     Mat tmp;    
     cvtColor(src, transformed_image, CV_BGR2GRAY);
-    //transformed_image.convertTo(tmp, CV_32F, 1.0/255.0, 0);
 
     if ( paramaters.size() != HOUGH_CIRCLES_PARAMETER_NUMBER )
         return;
@@ -422,7 +421,7 @@ void Transform::integral_image ( cv::Mat src )
     
     Mat tmp1, tmp2, tmp3;
     
-    cv::integral(src,tmp1,tmp2,tmp3,CV_32F);
+    integral(src,tmp1,tmp2,tmp3,CV_32F);
     
     switch ( type )
     {
@@ -547,9 +546,72 @@ void Transform::census_transform ( cv::Mat src )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-void Transform::sobel_operator ( cv::Mat src )
+void Transform::sobel_operator ( Mat src )
 {
+    Mat tmp;    
+    cvtColor(src, tmp, CV_BGR2GRAY);
     
+    if ( paramaters.size() != SOBEL_OPERATOR_PARAMETER_NUMBER )
+        return;  
+
+    if ( paramaters[0] < 0 )
+        paramaters[0] = 0;
+    if ( paramaters[0] > 10 )
+        paramaters[0] = 10;     
+
+    if ( paramaters[1] < 0 )
+        paramaters[1] = 0;
+    if ( paramaters[1] > 10 )
+        paramaters[1] = 10; 
+    
+    if ( paramaters[2] + paramaters[3] > 1 )
+    {
+        paramaters[2] = 0.5;
+        paramaters[3] = 0.5;
+    }
+    
+    if ( paramaters[2] > 1 )
+    {
+        paramaters[2] = 1;
+        paramaters[3] = 0;
+    }
+    else if ( paramaters[2] < 0 )
+    {
+        paramaters[2] = 0;
+        paramaters[3] = 1;
+    } 
+    else if ( paramaters[3] > 1 )
+    {
+        paramaters[2] = 0;
+        paramaters[3] = 1;
+    }   
+    else if ( paramaters[3] < 0 )
+    {
+        paramaters[2] = 1;
+        paramaters[3] = 0;
+    }   
+    
+    int scale = paramaters[0];
+    int delta = paramaters[1];
+    double x_weight = paramaters[2];    
+    double y_weight = paramaters[3];
+
+    GaussianBlur( tmp, tmp, Size(3,3), 0, 0, BORDER_DEFAULT );
+
+    /// Generate grad_x and grad_y
+    Mat grad_x, grad_y;
+    Mat abs_grad_x, abs_grad_y;
+
+    /// Gradient X
+    Sobel( tmp, grad_x, CV_16S, 1, 0, 3, scale, delta, BORDER_DEFAULT );
+    convertScaleAbs( grad_x, abs_grad_x );
+
+    /// Gradient Y
+    Sobel( tmp, grad_y, CV_16S, 0, 1, 3, scale, delta, BORDER_DEFAULT );
+    convertScaleAbs( grad_y, abs_grad_y );
+
+    /// Total Gradient (approximate)
+    addWeighted( abs_grad_x, x_weight, abs_grad_y, y_weight, 0, transformed_image );
 }
 /*******************************************************************************
 * Function     : 
@@ -558,9 +620,39 @@ void Transform::sobel_operator ( cv::Mat src )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-void Transform::morphological_dilate ( cv::Mat src )
+void Transform::morphological_dilate ( Mat src )
 {
+    Mat tmp;    
+    cvtColor(src, tmp, CV_BGR2GRAY);
+
+    if ( paramaters.size() != MORPHOLOGICAL_ERODE_PARAMETER_NUMBER )
+        return;
     
+    switch (int(paramaters[0]))/* erode type */
+    {
+        case MORPH_RECT:
+            break;
+        case MORPH_CROSS:
+            break;
+        case MORPH_ELLIPSE:
+            break;
+        default:
+            paramaters[0] = MORPH_RECT;
+    }
+    
+    if ( paramaters[1] < 0 ) /* kernel size */
+        paramaters[1] = 0;
+    if ( paramaters[1] > 21 )
+        paramaters[1] = 21;
+    
+
+    int dilate_type = paramaters[0];    
+    Size size(2*paramaters[1]+1,2*paramaters[1]+1);
+    Point point(paramaters[1],paramaters[1]);
+    
+    dilate( tmp, transformed_image, getStructuringElement( dilate_type, 
+                                                           size, 
+                                                           point ) );    
 }
 /*******************************************************************************
 * Function     : 
@@ -571,7 +663,51 @@ void Transform::morphological_dilate ( cv::Mat src )
 ********************************************************************************/
 void Transform::adaptive_thresholding ( cv::Mat src )
 {
+    Mat tmp;    
+    cvtColor(src, tmp, CV_BGR2GRAY);
     
+    if ( paramaters.size() != ADAPTIVE_THRESHOLDING_PARAMETER_NUMBER )
+        return;
+    
+    if ( paramaters[0] < 0 )
+        paramaters[0] = 0;
+    if ( paramaters[0] > 255 )
+        paramaters[0] = 255;
+    
+    if ( paramaters[1] < 0 )
+        paramaters[1] = 0;
+    if ( paramaters[1] > 1 )
+        paramaters[1] = 1;
+    
+    if ( paramaters[2] < 0 )
+        paramaters[2] = 0;
+    if ( paramaters[2] > 4 )
+        paramaters[2] = 4;    
+    
+    if ( !(int(paramaters[3])%2) )
+        paramaters[3]++;    
+    if ( paramaters[3] < 0 )
+        paramaters[3] = 0;
+    if ( paramaters[3] > 21 )
+        paramaters[3] = 21;       
+    
+    if ( paramaters[4] < 0 )
+        paramaters[4] = 0;
+    if ( paramaters[4] > 10 )
+        paramaters[4] = 10;
+
+    
+    int threshold = paramaters[0];
+    int method = paramaters[1];
+    int type = paramaters[2];
+    int blocksize = paramaters[3];
+    int c = paramaters[4];
+    
+    adaptiveThreshold( tmp, transformed_image, threshold,
+                                               method,
+                                               type,
+                                               blocksize,
+                                               c);
 }
 /*******************************************************************************
 * Function     : 
@@ -580,9 +716,51 @@ void Transform::adaptive_thresholding ( cv::Mat src )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-void Transform::hough_lines ( cv::Mat src )
+void Transform::hough_lines ( Mat src )
 {
+    Mat tmp;    
+    cvtColor(src, tmp, CV_BGR2GRAY);
     
+    if ( paramaters.size() != HOUGH_LINES_PARAMETER_NUMBER )
+        return;    
+    
+    if ( paramaters[0] < 0 )
+        paramaters[0] = 0;
+    if ( paramaters[0] > 100 )
+        paramaters[0] = 100;
+    
+    if ( paramaters[1] < 0 )
+        paramaters[1] = 0;
+    if ( paramaters[1] > 100 )
+        paramaters[1] = 100;
+    
+    if ( paramaters[2] < 0 )
+        paramaters[2] = 0;
+    if ( paramaters[2] > 20 )
+        paramaters[2] = 20;    
+    
+    int threshold = paramaters[0];
+    int minlinelength = paramaters[1];
+    int maxlinegap = paramaters[2];
+    
+    Canny( tmp, tmp, threshold, threshold*4, 3 );   
+    
+    vector<Vec4i> lines;
+    HoughLinesP(tmp, lines, 1, CV_PI/180, threshold, minlinelength, maxlinegap );
+    
+    Mat tmp1(tmp.rows,tmp.cols,CV_8UC3,Scalar(0,0,0));
+    
+    for ( size_t i = 0; i < lines.size(); i++ )
+    {
+        Vec4i l = lines[i];
+        line( tmp1, Point(l[0], l[1]), 
+                                 Point(l[2], l[3]), 
+                                 Scalar(255,255,255), 
+                                 1, 
+                                 CV_AA);
+    }    
+    
+    transformed_image = tmp1;
 }
 /*******************************************************************************
 * Function     : 
@@ -591,9 +769,37 @@ void Transform::hough_lines ( cv::Mat src )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-void Transform::harris_corner_strength ( cv::Mat src )
+void Transform::harris_corner_strength ( Mat src )
 {
+    Mat tmp;    
+    cvtColor(src, tmp, CV_BGR2GRAY);
     
+    if ( paramaters.size() != HARRIS_CORNER_STRENGTH_PARAMETER_NUMBER )
+        return;   
+    
+    if ( paramaters[0] < 0 )
+        paramaters[0] = 0;
+    if ( paramaters[0] > 200 )
+        paramaters[0] = 200;
+    
+    if ( paramaters[1] < 0 )
+        paramaters[1] = 0;
+    if ( paramaters[1] > 255 )
+        paramaters[1] = 255;   
+    
+    
+    if ( paramaters[1] < 0 )
+        paramaters[1] = 0;
+    if ( paramaters[1] > 1 )
+        paramaters[1] = 1; 
+    
+    int blockSize = paramaters[0];
+    int apertureSize = paramaters[1];
+    double k =  paramaters[2];
+    
+    cornerHarris( tmp, transformed_image, blockSize, apertureSize, k, BORDER_DEFAULT );  
+    cv::normalize( transformed_image, transformed_image, 0, 255, NORM_MINMAX, CV_32FC1, Mat() );
+    convertScaleAbs( transformed_image, transformed_image );    
 }
 /*******************************************************************************
 * Function     : 
@@ -602,9 +808,15 @@ void Transform::harris_corner_strength ( cv::Mat src )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-void Transform::histogram_equalization ( cv::Mat src )
+void Transform::histogram_equalization ( Mat src )
 {
+    Mat tmp;    
+    cvtColor(src, tmp, CV_BGR2GRAY);
     
+    if ( paramaters.size() != HISTOGRAM_EQUALIZATION_PARAMETER_NUMBER )
+        return;      
+    
+    equalizeHist( tmp, transformed_image );
 }
 /*******************************************************************************
 * Function     : 
@@ -613,9 +825,19 @@ void Transform::histogram_equalization ( cv::Mat src )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-void Transform::log ( cv::Mat src )
+void Transform::log ( Mat src )
 {
+    Mat tmp;    
+    cvtColor(src, tmp, CV_BGR2GRAY);
+    tmp.convertTo(tmp, CV_32F, 1.0/255.0, 0); 
     
+    if ( paramaters.size() != LOG_PARAMETER_NUMBER )
+        return; 
+    
+    Mat tmp1(tmp.rows,tmp.cols,CV_32F,Scalar(0,0,0));
+    cv::log(tmp, tmp1);
+    
+    transformed_image = tmp1;
 }
 /*******************************************************************************
 * Function     : 
@@ -624,20 +846,61 @@ void Transform::log ( cv::Mat src )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-void Transform::median_blur ( cv::Mat src )
+void Transform::median_blur ( Mat src )
 {
+    Mat tmp;    
+    cvtColor(src, tmp, CV_BGR2GRAY);
     
+    if ( paramaters.size() != MEDIAN_BLUR_PARAMETER_NUMBER )
+        return;     
+    
+    if ( !(int(paramaters[0])%2) )
+        paramaters[0]++; 
+    
+    if ( paramaters[0] < 0 )
+        paramaters[0] = 0;
+    if ( paramaters[0] > 21 )
+        paramaters[0] = 21;    
+    
+    int ksize = paramaters[0];
+    
+    medianBlur(tmp, transformed_image, ksize);
 }
 /*******************************************************************************
 * Function     : 
 * Description  : 
 * Arguments    : 
 * Returns      : 
-* Remarks      : 
+* Remarks      : http://opencv-code.com/tutorials/count-and-segment-overlapping-objects-with-watershed-and-distance-transform/
 ********************************************************************************/
-void Transform::distance_transform ( cv::Mat src )
+void Transform::distance_transform ( Mat src )
 {
+    Mat tmp;    
+    cvtColor(src, tmp, CV_BGR2GRAY);
     
+    if ( paramaters.size() != DISTANCE_TRANSFORM_PARAMETER_NUMBER )
+        return;    
+
+    if ( paramaters[0] < 1 )
+        paramaters[0] = 1;
+    if ( paramaters[0] > 7 )
+        paramaters[0] = 7; 
+    if ( paramaters[1] < 0 )
+        paramaters[1] = 0;
+    if ( paramaters[1] > 14 )
+        paramaters[1] = 14;   
+    if ( paramaters[2] < 0 )
+        paramaters[2] = 0;
+    if ( paramaters[2] > 255 )
+        paramaters[2] = 255;    
+    
+    int dist = paramaters[0];
+    int mask = paramaters[1];
+    int thresh = paramaters[2];
+    
+    threshold(tmp, tmp, thresh, 255, CV_THRESH_BINARY);
+    distanceTransform(tmp, transformed_image, dist, mask); 
+    cv::normalize(transformed_image, transformed_image, 0, 1.0, NORM_MINMAX);
 }
 /*******************************************************************************
 * Function     : 
@@ -648,7 +911,36 @@ void Transform::distance_transform ( cv::Mat src )
 ********************************************************************************/
 void Transform::laplacian_edged_etection ( cv::Mat src )
 {
+    Mat tmp;    
+    cvtColor(src, tmp, CV_BGR2GRAY);
     
+    if ( paramaters.size() != DISTANCE_TRANSFORM_PARAMETER_NUMBER )
+        return;    
+    
+    if ( !(int(paramaters[0])%2) )
+        paramaters[0]++; 
+
+    if ( paramaters[0] < 0 )
+        paramaters[0] = 0;
+    if ( paramaters[0] > 21 )
+        paramaters[0] = 21; 
+    if ( paramaters[1] < 0 )
+        paramaters[1] = 0;
+    if ( paramaters[1] > 10 )
+        paramaters[1] = 10;   
+    if ( paramaters[2] < 0 )
+        paramaters[2] = 0;
+    if ( paramaters[2] > 10 )
+        paramaters[2] = 10; 
+    
+    GaussianBlur( tmp, tmp, Size(3,3), 0, 0, BORDER_DEFAULT );    
+
+    int kernel_size = paramaters[0];
+    int scale = paramaters[1];
+    int delta = paramaters[2];
+
+    Laplacian( tmp, transformed_image, CV_16S, kernel_size, scale, delta, BORDER_DEFAULT );
+    convertScaleAbs( transformed_image, transformed_image );
 }
 /*******************************************************************************
 * Function     : 
@@ -657,9 +949,15 @@ void Transform::laplacian_edged_etection ( cv::Mat src )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-void Transform::rank_transform ( cv::Mat src )
+void Transform::rank_transform ( Mat src )
 {
+    Mat tmp;    
+    cvtColor(src, tmp, CV_BGR2GRAY);
     
+    if ( paramaters.size() != RANK_TRANSFORM_PARAMETER_NUMBER )
+        return;  
+    
+    transformed_image = tmp;    
 }
 /*******************************************************************************
 * Function     : 
@@ -668,7 +966,13 @@ void Transform::rank_transform ( cv::Mat src )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-void Transform::convert ( cv::Mat src )
+void Transform::convert ( Mat src )
 {
+    Mat tmp;    
+    cvtColor(src, tmp, CV_BGR2GRAY);
     
+    if ( paramaters.size() != CONVERT_PARAMETER_NUMBER )
+        return;      
+    
+    transformed_image = tmp;
 }

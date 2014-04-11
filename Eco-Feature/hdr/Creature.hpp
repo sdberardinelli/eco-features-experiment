@@ -13,10 +13,13 @@
 /*******************************************************************************
 *  INCLUDES
 ********************************************************************************/
+#include "Subregion.hpp"
+#include "Transform.hpp"
 
 /*******************************************************************************
 *  DEFINES
 ********************************************************************************/
+#define MAX_TRANSFORMS 8
 
 /*******************************************************************************
 *  MACROS
@@ -42,6 +45,12 @@ class Creature
         Creature& operator= ( const Creature& ); /* assign */
         ~Creature ( void );
         /* functions */
+        void     initialize ( void );
+        void     set_fitness ( double );
+        double   get_fitness ( void );        
     private:
+        double fitness;
+        Subregions::Subregion subregion;
+        std::vector<Transforms::Transform> transorms;
 };
 #endif

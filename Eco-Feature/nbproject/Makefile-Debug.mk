@@ -40,6 +40,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/Creature.o \
 	${OBJECTDIR}/src/Feature.o \
 	${OBJECTDIR}/src/GA.o \
+	${OBJECTDIR}/src/Subregion.o \
 	${OBJECTDIR}/src/Transform.o \
 	${OBJECTDIR}/src/TransformFunctions.o \
 	${OBJECTDIR}/src/main.o
@@ -93,6 +94,11 @@ ${OBJECTDIR}/src/GA.o: src/GA.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -Ihdr -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GA.o src/GA.cpp
+
+${OBJECTDIR}/src/Subregion.o: src/Subregion.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -Ihdr -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Subregion.o src/Subregion.cpp
 
 ${OBJECTDIR}/src/Transform.o: src/Transform.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
