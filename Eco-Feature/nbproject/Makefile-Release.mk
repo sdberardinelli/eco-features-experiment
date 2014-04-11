@@ -36,10 +36,10 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/src/AdaBoost.o \
-	${OBJECTDIR}/src/Classifier.o \
 	${OBJECTDIR}/src/Creature.o \
 	${OBJECTDIR}/src/Feature.o \
 	${OBJECTDIR}/src/GA.o \
+	${OBJECTDIR}/src/Perceptron.o \
 	${OBJECTDIR}/src/Subregion.o \
 	${OBJECTDIR}/src/Transform.o \
 	${OBJECTDIR}/src/TransformFunctions.o \
@@ -75,11 +75,6 @@ ${OBJECTDIR}/src/AdaBoost.o: src/AdaBoost.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/AdaBoost.o src/AdaBoost.cpp
 
-${OBJECTDIR}/src/Classifier.o: src/Classifier.cpp 
-	${MKDIR} -p ${OBJECTDIR}/src
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Classifier.o src/Classifier.cpp
-
 ${OBJECTDIR}/src/Creature.o: src/Creature.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
@@ -94,6 +89,11 @@ ${OBJECTDIR}/src/GA.o: src/GA.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GA.o src/GA.cpp
+
+${OBJECTDIR}/src/Perceptron.o: src/Perceptron.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Perceptron.o src/Perceptron.cpp
 
 ${OBJECTDIR}/src/Subregion.o: src/Subregion.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src

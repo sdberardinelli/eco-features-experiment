@@ -13,6 +13,8 @@
 #include "Subregion.hpp"
 #include <opencv2/core/core.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
+#include <valarray>
+#include <iostream>
 
 /************************************
  * Namespaces 
@@ -27,6 +29,26 @@ using namespace Subregions;
 
 /*******************************************************************************
 * Constructor  : (Default)
+* Description  : 
+* Arguments    : 
+* Remarks      : 
+********************************************************************************/
+Subregion::Subregion ( void ) { ; }
+/*******************************************************************************
+* Constructor  : 
+* Description  : 
+* Arguments    : 
+* Remarks      : 
+********************************************************************************/
+Subregion::Subregion ( int _x1, int _x2, int _y1, int _y2 ) 
+{ 
+    x1 = _x1;
+    x2 = _x2;
+    y1 = _y1;
+    y2 = _y2;
+}
+/*******************************************************************************
+* Constructor  :
 * Description  : 
 * Arguments    : 
 * Remarks      : 
@@ -68,7 +90,15 @@ Subregion::Subregion ( Mat _original, int _x1, int _x2, int _y1, int _y2 )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-Subregion::Subregion ( Subregion& obj ) { ; }
+Subregion::Subregion ( const Subregion& obj )
+{ 
+    this->x1 = obj.x1;
+    this->x2 = obj.x2;
+    this->x1 = obj.x1;
+    this->y2 = obj.y2;
+    this->original = obj.original;
+    this->subregion = obj.subregion;
+}
 /*******************************************************************************
 * Deconstructor: 
 * Description  : 
@@ -87,9 +117,45 @@ Subregion& Subregion::operator=( const Subregion& obj )
 {
     if (this != &obj) // prevent self-assignment
     {
-        ;
+        this->x1 = obj.x1;
+        this->x2 = obj.x2;
+        this->y1 = obj.y1;
+        this->y2 = obj.y2;
+        this->original = obj.original;
+        this->subregion = obj.subregion;
     }
     return *this;
+}
+/*******************************************************************************
+* Function     : 
+* Description  : 
+* Arguments    : 
+* Returns      : 
+* Remarks      : 
+********************************************************************************/
+void Subregion::set_original ( Mat _original )
+{
+    Mat croppedRef(_original);
+    croppedRef.copyTo(original);
+}
+/*******************************************************************************
+* Function     : 
+* Description  : 
+* Arguments    : 
+* Returns      : 
+* Remarks      : 
+********************************************************************************/
+void Subregion::set_subregion ( Mat _original, int _x1, int _x2, int _y1, int _y2 )
+{
+    Mat croppedRef(_original);
+    croppedRef.copyTo(original);
+    
+    x1 = _x1;
+    x2 = _x2;
+    y1 = _y1;
+    y2 = _y2;
+    
+    construct_subregion(); 
 }
 /*******************************************************************************
 * Function     : 
@@ -116,6 +182,8 @@ void Subregion::set_subregion ( int _x1, int _x2, int _y1, int _y2 )
 ********************************************************************************/
 Mat Subregion::get_subregion ( void )
 {       
+    construct_subregion(); 
+    
     return subregion;
 }
 /*******************************************************************************
@@ -144,6 +212,19 @@ void Subregion::construct_subregion ( void )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-
-
-
+valarray<int> Subregion::get_subregion_values ( void )
+{   
+    valarray<int> subregion_values(4);
+    subregion_values[0] = x1;
+    subregion_values[1] = x2;
+    subregion_values[2] = y1;
+    subregion_values[3] = y2;    
+    return subregion_values;
+}
+/*******************************************************************************
+* Function     : 
+* Description  : 
+* Arguments    : 
+* Returns      : 
+* Remarks      : 
+********************************************************************************/

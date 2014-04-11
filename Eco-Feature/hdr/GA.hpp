@@ -14,11 +14,13 @@
 *  INCLUDES
 ********************************************************************************/
 #include "Creature.hpp"
+#include <opencv2/core/core.hpp>
 #include <vector>
 
 /*******************************************************************************
 *  DEFINES
 ********************************************************************************/
+#define MUTATION_RATE 0.05
 
 /*******************************************************************************
 *  MACROS
@@ -53,5 +55,7 @@ class GA
         
     private:
         std::vector<Creature> population;
+        std::vector<cv::Mat>  training_images;
+        std::vector<cv::Mat>  holding_images;
 };
 #endif

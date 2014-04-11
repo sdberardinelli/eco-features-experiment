@@ -155,12 +155,12 @@ void Transform::gaussian_blur ( Mat src )
     if ( paramaters[0] > 25 )
         paramaters[0] = 25;  
     
-    if ( paramaters[1] < 0 ) /* kernel size */
+    if ( paramaters[1] < 0 ) 
         paramaters[1] = 0;
     if ( paramaters[1] > 10 )
         paramaters[1] = 10;  
     
-    if ( paramaters[2] < 0 ) /* kernel size */
+    if ( paramaters[2] < 0 )
         paramaters[2] = 0;
     if ( paramaters[2] > 10 )
         paramaters[2] = 10;     

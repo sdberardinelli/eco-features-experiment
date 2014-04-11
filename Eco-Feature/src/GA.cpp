@@ -11,11 +11,21 @@
  * Included Headers 
  ************************************/
 #include "GA.hpp"
+#include "Creature.hpp"
+#include "Subregion.hpp"
+#include "Transform.hpp"
+#include <vector>
+#include <opencv2/core/core.hpp>
+#include <random>
+#include <iostream>
 
 /************************************
  * Namespaces 
  ************************************/
 using namespace std;
+using namespace Subregions;
+using namespace Transforms;
+using namespace cv;
 
 /************************************
  * Local Variables 
@@ -101,7 +111,88 @@ double GA::fitness ( Creature a )
 ********************************************************************************/
 void GA::initialize ( int size )
 {
-    ;
+    random_device rd;
+    mt19937 rnd(rd());
+    uniform_int_distribution<int> trans_dist(1,TRANSORM_NUM);
+    uniform_int_distribution<int> trans1_dist(MINIMUM_TRANFORMS,MAXIMUM_TRANFORMS);
+    uniform_int_distribution<int> param_dist(0,360);
+    
+    for ( int i = 0; i < size; i++ )
+    {
+        Creature current_creature;
+        cout << "working on current_creature (" << i << ")" << endl;
+        
+        TRANSORMS transforms;
+        int transform_count = trans1_dist(rnd);
+        cout << "chose " << transform_count << " transforms" << endl;
+        for ( int j = 0; j < transform_count; j++ )
+        {
+            Transform transform((TRANFORM_TYPE)trans_dist(rnd));  
+            
+            valarray<double> parameters(ParamterSize(transform.get_transform_type()));
+            
+            cout << "transform " << j << " is " << transform.get_transform_type()
+                 << " with " << parameters.size() << " paramters( ";
+
+            for ( int k = 0; k < parameters.size(); k++ )
+            {
+                parameters[k] = param_dist(rnd);
+                cout << parameters[k] << " ";
+            }
+            cout << ")" << endl;
+            
+            transform.set_parameters(parameters);
+            
+            transforms.push_back(transform);
+        }
+        cout << "verifying transforms vector has values" << endl;
+        for ( int j = 0; j < transform_count; j++ )
+        {
+            valarray<double> tmp = transforms[j].get_paramaters();
+            
+            cout << "transform " << j << " is " << transforms[j].get_transform_type()
+                 << " with paramters( ";
+            for ( int k = 0; k < tmp.size(); k++ )
+            {
+                cout << tmp[k] << " ";
+            }
+            cout << ")" << endl;
+        }
+        getchar();
+        
+        cout << "picking subregion" << endl;
+        uniform_int_distribution<int> x1_dist(0,MAXIMUM_WIDTH);
+        int x1 = x1_dist(rnd);
+        uniform_int_distribution<int> x2_dist(x1,MAXIMUM_WIDTH);
+        int x2 = x2_dist(rnd);
+        uniform_int_distribution<int> y1_dist(0,MAXIMUM_HEIGHT);        
+        int y1 = y1_dist(rnd);
+        uniform_int_distribution<int> y2_dist(0,MAXIMUM_HEIGHT);        
+        int y2 = y2_dist(rnd);
+        
+        cout << "x1 = " << x1 << endl;
+        cout << "x2 = " << x2 << endl;
+        cout << "y1 = " << y1 << endl;
+        cout << "y2 = " << y2 << endl;
+        Subregion subregion(x1,x2,y1,y2);
+        
+        
+        
+        current_creature.set_subregion(subregion);
+        current_creature.set_transforms(transforms);
+        
+        population.push_back(current_creature);
+    }
+    
+    
+    cout << "Checking creatures now" << endl;
+    
+        for ( vector<int>::size_type creature_i = 0; 
+              creature_i < population.size(); 
+              creature_i++ )
+        {
+            cout << population[creature_i].to_string() << endl;
+        }
 }
 /*******************************************************************************
 * Function     : 
@@ -112,7 +203,26 @@ void GA::initialize ( int size )
 ********************************************************************************/
 void GA::run ( int generations )
 {
-    ;
+    for ( int generation = 0; generation < generations; generation++ )
+    {
+        for ( vector<int>::size_type creature_i = 0; 
+              creature_i < population.size(); 
+              creature_i++ )
+        {
+            for ( vector<int>::size_type training_images_i = 0; 
+                 training_images_i < training_images.size(); 
+                 training_images_i++ )
+            {
+                ;
+            }
+            for ( vector<int>::size_type holding_images_i = 0; 
+                 holding_images_i < holding_images.size(); 
+                 holding_images_i++ )
+            {
+                ;
+            }            
+        }
+    }
 }
 /*******************************************************************************
 * Function     : 

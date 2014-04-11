@@ -14,13 +14,16 @@
 *  INCLUDES
 ********************************************************************************/
 #include <opencv2/core/core.hpp>
+#include <valarray>
 
 /*******************************************************************************
 *  DEFINES
 ********************************************************************************/
 namespace Subregions
 {
-
+#define MAXIMUM_WIDTH  112
+#define MAXIMUM_HEIGHT 200
+    
 /*******************************************************************************
 *  MACROS
 ********************************************************************************/
@@ -42,14 +45,19 @@ class Subregion
         /* constructors */
         Subregion ( void ); /* default */
         Subregion ( cv::Mat ); 
+        Subregion ( int,int,int,int ); 
         Subregion ( cv::Mat,int,int,int,int ); 
-        Subregion ( Subregion& ); /* copy */
+        Subregion ( const Subregion& ); /* copy */
         Subregion& operator= ( const Subregion& ); /* assign */
         ~Subregion ( void );
         
         /* functions */
+        void    set_original  ( cv::Mat );
+        void    set_subregion ( cv::Mat, int,int,int,int );
         void    set_subregion ( int,int,int,int );
-        cv::Mat get_subregion ( void );      
+        cv::Mat get_subregion ( void );   
+        std::valarray<int>
+        get_subregion_values ( void );
         
     private:
         

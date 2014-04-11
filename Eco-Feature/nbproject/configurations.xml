@@ -5,10 +5,10 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>hdr/AdaBoost.hpp</itemPath>
-      <itemPath>hdr/Classifier.hpp</itemPath>
       <itemPath>hdr/Creature.hpp</itemPath>
       <itemPath>hdr/Feature.hpp</itemPath>
       <itemPath>hdr/GA.hpp</itemPath>
+      <itemPath>hdr/Perceptron.hpp</itemPath>
       <itemPath>hdr/Subregion.hpp</itemPath>
       <itemPath>hdr/Transform.hpp</itemPath>
       <itemPath>hdr/main.hpp</itemPath>
@@ -25,10 +25,10 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>src/AdaBoost.cpp</itemPath>
-      <itemPath>src/Classifier.cpp</itemPath>
       <itemPath>src/Creature.cpp</itemPath>
       <itemPath>src/Feature.cpp</itemPath>
       <itemPath>src/GA.cpp</itemPath>
+      <itemPath>src/Perceptron.cpp</itemPath>
       <itemPath>src/Subregion.cpp</itemPath>
       <itemPath>src/Transform.cpp</itemPath>
       <itemPath>src/TransformFunctions.cpp</itemPath>
@@ -73,13 +73,13 @@
       </item>
       <item path="hdr/AdaBoost.hpp" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="hdr/Classifier.hpp" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="hdr/Creature.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="hdr/Feature.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="hdr/GA.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="hdr/Perceptron.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="hdr/Subregion.hpp" ex="false" tool="3" flavor2="0">
       </item>
@@ -91,13 +91,13 @@
       </item>
       <item path="src/AdaBoost.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="src/Classifier.cpp" ex="false" tool="1" flavor2="0">
-      </item>
       <item path="src/Creature.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Feature.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/GA.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Perceptron.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Subregion.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -136,13 +136,13 @@
       </item>
       <item path="hdr/AdaBoost.hpp" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="hdr/Classifier.hpp" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="hdr/Creature.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="hdr/Feature.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="hdr/GA.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="hdr/Perceptron.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="hdr/Subregion.hpp" ex="false" tool="3" flavor2="0">
       </item>
@@ -154,13 +154,13 @@
       </item>
       <item path="src/AdaBoost.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="src/Classifier.cpp" ex="false" tool="1" flavor2="0">
-      </item>
       <item path="src/Creature.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Feature.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/GA.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Perceptron.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Subregion.cpp" ex="false" tool="1" flavor2="0">
       </item>

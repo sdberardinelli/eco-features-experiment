@@ -49,7 +49,12 @@ Transform::Transform ( TRANFORM_TYPE _transform_type )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-Transform::Transform ( Transform& obj ) { ; }
+Transform::Transform ( const Transform& obj )
+{
+    this->paramaters = obj.paramaters;
+    this->transform_type = obj.transform_type;
+    this->transformed_image = obj.transformed_image;   
+}
 /*******************************************************************************
 * Deconstructor: 
 * Description  : 
@@ -68,7 +73,9 @@ Transform& Transform::operator=( const Transform& obj )
 {
     if (this != &obj) // prevent self-assignment
     {
-        ;
+        this->paramaters = obj.paramaters;
+        this->transform_type = obj.transform_type;
+        this->transformed_image = obj.transformed_image;
     }
     return *this;
 }
@@ -104,6 +111,20 @@ TRANFORM_TYPE Transform::get_transform_type ( void )
 void Transform::set_parameters ( valarray<double>& _paramaters )
 {
     paramaters = _paramaters;
+}
+/*******************************************************************************
+* Function     : 
+* Description  : 
+* Arguments    : 
+* Returns      : 
+* Remarks      : 
+********************************************************************************/
+void Transform::set_parameter ( int i, double value )
+{
+    if ( i < 0 || i > paramaters.size() )
+        return;
+    
+    paramaters[i] = value;
 }
 /*******************************************************************************
 * Function     : 

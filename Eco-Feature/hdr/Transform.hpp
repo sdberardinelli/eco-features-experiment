@@ -45,6 +45,9 @@ namespace Transforms
 #define LAPLACIAN_EDGED_ETECTION_PARAMETER_NUMBER 3
 #define RANK_TRANSFORM_PARAMETER_NUMBER 0
 #define CONVERT_PARAMETER_NUMBER 0
+    
+#define MINIMUM_TRANFORMS 2
+#define MAXIMUM_TRANFORMS 8
 /*******************************************************************************
 *  MACROS
 ********************************************************************************/
@@ -81,6 +84,40 @@ typedef enum _TRANFORM_TYPE {
     TRANSORM_NUM
 }TRANFORM_TYPE;
 
+inline int ParamterSize ( TRANFORM_TYPE in )
+{
+    switch ( in )
+    {
+        case GABOR_FILTER:                return GABOR_FILTER_PARAMETER_NUMBER;
+        case MORPHOLOGICAL_ERODE:         return MORPHOLOGICAL_ERODE_PARAMETER_NUMBER;
+        case GAUSSIAN_BLUR:               return GAUSSIAN_BLUR_PARAMETER_NUMBER;
+        case HISTOGRAM:                   return HISTOGRAM_PARAMETER_NUMBER;
+        case HOUGH_CIRCLES:               return HOUGH_CIRCLES_PARAMETER_NUMBER;
+        case NORMALIZE:                   return NORMALIZE_PARAMETER_NUMBER;
+        case DISCRETE_FOURIER_TRANSFORM:  return DISCRETE_FOURIER_TRANSFORM_PARAMETER_NUMBER;
+        case SQUARE_ROOT:                 return SQUARE_ROOT_PARAMETER_NUMBER;
+        case CANNY_EDGE:                  return CANNY_EDGE_PARAMETER_NUMBER;
+        case INTEGRAL_IMAGE:              return INTEGRAL_IMAGE_PARAMETER_NUMBER;
+        case DIFFERENCE_GAUSSIANS:        return DIFFERENCE_GAUSSIANS_PARAMETER_NUMBER;
+        case CENSUS_TRANSFORM:            return CENSUS_TRANSFORM_PARAMETER_NUMBER;
+        case SOBEL_OPERATOR:              return SOBEL_OPERATOR_PARAMETER_NUMBER;
+        case MORPHOLOGICAL_DILATE:        return MORPHOLOGICAL_DILATE_PARAMETER_NUMBER;
+        case ADAPTIVE_THRESHOLDING:       return ADAPTIVE_THRESHOLDING_PARAMETER_NUMBER;
+        case HOUGH_LINES:                 return HOUGH_LINES_PARAMETER_NUMBER;
+        case HARRIS_CORNER_STRENGTH:      return HARRIS_CORNER_STRENGTH_PARAMETER_NUMBER;
+        case HISTOGRAM_EQUALIZATION:      return HISTOGRAM_EQUALIZATION_PARAMETER_NUMBER;
+        case LOG:                         return LOG_PARAMETER_NUMBER;
+        case MEDIAN_BLUR:                 return MEDIAN_BLUR_PARAMETER_NUMBER;
+        case DISTANCE_TRANSFORM:          return DISTANCE_TRANSFORM_PARAMETER_NUMBER;
+        case LAPLACIAN_EDGED_ETECTION:    return LAPLACIAN_EDGED_ETECTION_PARAMETER_NUMBER;
+        case RANK_TRANSFORM:              return RANK_TRANSFORM_PARAMETER_NUMBER;
+        case CONVERT:                     return CONVERT_PARAMETER_NUMBER;
+        default: break;
+    }
+
+    return 0;
+} 
+
 /*******************************************************************************
 *  EXTERNALS
 ********************************************************************************/
@@ -94,7 +131,7 @@ class Transform
         /* constructors */
         Transform ( void ); /* default */
         Transform ( TRANFORM_TYPE ); /* default */
-        Transform ( Transform& ); /* copy */
+        Transform ( const Transform& ); /* copy */
         Transform& operator= ( const Transform& ); /* assign */
         ~Transform ( void );
         
@@ -105,8 +142,9 @@ class Transform
         void set_transform_type ( TRANFORM_TYPE );
         TRANFORM_TYPE get_transform_type ( void );
         
+        void set_parameter ( int, double );
         void set_parameters ( std::valarray<double>& );
-        std::valarray<double>& get_paramaters ( void );        
+        std::valarray<double>& get_paramaters ( void );       
         
     private:
         

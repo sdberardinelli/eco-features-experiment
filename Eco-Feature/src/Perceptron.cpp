@@ -1,6 +1,6 @@
 /******************************************************************************
- * Filename      : Classifier.cpp
- * Header File(s): Classifier.hpp
+ * Filename      : Perceptron.cpp
+ * Header File(s): Perceptron.hpp
  * Description   :
  * Authors(s)    : 
  * Date Created  : 
@@ -10,7 +10,7 @@
 /************************************
  * Included Headers 
  ************************************/
-#include "Classifier.hpp"
+#include "Perceptron.hpp"
 
 /************************************
  * Namespaces 
@@ -27,7 +27,7 @@ using namespace std;
 * Arguments    : 
 * Remarks      : 
 ********************************************************************************/
-Classifier::Classifier ( void ) { ; }
+Perceptron::Perceptron ( void ) { ; }
 /*******************************************************************************
 * Constructor  : (Copy)
 * Description  : 
@@ -35,14 +35,14 @@ Classifier::Classifier ( void ) { ; }
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-Classifier::Classifier ( Classifier& obj ) { ; }
+Perceptron::Perceptron ( Perceptron& obj ) { ; }
 /*******************************************************************************
 * Deconstructor: 
 * Description  : 
 * Arguments    : 
 * Remarks      : 
 ********************************************************************************/
-Classifier::~Classifier ( void ) { ; }
+Perceptron::~Perceptron ( void ) { ; }
 /*******************************************************************************
 * Constructor  : (Assignment)
 * Description  : 
@@ -50,7 +50,7 @@ Classifier::~Classifier ( void ) { ; }
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-Classifier& Classifier::operator=( const Classifier& obj ) 
+Perceptron& Perceptron::operator=( const Perceptron& obj ) 
 {
     if (this != &obj) // prevent self-assignment
     {

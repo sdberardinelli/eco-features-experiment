@@ -15,6 +15,7 @@
 ********************************************************************************/
 #include "Subregion.hpp"
 #include "Transform.hpp"
+#include <string>
 
 /*******************************************************************************
 *  DEFINES
@@ -28,6 +29,7 @@
 /*******************************************************************************
 *  DATA TYPES
 ********************************************************************************/
+typedef std::vector<Transforms::Transform> TRANSORMS;
 
 /*******************************************************************************
 *  EXTERNALS
@@ -41,16 +43,26 @@ class Creature
     public: 
         /* constructors */
         Creature ( void ); /* default */
-        Creature ( Creature& ); /* copy */
+        Creature ( const Creature& ); /* copy */
         Creature& operator= ( const Creature& ); /* assign */
         ~Creature ( void );
         /* functions */
         void     initialize ( void );
+    
         void     set_fitness ( double );
-        double   get_fitness ( void );        
+        double   get_fitness ( void ); 
+        
+        void                    set_subregion ( Subregions::Subregion& );
+        Subregions::Subregion&  get_subregion ( void );     
+      
+        void        set_transforms ( TRANSORMS );
+        TRANSORMS & get_transforms ( void );  
+        
+        
+        std::string to_string ( void );
     private:
-        double fitness;
+        double                fitness;
         Subregions::Subregion subregion;
-        std::vector<Transforms::Transform> transorms;
+        TRANSORMS             transforms;
 };
 #endif

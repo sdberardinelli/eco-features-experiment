@@ -1,14 +1,14 @@
 /******************************************************************************
- * Filename      : Classifier.hpp
- * Source File(s): Classifier.cpp
+ * Filename      : Perceptron.hpp
+ * Source File(s): Perceptron.cpp
  * Description   :
  * Authors(s)    : 
  * Date Created  : 
  * Date Modified :
  * Modifier(s)   :
  *******************************************************************************/
-#ifndef CLASSIFIER_H
-#define CLASSIFIER_H
+#ifndef PERCEPTRON_H
+#define PERCEPTRON_H
 
 /*******************************************************************************
 *  INCLUDES
@@ -26,21 +26,21 @@
 *  DATA TYPES
 ********************************************************************************/
 
-/*******************************************************************************
+/******************************************************************************* 
 *  EXTERNALS
 ********************************************************************************/
 
 /*******************************************************************************
 *  CLASS DEFINITIONS
 ********************************************************************************/
-class Classifier
+class Perceptron
 {
     public: 
         /* constructors */
-        Classifier ( void ); /* default */
-        Classifier ( Classifier& ); /* copy */
-        Classifier& operator= ( const Classifier& ); /* assign */
-        ~Classifier ( void );
+        Perceptron ( void ); /* default */
+        Perceptron ( Perceptron& ); /* copy */
+        Perceptron& operator= ( const Perceptron& ); /* assign */
+        ~Perceptron ( void );
         /* functions */
     private:
 };
