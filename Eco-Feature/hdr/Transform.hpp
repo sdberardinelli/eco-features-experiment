@@ -46,8 +46,8 @@ namespace Transforms
 #define RANK_TRANSFORM_PARAMETER_NUMBER 0
 #define CONVERT_PARAMETER_NUMBER 0
     
-#define MINIMUM_TRANFORMS 2
-#define MAXIMUM_TRANFORMS 8
+#define MINIMUM_TRANFORMS 1
+#define MAXIMUM_TRANFORMS 2
 /*******************************************************************************
 *  MACROS
 ********************************************************************************/
@@ -79,8 +79,6 @@ typedef enum _TRANFORM_TYPE {
     MEDIAN_BLUR                 =20,
     DISTANCE_TRANSFORM          =21,
     LAPLACIAN_EDGED_ETECTION    =22,
-    RANK_TRANSFORM              =23,
-    CONVERT                     =24,
     TRANSORM_NUM
 }TRANFORM_TYPE;
 
@@ -110,8 +108,6 @@ inline int ParamterSize ( TRANFORM_TYPE in )
         case MEDIAN_BLUR:                 return MEDIAN_BLUR_PARAMETER_NUMBER;
         case DISTANCE_TRANSFORM:          return DISTANCE_TRANSFORM_PARAMETER_NUMBER;
         case LAPLACIAN_EDGED_ETECTION:    return LAPLACIAN_EDGED_ETECTION_PARAMETER_NUMBER;
-        case RANK_TRANSFORM:              return RANK_TRANSFORM_PARAMETER_NUMBER;
-        case CONVERT:                     return CONVERT_PARAMETER_NUMBER;
         default: break;
     }
 
@@ -173,9 +169,7 @@ class Transform
         void log ( cv::Mat );
         void median_blur ( cv::Mat );
         void distance_transform ( cv::Mat );
-        void laplacian_edged_etection ( cv::Mat );
-        void rank_transform ( cv::Mat );
-        void convert ( cv::Mat );        
+        void laplacian_edged_detection ( cv::Mat );    
 };
 }
 #endif

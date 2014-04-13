@@ -151,7 +151,7 @@ void GA::initialize ( int size )
     
     random_device rd;
     mt19937 rnd(rd());
-    uniform_int_distribution<int> trans_dist(1,TRANSORM_NUM);
+    uniform_int_distribution<int> trans_dist(1,TRANSORM_NUM-1);
     uniform_int_distribution<int> trans1_dist(MINIMUM_TRANFORMS,MAXIMUM_TRANFORMS);
     uniform_int_distribution<int> param_dist(0,360);
     
@@ -185,6 +185,7 @@ void GA::initialize ( int size )
         Subregion subregion(x1,x2,y1,y2);
         current_creature.set_subregion(subregion);
         current_creature.set_transforms(transforms);
+        current_creature.initialize();
         population.push_back(current_creature);
     }
 }
@@ -209,15 +210,20 @@ void GA::run ( int generations )
                  training_images_i++ )
             {
                 cout << population[creature_i].to_string() << endl;
-                ;
                 population[creature_i].perform_transforms(training_images[training_images_i]);
                 population[creature_i].train_perceptron();
+                
+//                imshow("feautre",population[creature_i].get_feature());
+//                waitKey(0);
+//                destroyWindow("feautre");
             }
+
             for ( vector<int>::size_type holding_images_i = 0; 
                  holding_images_i < holding_images.size(); 
                  holding_images_i++ )
             {
-                ;
+                population[creature_i].perform_transforms(holding_images[holding_images]);
+                population[creature_i].output_perceptron();
             }            
         }
     }

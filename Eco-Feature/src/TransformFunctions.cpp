@@ -80,13 +80,17 @@ void Transform::gabor_filter ( Mat src )
     double psi    = paramaters[5]*CV_PI/180;
     
 
-    filter2D(tmp, transformed_image, CV_32F, getGaborKernel(size,
-                                                            sigma,
-                                                            theta,
-                                                            lambda,
-                                                            gamma,
-                                                            psi,
-                                                            CV_32F));   
+    filter2D(tmp, tmp, CV_32F, getGaborKernel(size,
+                               sigma,
+                               theta,
+                               lambda,
+                               gamma,
+                               psi,
+                               CV_32F)); 
+    
+    tmp.convertTo(tmp,CV_8UC1);
+    
+    transformed_image = tmp;
 }
 /*******************************************************************************
 * Function     : 
@@ -125,9 +129,12 @@ void Transform::morphological_erode ( Mat src )
     Size size(2*paramaters[1]+1,2*paramaters[1]+1);
     Point point(paramaters[1],paramaters[1]);
     
-    erode( tmp, transformed_image, getStructuringElement( erosion_type, 
-                                                          size, 
-                                                          point ) );
+    erode( tmp, tmp, getStructuringElement( erosion_type, 
+                                            size, 
+                                            point ) );
+    
+    tmp.convertTo(tmp,CV_8UC1);
+    transformed_image = tmp;
 }
 /*******************************************************************************
 * Function     : 
@@ -184,7 +191,10 @@ void Transform::histogram ( Mat src )
     if ( paramaters.size() != HISTOGRAM_PARAMETER_NUMBER )
         return;
     
-    equalizeHist(tmp, transformed_image);
+    equalizeHist(tmp, tmp);
+    
+    tmp.convertTo(tmp,CV_8UC1);
+    transformed_image = tmp;
 }
 /*******************************************************************************
 * Function     : 
@@ -217,6 +227,7 @@ void Transform::hough_circles ( Mat src )
 
     vector<Vec3f> circles;
 
+    tmp.convertTo(tmp,CV_8UC1);
     /// Apply the Hough Transform to find the circles
     HoughCircles( tmp, 
                   circles, 
@@ -241,6 +252,7 @@ void Transform::hough_circles ( Mat src )
         circle( tmp1, center, radius, Scalar(0,0,255), 3, 8, 0 );
      }    
     
+    tmp1.convertTo(tmp1,CV_8UC1);
     transformed_image = tmp1;
 }
 /*******************************************************************************
@@ -297,61 +309,64 @@ void Transform::discrete_fourier_transform ( Mat src )
         paramaters[0] = 0;
     if ( paramaters[0] > 10 )
         paramaters[0] = 10; 
-   
-    int threshold = paramaters[0];    
     
-    Mat padded;                            //expand input image to optimal size
-    int m = getOptimalDFTSize( tmp.rows );
-    int n = getOptimalDFTSize( tmp.cols ); // on the border add zero values
-    copyMakeBorder(tmp, padded, 0, m - tmp.rows, 0, n - tmp.cols, BORDER_CONSTANT, Scalar::all(0));
-
-    Mat planes[] = {Mat_<float>(padded), Mat::zeros(padded.size(), CV_32F)};
-    Mat complexI;
-    
-    planes[0].convertTo(padded,CV_32F);
-    planes[0].convertTo(planes[1],CV_32F);
-    
-    merge(planes, 2, complexI);         // Add to the expanded another plane with zeros
-
-    dft(complexI, complexI);            // this way the result may fit in the source matrix
-
-    // compute the magnitude and switch to logarithmic scale
-    // => log(1 + sqrt(Re(DFT(I))^2 + Im(DFT(I))^2))
-    split(complexI, planes);                   // planes[0] = Re(DFT(I), planes[1] = Im(DFT(I))
-    magnitude(planes[0], planes[1], planes[0]);// planes[0] = magnitude
-    Mat magI = planes[0];
-
-    magI += Scalar::all(1);                    // switch to logarithmic scale
-    cv::log(magI, magI);
-
-    // crop the spectrum, if it has an odd number of rows or columns
-    magI = magI(Rect(0, 0, magI.cols & -2, magI.rows & -2));
-
-    // rearrange the quadrants of Fourier image  so that the origin is at the image center
-    int cx = magI.cols/2;
-    int cy = magI.rows/2;
-
-    Mat q0(magI, Rect(0, 0, cx, cy));   // Top-Left - Create a ROI per quadrant
-    Mat q1(magI, Rect(cx, 0, cx, cy));  // Top-Right
-    Mat q2(magI, Rect(0, cy, cx, cy));  // Bottom-Left
-    Mat q3(magI, Rect(cx, cy, cx, cy)); // Bottom-Right
-
-    //Mat tmp;                           // swap quadrants (Top-Left with Bottom-Right)
-    q0.copyTo(tmp);
-    q3.copyTo(q0);
-    tmp.copyTo(q3);
-
-    q1.copyTo(tmp);                    // swap quadrant (Top-Right with Bottom-Left)
-    q2.copyTo(q1);
-    tmp.copyTo(q2);
-
-    
-    Mat tmp1(magI.rows,magI.cols,CV_8UC3,Scalar(0,0,0));
-    cv::normalize(magI, tmp1, 0, 1, CV_MINMAX); // Transform the matrix with float values into a
-                                            // viewable image form (float between values 0 and 1).
-
-    
-    transformed_image=tmp1;
+    tmp.convertTo(tmp,CV_8UC1);
+    transformed_image = tmp;    
+//   
+//    int threshold = paramaters[0];    
+//    
+//    Mat padded;                            //expand input image to optimal size
+//    int m = getOptimalDFTSize( tmp.rows );
+//    int n = getOptimalDFTSize( tmp.cols ); // on the border add zero values
+//    copyMakeBorder(tmp, padded, 0, m - tmp.rows, 0, n - tmp.cols, BORDER_CONSTANT, Scalar::all(0));
+//
+//    Mat planes[] = {Mat_<float>(padded), Mat::zeros(padded.size(), CV_32F)};
+//    Mat complexI;
+//    
+//    planes[0].convertTo(padded,CV_32F);
+//    planes[0].convertTo(planes[1],CV_32F);
+//    
+//    merge(planes, 2, complexI);         // Add to the expanded another plane with zeros
+//
+//    dft(complexI, complexI);            // this way the result may fit in the source matrix
+//
+//    // compute the magnitude and switch to logarithmic scale
+//    // => log(1 + sqrt(Re(DFT(I))^2 + Im(DFT(I))^2))
+//    split(complexI, planes);                   // planes[0] = Re(DFT(I), planes[1] = Im(DFT(I))
+//    magnitude(planes[0], planes[1], planes[0]);// planes[0] = magnitude
+//    Mat magI = planes[0];
+//
+//    magI += Scalar::all(1);                    // switch to logarithmic scale
+//    cv::log(magI, magI);
+//
+//    // crop the spectrum, if it has an odd number of rows or columns
+//    magI = magI(Rect(0, 0, magI.cols & -2, magI.rows & -2));
+//
+//    // rearrange the quadrants of Fourier image  so that the origin is at the image center
+//    int cx = magI.cols/2;
+//    int cy = magI.rows/2;
+//
+//    Mat q0(magI, Rect(0, 0, cx, cy));   // Top-Left - Create a ROI per quadrant
+//    Mat q1(magI, Rect(cx, 0, cx, cy));  // Top-Right
+//    Mat q2(magI, Rect(0, cy, cx, cy));  // Bottom-Left
+//    Mat q3(magI, Rect(cx, cy, cx, cy)); // Bottom-Right
+//
+//    //Mat tmp;                           // swap quadrants (Top-Left with Bottom-Right)
+//    q0.copyTo(tmp);
+//    q3.copyTo(q0);
+//    tmp.copyTo(q3);
+//
+//    q1.copyTo(tmp);                    // swap quadrant (Top-Right with Bottom-Left)
+//    q2.copyTo(q1);
+//    tmp.copyTo(q2);
+//
+//    
+//    Mat tmp1(magI.rows,magI.cols,CV_8UC3,Scalar(0,0,0));
+//    cv::normalize(magI, tmp1, 0, 1, CV_MINMAX); // Transform the matrix with float values into a
+//                                            // viewable image form (float between values 0 and 1).
+//
+//    
+//    transformed_image=tmp1;
 }
 /*******************************************************************************
 * Function     : 
@@ -368,7 +383,9 @@ void Transform::square_root ( cv::Mat src )
     if ( paramaters.size() != SQUARE_ROOT_PARAMETER_NUMBER )
         return;        
     
-    cv::sqrt(tmp,transformed_image);
+    cv::sqrt(tmp,tmp);
+    tmp.convertTo(tmp,CV_8UC1);
+    transformed_image = tmp;
 }
 /*******************************************************************************
 * Function     : 
@@ -396,6 +413,7 @@ void Transform::canny_edge ( Mat src )
     
     Canny( tmp, tmp, threshold, threshold*3, 3 );
     
+    tmp.convertTo(tmp,CV_8UC1);
     transformed_image = tmp;   
 }
 /*******************************************************************************
@@ -423,6 +441,8 @@ void Transform::integral_image ( cv::Mat src )
     Mat tmp1, tmp2, tmp3;
     
     integral(src,tmp1,tmp2,tmp3,CV_32F);
+    
+    tmp1.convertTo(tmp1,CV_8UC1);
     
     switch ( type )
     {
@@ -475,8 +495,9 @@ void Transform::difference_gaussians ( Mat src )
     GaussianBlur(tmp, g1, Size(kern1,kern1), 0);
     GaussianBlur(tmp, g2, Size(kern2,kern2), 0);
     
-    transformed_image = g1-g2;
-    
+    tmp = g1-g2;
+    tmp.convertTo(tmp,CV_8UC1);
+    transformed_image = tmp;
 }
 /*******************************************************************************
 * Function     : 
@@ -485,10 +506,9 @@ void Transform::difference_gaussians ( Mat src )
 * Returns      : 
 * Remarks      : http://hangyinuml.wordpress.com/2012/09/08/census-transform-c-implementation/
 ********************************************************************************/
-void Transform::census_transform ( cv::Mat src )
+void Transform::census_transform ( Mat src )
 {
-    Mat tmp;    
-    src.convertTo(tmp, CV_8U, 1.0/255.0, 0);    
+    Mat tmp = src,tmp1; 
     
     if ( paramaters.size() != CENSUS_TRANSFORM_PARAMETER_NUMBER )
         return;  
@@ -502,7 +522,7 @@ void Transform::census_transform ( cv::Mat src )
         paramaters[0] = 25;     
     
     Size imgSize = tmp.size();
-    transformed_image = Mat::zeros(imgSize, CV_8U);
+    tmp1 = Mat::zeros(imgSize, CV_8U);
 
     unsigned int census = 0;
     unsigned int bit = 0;
@@ -534,9 +554,13 @@ void Transform::census_transform ( cv::Mat src )
           }
         }
 
-       transformed_image.ptr<uchar>(x)[y] = census;
+       tmp1.ptr<uchar>(x)[y] = census;
       }
     } 
+    
+    tmp1.convertTo(tmp1,CV_8UC1);
+    
+    transformed_image = tmp1;
 }
 /*******************************************************************************
 * Function     : 
@@ -609,7 +633,10 @@ void Transform::sobel_operator ( Mat src )
     convertScaleAbs( grad_y, abs_grad_y );
 
     /// Total Gradient (approximate)
-    addWeighted( abs_grad_x, x_weight, abs_grad_y, y_weight, 0, transformed_image );
+    addWeighted( abs_grad_x, x_weight, abs_grad_y, y_weight, 0, tmp );
+    
+    tmp.convertTo(tmp,CV_8UC1);
+    transformed_image = tmp;
 }
 /*******************************************************************************
 * Function     : 
@@ -647,9 +674,12 @@ void Transform::morphological_dilate ( Mat src )
     Size size(2*paramaters[1]+1,2*paramaters[1]+1);
     Point point(paramaters[1],paramaters[1]);
     
-    dilate( tmp, transformed_image, getStructuringElement( dilate_type, 
-                                                           size, 
-                                                           point ) );    
+    dilate( tmp, tmp, getStructuringElement( dilate_type, 
+                                             size, 
+                                             point ) );    
+    
+    tmp.convertTo(tmp,CV_8UC1);
+    transformed_image = tmp;
 }
 /*******************************************************************************
 * Function     : 
@@ -698,12 +728,9 @@ void Transform::adaptive_thresholding ( Mat src )
     int blocksize = paramaters[3];
     int c = paramaters[4];
     
-    
-    adaptiveThreshold( tmp, transformed_image, threshold,
-                                               method,
-                                               type,
-                                               blocksize,
-                                               c);
+    src.convertTo(tmp,CV_8UC1);
+    adaptiveThreshold( tmp, tmp, threshold, method, type, blocksize, c);
+    transformed_image = tmp;
 }
 /*******************************************************************************
 * Function     : 
@@ -738,6 +765,7 @@ void Transform::hough_lines ( Mat src )
     int minlinelength = paramaters[1];
     int maxlinegap = paramaters[2];
     
+    tmp.convertTo(tmp,CV_8UC1);
     Canny( tmp, tmp, threshold, threshold*4, 3 );   
     
     vector<Vec4i> lines;
@@ -755,6 +783,7 @@ void Transform::hough_lines ( Mat src )
                                  CV_AA);
     }    
     
+    tmp1.convertTo(tmp1,CV_8UC1);
     transformed_image = tmp1;
 }
 /*******************************************************************************
@@ -796,6 +825,7 @@ void Transform::harris_corner_strength ( Mat src )
     
     convertScaleAbs( tmp, tmp );
     
+    tmp.convertTo(tmp,CV_8UC1);
     transformed_image = tmp;
 }
 /*******************************************************************************
@@ -812,7 +842,9 @@ void Transform::histogram_equalization ( Mat src )
     if ( paramaters.size() != HISTOGRAM_EQUALIZATION_PARAMETER_NUMBER )
         return;      
     
-    equalizeHist( tmp, transformed_image );
+    src.convertTo(tmp,CV_8UC1);
+    equalizeHist( tmp, tmp );
+    transformed_image = tmp;
 }
 /*******************************************************************************
 * Function     : 
@@ -831,6 +863,7 @@ void Transform::log ( Mat src )
     src.convertTo(tmp,CV_32F);
     cv::log(tmp, tmp);
     
+    tmp.convertTo(tmp,CV_8UC1);
     transformed_image = tmp;
 }
 /*******************************************************************************
@@ -871,15 +904,15 @@ void Transform::median_blur ( Mat src )
 ********************************************************************************/
 void Transform::distance_transform ( Mat src )
 {
-    Mat tmp = src;
+    Mat tmp1,tmp = src;
     
     if ( paramaters.size() != DISTANCE_TRANSFORM_PARAMETER_NUMBER )
         return;    
 
-    if ( paramaters[0] < 1 )
-        paramaters[0] = 1;
-    if ( paramaters[0] > 7 )
-        paramaters[0] = 7; 
+    if ( paramaters[0] < 180 )
+        paramaters[0] = 0;
+    if ( paramaters[0] >= 180 )
+        paramaters[0] = 1; 
     if ( paramaters[1] < 120 )
         paramaters[1] = 3;
     if ( paramaters[1] >= 120 && paramaters[1] <= 240)
@@ -895,11 +928,13 @@ void Transform::distance_transform ( Mat src )
     int mask = paramaters[1];
     int thresh = paramaters[2];
     
+    tmp.convertTo(tmp1,CV_32FC1);
     threshold(tmp, tmp, thresh, 255, CV_THRESH_BINARY);
-    distanceTransform(tmp, tmp, dist, mask); 
-    cv::normalize(transformed_image, tmp, 0, 1.0, NORM_MINMAX);
+    distanceTransform(tmp, tmp1, dist, mask); 
+    cv::normalize(tmp1, tmp1, 0, 1.0, NORM_MINMAX);
     
-    transformed_image = tmp;
+    tmp1.convertTo(tmp1,CV_8U);
+    transformed_image = tmp1;
 }
 /*******************************************************************************
 * Function     : 
@@ -908,7 +943,7 @@ void Transform::distance_transform ( Mat src )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-void Transform::laplacian_edged_etection ( cv::Mat src )
+void Transform::laplacian_edged_detection ( cv::Mat src )
 {
     Mat tmp = src;
     
@@ -937,38 +972,9 @@ void Transform::laplacian_edged_etection ( cv::Mat src )
     int scale = paramaters[1];
     int delta = paramaters[2];
 
-    Laplacian( tmp, transformed_image, CV_16S, kernel_size, scale, delta, BORDER_DEFAULT );
-    convertScaleAbs( transformed_image, transformed_image );
-}
-/*******************************************************************************
-* Function     : 
-* Description  : 
-* Arguments    : 
-* Returns      : 
-* Remarks      : 
-********************************************************************************/
-void Transform::rank_transform ( Mat src )
-{
-    Mat tmp = src;
+    Laplacian( tmp, tmp, CV_16S, kernel_size, scale, delta, BORDER_DEFAULT );
+    convertScaleAbs( tmp, tmp );
     
-    if ( paramaters.size() != RANK_TRANSFORM_PARAMETER_NUMBER )
-        return;  
-    
-    transformed_image = tmp;    
-}
-/*******************************************************************************
-* Function     : 
-* Description  : 
-* Arguments    : 
-* Returns      : 
-* Remarks      : 
-********************************************************************************/
-void Transform::convert ( Mat src )
-{
-    Mat tmp = src;
-    
-    if ( paramaters.size() != CONVERT_PARAMETER_NUMBER )
-        return;      
-    
+    tmp.convertTo(tmp,CV_8UC1);
     transformed_image = tmp;
 }

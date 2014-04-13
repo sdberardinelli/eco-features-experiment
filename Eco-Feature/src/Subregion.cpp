@@ -106,7 +106,11 @@ Subregion::Subregion ( const Subregion& obj )
 * Arguments    : 
 * Remarks      : 
 ********************************************************************************/
-Subregion::~Subregion ( void ) { ; }
+Subregion::~Subregion ( void )
+{ 
+    this->original.release();
+    this->subregion.release();
+}
 /*******************************************************************************
 * Constructor  : (Assignment)
 * Description  : 
@@ -219,6 +223,30 @@ valarray<int> Subregion::get_subregion_values ( void )
     subregion_values[2] = y1;
     subregion_values[3] = y2;    
     return subregion_values;
+}
+/*******************************************************************************
+* Function     : 
+* Description  : 
+* Arguments    : 
+* Returns      : 
+* Remarks      : 
+********************************************************************************/
+int Subregion::get_area ( void )
+{
+    Rect crop(x2-x1, y2-y1, x1, y1);    
+    return crop.area();
+}
+/*******************************************************************************
+* Function     : 
+* Description  : 
+* Arguments    : 
+* Returns      : 
+* Remarks      : 
+********************************************************************************/
+Rect Subregion::get_rect ( void )
+{
+    Rect rect(x2-x1, y2-y1, x1, y1);    
+    return rect;
 }
 /*******************************************************************************
 * Function     : 

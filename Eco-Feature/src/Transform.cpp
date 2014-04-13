@@ -61,7 +61,10 @@ Transform::Transform ( const Transform& obj )
 * Arguments    : 
 * Remarks      : 
 ********************************************************************************/
-Transform::~Transform ( void ) { ; }
+Transform::~Transform ( void )
+{ 
+    paramaters.resize(0);
+}
 /*******************************************************************************
 * Constructor  : (Assignment)
 * Description  : 
@@ -223,13 +226,7 @@ void Transform::perform_transform ( Mat src )
             distance_transform(src);
             break;
         case LAPLACIAN_EDGED_ETECTION:
-            laplacian_edged_etection(src);
-            break;
-        case RANK_TRANSFORM:
-            rank_transform(src);
-            break;
-        case CONVERT:
-            convert(src);
+            laplacian_edged_detection(src);
             break;
         default:
             transformed_image = src;
@@ -311,13 +308,7 @@ void Transform::perform_transform ( Mat src, TRANFORM_TYPE _transform_type )
             distance_transform(src);
             break;
         case LAPLACIAN_EDGED_ETECTION:
-            laplacian_edged_etection(src);
-            break;
-        case RANK_TRANSFORM:
-            rank_transform(src);
-            break;
-        case CONVERT:
-            convert(src);
+            laplacian_edged_detection(src);
             break;
         default:
             transformed_image = src;

@@ -22,7 +22,6 @@
 /*******************************************************************************
 *  DEFINES
 ********************************************************************************/
-#define MAX_TRANSFORMS 8
 
 /*******************************************************************************
 *  MACROS
@@ -62,9 +61,11 @@ class Creature
         void        perform_transforms ( cv::Mat );
         void        train_perceptron ( void );
         
+        cv::Mat&    get_feature ( void );
         
         std::string to_string ( void );
     private:
+        cv::Mat               feature;
         double                fitness;
         Subregions::Subregion subregion;
         TRANSORMS             transforms;

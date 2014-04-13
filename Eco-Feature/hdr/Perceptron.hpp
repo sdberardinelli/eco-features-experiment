@@ -13,12 +13,11 @@
 /*******************************************************************************
 *  INCLUDES
 ********************************************************************************/
-#include <valarray>
+#include <vector>
 
 /*******************************************************************************
 *  DEFINES
 ********************************************************************************/
-#define LEARNING_RATE 0.1
 
 /*******************************************************************************
 *  MACROS
@@ -46,20 +45,32 @@ class Perceptron
         /* functions */
         void train ( int );
         
+        std::vector<double>& get_weights ( void );
+        void set_weights ( std::vector<double>& );
+        
+        std::vector<double>& get_inputs ( void );
+        void set_inputs ( std::vector<double>& );
+        
         double get_output ( void );
         void set_output ( double );
         
+        double get_bias ( void );
+        void set_bias ( double );
         
-        void set_weight_size ( int );
+        double get_learningrate ( void );
+        void set_learningrate ( double );      
         
-        std::valarray<double>& get_weights ( void );
-        void set_weights ( std::valarray<double>& );
-        
-        double compute_coefficient ( double );
+        double get_threshold ( void );
+        void set_threshold ( double );         
+
+        int compute_output ( void );
         
     private:
-        double                learning_rate;
-        std::valarray<double> weigths;
-        double                output;
+        double                 bias;
+        double                 learning_rate;
+        double                 threshold;
+        std::vector<double>    weights;
+        std::vector<double>    inputs;
+        double                 output;
 };
 #endif

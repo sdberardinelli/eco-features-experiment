@@ -12,7 +12,8 @@
  ************************************/
 #include "Perceptron.hpp"
 #include <cmath>
-#include <valarray>
+#include <vector>
+#include <iostream>
 
 /************************************
  * Namespaces 
@@ -29,10 +30,7 @@ using namespace std;
 * Arguments    : 
 * Remarks      : 
 ********************************************************************************/
-Perceptron::Perceptron ( void )
-{ 
-    learning_rate = LEARNING_RATE;
-}
+Perceptron::Perceptron ( void ) { ; }
 /*******************************************************************************
 * Constructor  : (Copy)
 * Description  : 
@@ -42,8 +40,12 @@ Perceptron::Perceptron ( void )
 ********************************************************************************/
 Perceptron::Perceptron ( Perceptron& obj )
 { 
-     this->output = obj.output;
-     this->weigths = obj.weigths;
+    this->bias = obj.bias;
+    this->learning_rate = obj.learning_rate;
+    this->threshold = obj.threshold;
+    this->weights = obj.weights;
+    this->inputs = obj.inputs;
+    this->output = obj.output;
 }
 /*******************************************************************************
 * Deconstructor: 
@@ -53,7 +55,8 @@ Perceptron::Perceptron ( Perceptron& obj )
 ********************************************************************************/
 Perceptron::~Perceptron ( void )
 { 
-    weigths.resize(0);
+    weights.resize(0);
+    inputs.resize(0);
 }
 /*******************************************************************************
 * Constructor  : (Assignment)
@@ -66,8 +69,12 @@ Perceptron& Perceptron::operator=( const Perceptron& obj )
 {
     if (this != &obj) // prevent self-assignment
     {
+        this->bias = obj.bias;
+        this->learning_rate = obj.learning_rate;
+        this->threshold = obj.threshold;
+        this->weights = obj.weights;
+        this->inputs = obj.inputs;
         this->output = obj.output;
-        this->weigths = obj.weigths;
     }
     return *this;
 }
@@ -78,9 +85,9 @@ Perceptron& Perceptron::operator=( const Perceptron& obj )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-void Perceptron::set_weights ( valarray<double>& _weigths )
+void Perceptron::set_weights ( vector<double>& _weigths )
 {
-    weigths = _weigths;
+    weights = _weigths;  
 }
 /*******************************************************************************
 * Function     : 
@@ -89,9 +96,9 @@ void Perceptron::set_weights ( valarray<double>& _weigths )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-valarray<double>& Perceptron::get_weights ( void )
+vector<double>& Perceptron::get_weights ( void )
 {
-    return weigths;
+    return weights;
 }
 /*******************************************************************************
 * Function     : 
@@ -100,9 +107,20 @@ valarray<double>& Perceptron::get_weights ( void )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-void Perceptron::set_weight_size ( int _size )
+void Perceptron::set_inputs ( vector<double>& _input )
 {
-    weigths.resize(_size);
+    inputs = _input; 
+}
+/*******************************************************************************
+* Function     : 
+* Description  : 
+* Arguments    : 
+* Returns      : 
+* Remarks      : 
+********************************************************************************/
+vector<double>& Perceptron::get_inputs ( void )
+{
+    return inputs;
 }
 /*******************************************************************************
 * Function     : 
@@ -133,13 +151,9 @@ double Perceptron::get_output ( void )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-double Perceptron::compute_coefficient ( double _delta_w )
+void Perceptron::set_bias ( double _bias )
 {
-    double _coefficient;
-    
-    _coefficient = 0.5*log((1.0-_delta_w)/_delta_w);
-    
-    return _coefficient;
+    bias = _bias;
 }
 /*******************************************************************************
 * Function     : 
@@ -148,12 +162,98 @@ double Perceptron::compute_coefficient ( double _delta_w )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-void Perceptron::train ( int bias )
+double Perceptron::get_bias ( void )
 {
-    for (auto it = begin(weigths); it != end(weigths); ++it)
+    return bias;
+}
+/*******************************************************************************
+* Function     : 
+* Description  : 
+* Arguments    : 
+* Returns      : 
+* Remarks      : 
+********************************************************************************/
+void Perceptron::set_learningrate ( double _learning_rate )
+{
+    learning_rate = _learning_rate;
+}
+/*******************************************************************************
+* Function     : 
+* Description  : 
+* Arguments    : 
+* Returns      : 
+* Remarks      : 
+********************************************************************************/
+double Perceptron::get_learningrate ( void )
+{
+    return learning_rate;
+}
+/*******************************************************************************
+* Function     : 
+* Description  : 
+* Arguments    : 
+* Returns      : 
+* Remarks      : 
+********************************************************************************/
+void Perceptron::set_threshold ( double _threshold )
+{
+    threshold = _threshold;
+}
+/*******************************************************************************
+* Function     : 
+* Description  : 
+* Arguments    : 
+* Returns      : 
+* Remarks      : 
+********************************************************************************/
+double Perceptron::get_threshold ( void )
+{
+    return threshold;
+}
+/*******************************************************************************
+* Function     : 
+* Description  : 
+* Arguments    : 
+* Returns      : 
+* Remarks      : 
+********************************************************************************/
+int Perceptron::compute_output ( void )
+{
+    int output = 0;
+    
+    if (weights.size() != inputs.size() )
+        return output;
+    
+    for ( vector<int>::size_type i = 0; i < inputs.size(); i++ )
     {
-        ;//cout << ' ' << *it;
+        output += weights[i]*inputs[i];
     }
+    
+    if ( output + bias > threshold )
+    {
+        output = 1;
+    }
+    else
+    {
+        output = 0;
+    }
+    
+    return output;
+}
+/*******************************************************************************
+* Function     : 
+* Description  : 
+* Arguments    : 
+* Returns      : 
+* Remarks      : 
+********************************************************************************/
+void Perceptron::train ( int goal )
+{
+    for ( vector<int>::size_type i = 0; i < weights.size(); i++ )    
+    {
+        weights[i] += (goal-output)*learning_rate*inputs[i];
+    }
+    output = compute_output();          
 }
 /*******************************************************************************
 * Function     : 

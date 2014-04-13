@@ -56,8 +56,9 @@ class Subregion
         void    set_subregion ( cv::Mat, int,int,int,int );
         void    set_subregion ( int,int,int,int );
         cv::Mat get_subregion ( void );   
-        std::valarray<int>
-        get_subregion_values ( void );
+        std::valarray<int> get_subregion_values ( void );
+        int get_area ( void );
+        cv::Rect get_rect ( void );
         
     private:
         
