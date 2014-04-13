@@ -21,8 +21,8 @@
 ********************************************************************************/
 namespace Subregions
 {
-#define MAXIMUM_WIDTH  112
-#define MAXIMUM_HEIGHT 200
+#define MAXIMUM_WIDTH  1000
+#define MAXIMUM_HEIGHT 749
     
 /*******************************************************************************
 *  MACROS

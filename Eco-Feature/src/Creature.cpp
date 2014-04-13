@@ -11,11 +11,16 @@
  * Included Headers 
  ************************************/
 #include "Creature.hpp"
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <iostream>
 
 /************************************
  * Namespaces 
  ************************************/
 using namespace std;
+using namespace cv;
 
 /************************************
  * Local Variables 
@@ -47,7 +52,10 @@ Creature::Creature ( const Creature& obj )
 * Arguments    : 
 * Remarks      : 
 ********************************************************************************/
-Creature::~Creature ( void ) { ; }
+Creature::~Creature ( void )
+{ 
+    transforms.clear();
+}
 /*******************************************************************************
 * Constructor  : (Assignment)
 * Description  : 
@@ -141,6 +149,40 @@ void Creature::set_transforms ( TRANSORMS _transorms )
 TRANSORMS & Creature::get_transforms ( void )
 {
     return transforms;
+}
+/*******************************************************************************
+* Function     : 
+* Description  : 
+* Arguments    : 
+* Returns      : 
+* Remarks      : 
+********************************************************************************/
+void Creature::perform_transforms ( Mat _image )
+{    
+    Mat image;
+    cvtColor(_image, image, CV_BGR2GRAY);
+        
+    subregion.set_original(image);
+    image = subregion.get_subregion();
+        
+    for ( vector<int>::size_type i = 0; i < transforms.size();  i++ )
+    {
+        cout << "performing " << transforms[i].get_transform_type() << endl;
+        
+        transforms[i].perform_transform(image);
+        image = transforms[i].get_transform();    
+    }
+}
+/*******************************************************************************
+* Function     : 
+* Description  : 
+* Arguments    : 
+* Returns      : 
+* Remarks      : 
+********************************************************************************/
+void Creature::train_perceptron ( void )
+{
+    perceptron.train(1);
 }
 /*******************************************************************************
 * Function     : 

@@ -17,7 +17,810 @@
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
                    projectFiles="true">
-      <itemPath>data/image.jpg</itemPath>
+      <logicalFolder name="holding" displayName="holding" projectFiles="true">
+        <itemPath>data/holding/0401.jpg</itemPath>
+        <itemPath>data/holding/0402.jpg</itemPath>
+        <itemPath>data/holding/0403.jpg</itemPath>
+        <itemPath>data/holding/0404.jpg</itemPath>
+        <itemPath>data/holding/0405.jpg</itemPath>
+        <itemPath>data/holding/0406.jpg</itemPath>
+        <itemPath>data/holding/0407.jpg</itemPath>
+        <itemPath>data/holding/0408.jpg</itemPath>
+        <itemPath>data/holding/0409.jpg</itemPath>
+        <itemPath>data/holding/0410.jpg</itemPath>
+        <itemPath>data/holding/0411.jpg</itemPath>
+        <itemPath>data/holding/0412.jpg</itemPath>
+        <itemPath>data/holding/0413.jpg</itemPath>
+        <itemPath>data/holding/0414.jpg</itemPath>
+        <itemPath>data/holding/0415.jpg</itemPath>
+        <itemPath>data/holding/0416.jpg</itemPath>
+        <itemPath>data/holding/0417.jpg</itemPath>
+        <itemPath>data/holding/0418.jpg</itemPath>
+        <itemPath>data/holding/0419.jpg</itemPath>
+        <itemPath>data/holding/0420.jpg</itemPath>
+        <itemPath>data/holding/0421.jpg</itemPath>
+        <itemPath>data/holding/0422.jpg</itemPath>
+        <itemPath>data/holding/0423.jpg</itemPath>
+        <itemPath>data/holding/0424.jpg</itemPath>
+        <itemPath>data/holding/0425.jpg</itemPath>
+        <itemPath>data/holding/0426.jpg</itemPath>
+        <itemPath>data/holding/0427.jpg</itemPath>
+        <itemPath>data/holding/0428.jpg</itemPath>
+        <itemPath>data/holding/0429.jpg</itemPath>
+        <itemPath>data/holding/0430.jpg</itemPath>
+        <itemPath>data/holding/0431.jpg</itemPath>
+        <itemPath>data/holding/0432.jpg</itemPath>
+        <itemPath>data/holding/0433.jpg</itemPath>
+        <itemPath>data/holding/0434.jpg</itemPath>
+        <itemPath>data/holding/0435.jpg</itemPath>
+        <itemPath>data/holding/0436.jpg</itemPath>
+        <itemPath>data/holding/0437.jpg</itemPath>
+        <itemPath>data/holding/0438.jpg</itemPath>
+        <itemPath>data/holding/0439.jpg</itemPath>
+        <itemPath>data/holding/0440.jpg</itemPath>
+        <itemPath>data/holding/0441.jpg</itemPath>
+        <itemPath>data/holding/0442.jpg</itemPath>
+        <itemPath>data/holding/0443.jpg</itemPath>
+        <itemPath>data/holding/0444.jpg</itemPath>
+        <itemPath>data/holding/0445.jpg</itemPath>
+        <itemPath>data/holding/0446.jpg</itemPath>
+        <itemPath>data/holding/0447.jpg</itemPath>
+        <itemPath>data/holding/0448.jpg</itemPath>
+        <itemPath>data/holding/0449.jpg</itemPath>
+        <itemPath>data/holding/0450.jpg</itemPath>
+        <itemPath>data/holding/0451.jpg</itemPath>
+        <itemPath>data/holding/0452.jpg</itemPath>
+        <itemPath>data/holding/0453.jpg</itemPath>
+        <itemPath>data/holding/0454.jpg</itemPath>
+        <itemPath>data/holding/0455.jpg</itemPath>
+        <itemPath>data/holding/0456.jpg</itemPath>
+        <itemPath>data/holding/0457.jpg</itemPath>
+        <itemPath>data/holding/0458.jpg</itemPath>
+        <itemPath>data/holding/0459.jpg</itemPath>
+        <itemPath>data/holding/0460.jpg</itemPath>
+        <itemPath>data/holding/0461.jpg</itemPath>
+        <itemPath>data/holding/0462.jpg</itemPath>
+        <itemPath>data/holding/0463.jpg</itemPath>
+        <itemPath>data/holding/0464.jpg</itemPath>
+        <itemPath>data/holding/0465.jpg</itemPath>
+        <itemPath>data/holding/0466.jpg</itemPath>
+        <itemPath>data/holding/0467.jpg</itemPath>
+        <itemPath>data/holding/0468.jpg</itemPath>
+        <itemPath>data/holding/0469.jpg</itemPath>
+        <itemPath>data/holding/0470.jpg</itemPath>
+        <itemPath>data/holding/0471.jpg</itemPath>
+        <itemPath>data/holding/0472.jpg</itemPath>
+        <itemPath>data/holding/0473.jpg</itemPath>
+        <itemPath>data/holding/0474.jpg</itemPath>
+        <itemPath>data/holding/0475.jpg</itemPath>
+        <itemPath>data/holding/0476.jpg</itemPath>
+        <itemPath>data/holding/0477.jpg</itemPath>
+        <itemPath>data/holding/0478.jpg</itemPath>
+        <itemPath>data/holding/0479.jpg</itemPath>
+        <itemPath>data/holding/0480.jpg</itemPath>
+        <itemPath>data/holding/0481.jpg</itemPath>
+        <itemPath>data/holding/0482.jpg</itemPath>
+        <itemPath>data/holding/0483.jpg</itemPath>
+        <itemPath>data/holding/0484.jpg</itemPath>
+        <itemPath>data/holding/0485.jpg</itemPath>
+        <itemPath>data/holding/0486.jpg</itemPath>
+        <itemPath>data/holding/0487.jpg</itemPath>
+        <itemPath>data/holding/0488.jpg</itemPath>
+        <itemPath>data/holding/0489.jpg</itemPath>
+        <itemPath>data/holding/0490.jpg</itemPath>
+        <itemPath>data/holding/0491.jpg</itemPath>
+        <itemPath>data/holding/0492.jpg</itemPath>
+        <itemPath>data/holding/0493.jpg</itemPath>
+        <itemPath>data/holding/0494.jpg</itemPath>
+        <itemPath>data/holding/0495.jpg</itemPath>
+        <itemPath>data/holding/0496.jpg</itemPath>
+        <itemPath>data/holding/0497.jpg</itemPath>
+        <itemPath>data/holding/0498.jpg</itemPath>
+        <itemPath>data/holding/0499.jpg</itemPath>
+        <itemPath>data/holding/0500.jpg</itemPath>
+        <itemPath>data/holding/0501.jpg</itemPath>
+        <itemPath>data/holding/0502.jpg</itemPath>
+        <itemPath>data/holding/0503.jpg</itemPath>
+        <itemPath>data/holding/0504.jpg</itemPath>
+        <itemPath>data/holding/0505.jpg</itemPath>
+        <itemPath>data/holding/0506.jpg</itemPath>
+        <itemPath>data/holding/0507.jpg</itemPath>
+        <itemPath>data/holding/0508.jpg</itemPath>
+        <itemPath>data/holding/0509.jpg</itemPath>
+        <itemPath>data/holding/0510.jpg</itemPath>
+        <itemPath>data/holding/0511.jpg</itemPath>
+        <itemPath>data/holding/0512.jpg</itemPath>
+        <itemPath>data/holding/0513.jpg</itemPath>
+        <itemPath>data/holding/0514.jpg</itemPath>
+        <itemPath>data/holding/0515.jpg</itemPath>
+        <itemPath>data/holding/0516.jpg</itemPath>
+        <itemPath>data/holding/0517.jpg</itemPath>
+        <itemPath>data/holding/0518.jpg</itemPath>
+        <itemPath>data/holding/0519.jpg</itemPath>
+        <itemPath>data/holding/0520.jpg</itemPath>
+        <itemPath>data/holding/0521.jpg</itemPath>
+        <itemPath>data/holding/0522.jpg</itemPath>
+        <itemPath>data/holding/0523.jpg</itemPath>
+        <itemPath>data/holding/0524.jpg</itemPath>
+        <itemPath>data/holding/0525.jpg</itemPath>
+        <itemPath>data/holding/0526.jpg</itemPath>
+        <itemPath>data/holding/0527.jpg</itemPath>
+        <itemPath>data/holding/0528.jpg</itemPath>
+        <itemPath>data/holding/0529.jpg</itemPath>
+        <itemPath>data/holding/0530.jpg</itemPath>
+        <itemPath>data/holding/0531.jpg</itemPath>
+        <itemPath>data/holding/0532.jpg</itemPath>
+        <itemPath>data/holding/0533.jpg</itemPath>
+        <itemPath>data/holding/0534.jpg</itemPath>
+        <itemPath>data/holding/0535.jpg</itemPath>
+        <itemPath>data/holding/0536.jpg</itemPath>
+        <itemPath>data/holding/0537.jpg</itemPath>
+        <itemPath>data/holding/0538.jpg</itemPath>
+        <itemPath>data/holding/0539.jpg</itemPath>
+        <itemPath>data/holding/0540.jpg</itemPath>
+        <itemPath>data/holding/0541.jpg</itemPath>
+        <itemPath>data/holding/0542.jpg</itemPath>
+        <itemPath>data/holding/0543.jpg</itemPath>
+        <itemPath>data/holding/0544.jpg</itemPath>
+        <itemPath>data/holding/0545.jpg</itemPath>
+        <itemPath>data/holding/0546.jpg</itemPath>
+        <itemPath>data/holding/0547.jpg</itemPath>
+        <itemPath>data/holding/0548.jpg</itemPath>
+        <itemPath>data/holding/0549.jpg</itemPath>
+        <itemPath>data/holding/0550.jpg</itemPath>
+        <itemPath>data/holding/0551.jpg</itemPath>
+        <itemPath>data/holding/0552.jpg</itemPath>
+        <itemPath>data/holding/0553.jpg</itemPath>
+        <itemPath>data/holding/0554.jpg</itemPath>
+        <itemPath>data/holding/0555.jpg</itemPath>
+        <itemPath>data/holding/0556.jpg</itemPath>
+        <itemPath>data/holding/0557.jpg</itemPath>
+        <itemPath>data/holding/0558.jpg</itemPath>
+        <itemPath>data/holding/0559.jpg</itemPath>
+        <itemPath>data/holding/0560.jpg</itemPath>
+        <itemPath>data/holding/0561.jpg</itemPath>
+        <itemPath>data/holding/0562.jpg</itemPath>
+        <itemPath>data/holding/0563.jpg</itemPath>
+        <itemPath>data/holding/0564.jpg</itemPath>
+        <itemPath>data/holding/0565.jpg</itemPath>
+        <itemPath>data/holding/0566.jpg</itemPath>
+        <itemPath>data/holding/0567.jpg</itemPath>
+        <itemPath>data/holding/0568.jpg</itemPath>
+        <itemPath>data/holding/0569.jpg</itemPath>
+        <itemPath>data/holding/0570.jpg</itemPath>
+        <itemPath>data/holding/0571.jpg</itemPath>
+        <itemPath>data/holding/0572.jpg</itemPath>
+        <itemPath>data/holding/0573.jpg</itemPath>
+        <itemPath>data/holding/0574.jpg</itemPath>
+        <itemPath>data/holding/0575.jpg</itemPath>
+        <itemPath>data/holding/0576.jpg</itemPath>
+        <itemPath>data/holding/0577.jpg</itemPath>
+        <itemPath>data/holding/0578.jpg</itemPath>
+        <itemPath>data/holding/0579.jpg</itemPath>
+        <itemPath>data/holding/0580.jpg</itemPath>
+        <itemPath>data/holding/0581.jpg</itemPath>
+        <itemPath>data/holding/0582.jpg</itemPath>
+        <itemPath>data/holding/0583.jpg</itemPath>
+        <itemPath>data/holding/0584.jpg</itemPath>
+        <itemPath>data/holding/0585.jpg</itemPath>
+        <itemPath>data/holding/0586.jpg</itemPath>
+        <itemPath>data/holding/0587.jpg</itemPath>
+        <itemPath>data/holding/0588.jpg</itemPath>
+        <itemPath>data/holding/0589.jpg</itemPath>
+        <itemPath>data/holding/0590.jpg</itemPath>
+        <itemPath>data/holding/0591.jpg</itemPath>
+        <itemPath>data/holding/0592.jpg</itemPath>
+        <itemPath>data/holding/0593.jpg</itemPath>
+        <itemPath>data/holding/0594.jpg</itemPath>
+        <itemPath>data/holding/0595.jpg</itemPath>
+        <itemPath>data/holding/0596.jpg</itemPath>
+        <itemPath>data/holding/0597.jpg</itemPath>
+        <itemPath>data/holding/0598.jpg</itemPath>
+        <itemPath>data/holding/0599.jpg</itemPath>
+        <itemPath>data/holding/0600.jpg</itemPath>
+        <itemPath>data/holding/0601.jpg</itemPath>
+        <itemPath>data/holding/0602.jpg</itemPath>
+        <itemPath>data/holding/0603.jpg</itemPath>
+        <itemPath>data/holding/0604.jpg</itemPath>
+        <itemPath>data/holding/0605.jpg</itemPath>
+        <itemPath>data/holding/0606.jpg</itemPath>
+        <itemPath>data/holding/0607.jpg</itemPath>
+        <itemPath>data/holding/0608.jpg</itemPath>
+        <itemPath>data/holding/0609.jpg</itemPath>
+        <itemPath>data/holding/0610.jpg</itemPath>
+        <itemPath>data/holding/0611.jpg</itemPath>
+        <itemPath>data/holding/0612.jpg</itemPath>
+        <itemPath>data/holding/0613.jpg</itemPath>
+        <itemPath>data/holding/0614.jpg</itemPath>
+        <itemPath>data/holding/0615.jpg</itemPath>
+        <itemPath>data/holding/0616.jpg</itemPath>
+        <itemPath>data/holding/0617.jpg</itemPath>
+        <itemPath>data/holding/0618.jpg</itemPath>
+        <itemPath>data/holding/0619.jpg</itemPath>
+        <itemPath>data/holding/0620.jpg</itemPath>
+        <itemPath>data/holding/0621.jpg</itemPath>
+        <itemPath>data/holding/0622.jpg</itemPath>
+        <itemPath>data/holding/0623.jpg</itemPath>
+        <itemPath>data/holding/0624.jpg</itemPath>
+        <itemPath>data/holding/0625.jpg</itemPath>
+        <itemPath>data/holding/0626.jpg</itemPath>
+        <itemPath>data/holding/0627.jpg</itemPath>
+        <itemPath>data/holding/0628.jpg</itemPath>
+        <itemPath>data/holding/0629.jpg</itemPath>
+        <itemPath>data/holding/0630.jpg</itemPath>
+        <itemPath>data/holding/0631.jpg</itemPath>
+        <itemPath>data/holding/0632.jpg</itemPath>
+        <itemPath>data/holding/0633.jpg</itemPath>
+        <itemPath>data/holding/0634.jpg</itemPath>
+        <itemPath>data/holding/0635.jpg</itemPath>
+        <itemPath>data/holding/0636.jpg</itemPath>
+        <itemPath>data/holding/0637.jpg</itemPath>
+        <itemPath>data/holding/0638.jpg</itemPath>
+        <itemPath>data/holding/0639.jpg</itemPath>
+        <itemPath>data/holding/0640.jpg</itemPath>
+        <itemPath>data/holding/0641.jpg</itemPath>
+        <itemPath>data/holding/0642.jpg</itemPath>
+        <itemPath>data/holding/0643.jpg</itemPath>
+        <itemPath>data/holding/0644.jpg</itemPath>
+        <itemPath>data/holding/0645.jpg</itemPath>
+        <itemPath>data/holding/0646.jpg</itemPath>
+        <itemPath>data/holding/0647.jpg</itemPath>
+        <itemPath>data/holding/0648.jpg</itemPath>
+        <itemPath>data/holding/0649.jpg</itemPath>
+        <itemPath>data/holding/0650.jpg</itemPath>
+        <itemPath>data/holding/0651.jpg</itemPath>
+        <itemPath>data/holding/0652.jpg</itemPath>
+        <itemPath>data/holding/0653.jpg</itemPath>
+        <itemPath>data/holding/0654.jpg</itemPath>
+        <itemPath>data/holding/0655.jpg</itemPath>
+        <itemPath>data/holding/0656.jpg</itemPath>
+        <itemPath>data/holding/0657.jpg</itemPath>
+        <itemPath>data/holding/0658.jpg</itemPath>
+        <itemPath>data/holding/0659.jpg</itemPath>
+        <itemPath>data/holding/0660.jpg</itemPath>
+        <itemPath>data/holding/0661.jpg</itemPath>
+        <itemPath>data/holding/0662.jpg</itemPath>
+        <itemPath>data/holding/0663.jpg</itemPath>
+        <itemPath>data/holding/0664.jpg</itemPath>
+        <itemPath>data/holding/0665.jpg</itemPath>
+        <itemPath>data/holding/0666.jpg</itemPath>
+        <itemPath>data/holding/0667.jpg</itemPath>
+        <itemPath>data/holding/0668.jpg</itemPath>
+        <itemPath>data/holding/0669.jpg</itemPath>
+        <itemPath>data/holding/0670.jpg</itemPath>
+        <itemPath>data/holding/0671.jpg</itemPath>
+        <itemPath>data/holding/0672.jpg</itemPath>
+        <itemPath>data/holding/0673.jpg</itemPath>
+        <itemPath>data/holding/0674.jpg</itemPath>
+        <itemPath>data/holding/0675.jpg</itemPath>
+        <itemPath>data/holding/0676.jpg</itemPath>
+        <itemPath>data/holding/0677.jpg</itemPath>
+        <itemPath>data/holding/0678.jpg</itemPath>
+        <itemPath>data/holding/0679.jpg</itemPath>
+        <itemPath>data/holding/0680.jpg</itemPath>
+        <itemPath>data/holding/0681.jpg</itemPath>
+        <itemPath>data/holding/0682.jpg</itemPath>
+        <itemPath>data/holding/0683.jpg</itemPath>
+        <itemPath>data/holding/0684.jpg</itemPath>
+        <itemPath>data/holding/0685.jpg</itemPath>
+        <itemPath>data/holding/0686.jpg</itemPath>
+        <itemPath>data/holding/0687.jpg</itemPath>
+        <itemPath>data/holding/0688.jpg</itemPath>
+        <itemPath>data/holding/0689.jpg</itemPath>
+        <itemPath>data/holding/0690.jpg</itemPath>
+        <itemPath>data/holding/0691.jpg</itemPath>
+        <itemPath>data/holding/0692.jpg</itemPath>
+        <itemPath>data/holding/0693.jpg</itemPath>
+        <itemPath>data/holding/0694.jpg</itemPath>
+        <itemPath>data/holding/0695.jpg</itemPath>
+        <itemPath>data/holding/0696.jpg</itemPath>
+        <itemPath>data/holding/0697.jpg</itemPath>
+        <itemPath>data/holding/0698.jpg</itemPath>
+        <itemPath>data/holding/0699.jpg</itemPath>
+        <itemPath>data/holding/0700.jpg</itemPath>
+        <itemPath>data/holding/0701.jpg</itemPath>
+        <itemPath>data/holding/0702.jpg</itemPath>
+        <itemPath>data/holding/0703.jpg</itemPath>
+        <itemPath>data/holding/0704.jpg</itemPath>
+        <itemPath>data/holding/0705.jpg</itemPath>
+        <itemPath>data/holding/0706.jpg</itemPath>
+        <itemPath>data/holding/0707.jpg</itemPath>
+        <itemPath>data/holding/0708.jpg</itemPath>
+        <itemPath>data/holding/0709.jpg</itemPath>
+        <itemPath>data/holding/0710.jpg</itemPath>
+        <itemPath>data/holding/0711.jpg</itemPath>
+        <itemPath>data/holding/0712.jpg</itemPath>
+        <itemPath>data/holding/0713.jpg</itemPath>
+        <itemPath>data/holding/0714.jpg</itemPath>
+        <itemPath>data/holding/0715.jpg</itemPath>
+        <itemPath>data/holding/0716.jpg</itemPath>
+        <itemPath>data/holding/0717.jpg</itemPath>
+        <itemPath>data/holding/0718.jpg</itemPath>
+        <itemPath>data/holding/0719.jpg</itemPath>
+        <itemPath>data/holding/0720.jpg</itemPath>
+        <itemPath>data/holding/0721.jpg</itemPath>
+        <itemPath>data/holding/0722.jpg</itemPath>
+        <itemPath>data/holding/0723.jpg</itemPath>
+        <itemPath>data/holding/0724.jpg</itemPath>
+        <itemPath>data/holding/0725.jpg</itemPath>
+        <itemPath>data/holding/0726.jpg</itemPath>
+        <itemPath>data/holding/0727.jpg</itemPath>
+        <itemPath>data/holding/0728.jpg</itemPath>
+        <itemPath>data/holding/0729.jpg</itemPath>
+        <itemPath>data/holding/0730.jpg</itemPath>
+        <itemPath>data/holding/0731.jpg</itemPath>
+        <itemPath>data/holding/0732.jpg</itemPath>
+        <itemPath>data/holding/0733.jpg</itemPath>
+        <itemPath>data/holding/0734.jpg</itemPath>
+        <itemPath>data/holding/0735.jpg</itemPath>
+        <itemPath>data/holding/0736.jpg</itemPath>
+        <itemPath>data/holding/0737.jpg</itemPath>
+        <itemPath>data/holding/0738.jpg</itemPath>
+        <itemPath>data/holding/0739.jpg</itemPath>
+        <itemPath>data/holding/0740.jpg</itemPath>
+        <itemPath>data/holding/0741.jpg</itemPath>
+        <itemPath>data/holding/0742.jpg</itemPath>
+        <itemPath>data/holding/0743.jpg</itemPath>
+        <itemPath>data/holding/0744.jpg</itemPath>
+        <itemPath>data/holding/0745.jpg</itemPath>
+        <itemPath>data/holding/0746.jpg</itemPath>
+        <itemPath>data/holding/0747.jpg</itemPath>
+        <itemPath>data/holding/0748.jpg</itemPath>
+        <itemPath>data/holding/0749.jpg</itemPath>
+        <itemPath>data/holding/0750.jpg</itemPath>
+        <itemPath>data/holding/0751.jpg</itemPath>
+        <itemPath>data/holding/0752.jpg</itemPath>
+        <itemPath>data/holding/0753.jpg</itemPath>
+        <itemPath>data/holding/0754.jpg</itemPath>
+        <itemPath>data/holding/0755.jpg</itemPath>
+        <itemPath>data/holding/0756.jpg</itemPath>
+        <itemPath>data/holding/0757.jpg</itemPath>
+        <itemPath>data/holding/0758.jpg</itemPath>
+        <itemPath>data/holding/0759.jpg</itemPath>
+        <itemPath>data/holding/0760.jpg</itemPath>
+        <itemPath>data/holding/0761.jpg</itemPath>
+        <itemPath>data/holding/0762.jpg</itemPath>
+        <itemPath>data/holding/0763.jpg</itemPath>
+        <itemPath>data/holding/0764.jpg</itemPath>
+        <itemPath>data/holding/0765.jpg</itemPath>
+        <itemPath>data/holding/0766.jpg</itemPath>
+        <itemPath>data/holding/0767.jpg</itemPath>
+        <itemPath>data/holding/0768.jpg</itemPath>
+        <itemPath>data/holding/0769.jpg</itemPath>
+        <itemPath>data/holding/0770.jpg</itemPath>
+        <itemPath>data/holding/0771.jpg</itemPath>
+        <itemPath>data/holding/0772.jpg</itemPath>
+        <itemPath>data/holding/0773.jpg</itemPath>
+        <itemPath>data/holding/0774.jpg</itemPath>
+        <itemPath>data/holding/0775.jpg</itemPath>
+        <itemPath>data/holding/0776.jpg</itemPath>
+        <itemPath>data/holding/0777.jpg</itemPath>
+        <itemPath>data/holding/0778.jpg</itemPath>
+        <itemPath>data/holding/0779.jpg</itemPath>
+        <itemPath>data/holding/0780.jpg</itemPath>
+        <itemPath>data/holding/0781.jpg</itemPath>
+        <itemPath>data/holding/0782.jpg</itemPath>
+        <itemPath>data/holding/0783.jpg</itemPath>
+        <itemPath>data/holding/0784.jpg</itemPath>
+        <itemPath>data/holding/0785.jpg</itemPath>
+        <itemPath>data/holding/0786.jpg</itemPath>
+        <itemPath>data/holding/0787.jpg</itemPath>
+        <itemPath>data/holding/0788.jpg</itemPath>
+        <itemPath>data/holding/0789.jpg</itemPath>
+        <itemPath>data/holding/0790.jpg</itemPath>
+        <itemPath>data/holding/0791.jpg</itemPath>
+        <itemPath>data/holding/0792.jpg</itemPath>
+        <itemPath>data/holding/0793.jpg</itemPath>
+        <itemPath>data/holding/0794.jpg</itemPath>
+        <itemPath>data/holding/0795.jpg</itemPath>
+        <itemPath>data/holding/0796.jpg</itemPath>
+        <itemPath>data/holding/0797.jpg</itemPath>
+        <itemPath>data/holding/0798.jpg</itemPath>
+        <itemPath>data/holding/0799.jpg</itemPath>
+        <itemPath>data/holding/0800.jpg</itemPath>
+      </logicalFolder>
+      <logicalFolder name="training" displayName="training" projectFiles="true">
+        <itemPath>data/training/0001.jpg</itemPath>
+        <itemPath>data/training/0002.jpg</itemPath>
+        <itemPath>data/training/0003.jpg</itemPath>
+        <itemPath>data/training/0004.jpg</itemPath>
+        <itemPath>data/training/0005.jpg</itemPath>
+        <itemPath>data/training/0006.jpg</itemPath>
+        <itemPath>data/training/0007.jpg</itemPath>
+        <itemPath>data/training/0008.jpg</itemPath>
+        <itemPath>data/training/0009.jpg</itemPath>
+        <itemPath>data/training/0010.jpg</itemPath>
+        <itemPath>data/training/0011.jpg</itemPath>
+        <itemPath>data/training/0012.jpg</itemPath>
+        <itemPath>data/training/0013.jpg</itemPath>
+        <itemPath>data/training/0014.jpg</itemPath>
+        <itemPath>data/training/0015.jpg</itemPath>
+        <itemPath>data/training/0016.jpg</itemPath>
+        <itemPath>data/training/0017.jpg</itemPath>
+        <itemPath>data/training/0018.jpg</itemPath>
+        <itemPath>data/training/0019.jpg</itemPath>
+        <itemPath>data/training/0020.jpg</itemPath>
+        <itemPath>data/training/0021.jpg</itemPath>
+        <itemPath>data/training/0022.jpg</itemPath>
+        <itemPath>data/training/0023.jpg</itemPath>
+        <itemPath>data/training/0024.jpg</itemPath>
+        <itemPath>data/training/0025.jpg</itemPath>
+        <itemPath>data/training/0026.jpg</itemPath>
+        <itemPath>data/training/0027.jpg</itemPath>
+        <itemPath>data/training/0028.jpg</itemPath>
+        <itemPath>data/training/0029.jpg</itemPath>
+        <itemPath>data/training/0030.jpg</itemPath>
+        <itemPath>data/training/0031.jpg</itemPath>
+        <itemPath>data/training/0032.jpg</itemPath>
+        <itemPath>data/training/0033.jpg</itemPath>
+        <itemPath>data/training/0034.jpg</itemPath>
+        <itemPath>data/training/0035.jpg</itemPath>
+        <itemPath>data/training/0036.jpg</itemPath>
+        <itemPath>data/training/0037.jpg</itemPath>
+        <itemPath>data/training/0038.jpg</itemPath>
+        <itemPath>data/training/0039.jpg</itemPath>
+        <itemPath>data/training/0040.jpg</itemPath>
+        <itemPath>data/training/0041.jpg</itemPath>
+        <itemPath>data/training/0042.jpg</itemPath>
+        <itemPath>data/training/0043.jpg</itemPath>
+        <itemPath>data/training/0044.jpg</itemPath>
+        <itemPath>data/training/0045.jpg</itemPath>
+        <itemPath>data/training/0046.jpg</itemPath>
+        <itemPath>data/training/0047.jpg</itemPath>
+        <itemPath>data/training/0048.jpg</itemPath>
+        <itemPath>data/training/0049.jpg</itemPath>
+        <itemPath>data/training/0050.jpg</itemPath>
+        <itemPath>data/training/0051.jpg</itemPath>
+        <itemPath>data/training/0052.jpg</itemPath>
+        <itemPath>data/training/0053.jpg</itemPath>
+        <itemPath>data/training/0054.jpg</itemPath>
+        <itemPath>data/training/0055.jpg</itemPath>
+        <itemPath>data/training/0056.jpg</itemPath>
+        <itemPath>data/training/0057.jpg</itemPath>
+        <itemPath>data/training/0058.jpg</itemPath>
+        <itemPath>data/training/0059.jpg</itemPath>
+        <itemPath>data/training/0060.jpg</itemPath>
+        <itemPath>data/training/0061.jpg</itemPath>
+        <itemPath>data/training/0062.jpg</itemPath>
+        <itemPath>data/training/0063.jpg</itemPath>
+        <itemPath>data/training/0064.jpg</itemPath>
+        <itemPath>data/training/0065.jpg</itemPath>
+        <itemPath>data/training/0066.jpg</itemPath>
+        <itemPath>data/training/0067.jpg</itemPath>
+        <itemPath>data/training/0068.jpg</itemPath>
+        <itemPath>data/training/0069.jpg</itemPath>
+        <itemPath>data/training/0070.jpg</itemPath>
+        <itemPath>data/training/0071.jpg</itemPath>
+        <itemPath>data/training/0072.jpg</itemPath>
+        <itemPath>data/training/0073.jpg</itemPath>
+        <itemPath>data/training/0074.jpg</itemPath>
+        <itemPath>data/training/0075.jpg</itemPath>
+        <itemPath>data/training/0076.jpg</itemPath>
+        <itemPath>data/training/0077.jpg</itemPath>
+        <itemPath>data/training/0078.jpg</itemPath>
+        <itemPath>data/training/0079.jpg</itemPath>
+        <itemPath>data/training/0080.jpg</itemPath>
+        <itemPath>data/training/0081.jpg</itemPath>
+        <itemPath>data/training/0082.jpg</itemPath>
+        <itemPath>data/training/0083.jpg</itemPath>
+        <itemPath>data/training/0084.jpg</itemPath>
+        <itemPath>data/training/0085.jpg</itemPath>
+        <itemPath>data/training/0086.jpg</itemPath>
+        <itemPath>data/training/0087.jpg</itemPath>
+        <itemPath>data/training/0088.jpg</itemPath>
+        <itemPath>data/training/0089.jpg</itemPath>
+        <itemPath>data/training/0090.jpg</itemPath>
+        <itemPath>data/training/0091.jpg</itemPath>
+        <itemPath>data/training/0092.jpg</itemPath>
+        <itemPath>data/training/0093.jpg</itemPath>
+        <itemPath>data/training/0094.jpg</itemPath>
+        <itemPath>data/training/0095.jpg</itemPath>
+        <itemPath>data/training/0096.jpg</itemPath>
+        <itemPath>data/training/0097.jpg</itemPath>
+        <itemPath>data/training/0098.jpg</itemPath>
+        <itemPath>data/training/0099.jpg</itemPath>
+        <itemPath>data/training/0100.jpg</itemPath>
+        <itemPath>data/training/0101.jpg</itemPath>
+        <itemPath>data/training/0102.jpg</itemPath>
+        <itemPath>data/training/0103.jpg</itemPath>
+        <itemPath>data/training/0104.jpg</itemPath>
+        <itemPath>data/training/0105.jpg</itemPath>
+        <itemPath>data/training/0106.jpg</itemPath>
+        <itemPath>data/training/0107.jpg</itemPath>
+        <itemPath>data/training/0108.jpg</itemPath>
+        <itemPath>data/training/0109.jpg</itemPath>
+        <itemPath>data/training/0110.jpg</itemPath>
+        <itemPath>data/training/0111.jpg</itemPath>
+        <itemPath>data/training/0112.jpg</itemPath>
+        <itemPath>data/training/0113.jpg</itemPath>
+        <itemPath>data/training/0114.jpg</itemPath>
+        <itemPath>data/training/0115.jpg</itemPath>
+        <itemPath>data/training/0116.jpg</itemPath>
+        <itemPath>data/training/0117.jpg</itemPath>
+        <itemPath>data/training/0118.jpg</itemPath>
+        <itemPath>data/training/0119.jpg</itemPath>
+        <itemPath>data/training/0120.jpg</itemPath>
+        <itemPath>data/training/0121.jpg</itemPath>
+        <itemPath>data/training/0122.jpg</itemPath>
+        <itemPath>data/training/0123.jpg</itemPath>
+        <itemPath>data/training/0124.jpg</itemPath>
+        <itemPath>data/training/0125.jpg</itemPath>
+        <itemPath>data/training/0126.jpg</itemPath>
+        <itemPath>data/training/0127.jpg</itemPath>
+        <itemPath>data/training/0128.jpg</itemPath>
+        <itemPath>data/training/0129.jpg</itemPath>
+        <itemPath>data/training/0130.jpg</itemPath>
+        <itemPath>data/training/0131.jpg</itemPath>
+        <itemPath>data/training/0132.jpg</itemPath>
+        <itemPath>data/training/0133.jpg</itemPath>
+        <itemPath>data/training/0134.jpg</itemPath>
+        <itemPath>data/training/0135.jpg</itemPath>
+        <itemPath>data/training/0136.jpg</itemPath>
+        <itemPath>data/training/0137.jpg</itemPath>
+        <itemPath>data/training/0138.jpg</itemPath>
+        <itemPath>data/training/0139.jpg</itemPath>
+        <itemPath>data/training/0140.jpg</itemPath>
+        <itemPath>data/training/0141.jpg</itemPath>
+        <itemPath>data/training/0142.jpg</itemPath>
+        <itemPath>data/training/0143.jpg</itemPath>
+        <itemPath>data/training/0144.jpg</itemPath>
+        <itemPath>data/training/0145.jpg</itemPath>
+        <itemPath>data/training/0146.jpg</itemPath>
+        <itemPath>data/training/0147.jpg</itemPath>
+        <itemPath>data/training/0148.jpg</itemPath>
+        <itemPath>data/training/0149.jpg</itemPath>
+        <itemPath>data/training/0150.jpg</itemPath>
+        <itemPath>data/training/0151.jpg</itemPath>
+        <itemPath>data/training/0152.jpg</itemPath>
+        <itemPath>data/training/0153.jpg</itemPath>
+        <itemPath>data/training/0154.jpg</itemPath>
+        <itemPath>data/training/0155.jpg</itemPath>
+        <itemPath>data/training/0156.jpg</itemPath>
+        <itemPath>data/training/0157.jpg</itemPath>
+        <itemPath>data/training/0158.jpg</itemPath>
+        <itemPath>data/training/0159.jpg</itemPath>
+        <itemPath>data/training/0160.jpg</itemPath>
+        <itemPath>data/training/0161.jpg</itemPath>
+        <itemPath>data/training/0162.jpg</itemPath>
+        <itemPath>data/training/0163.jpg</itemPath>
+        <itemPath>data/training/0164.jpg</itemPath>
+        <itemPath>data/training/0165.jpg</itemPath>
+        <itemPath>data/training/0166.jpg</itemPath>
+        <itemPath>data/training/0167.jpg</itemPath>
+        <itemPath>data/training/0168.jpg</itemPath>
+        <itemPath>data/training/0169.jpg</itemPath>
+        <itemPath>data/training/0170.jpg</itemPath>
+        <itemPath>data/training/0171.jpg</itemPath>
+        <itemPath>data/training/0172.jpg</itemPath>
+        <itemPath>data/training/0173.jpg</itemPath>
+        <itemPath>data/training/0174.jpg</itemPath>
+        <itemPath>data/training/0175.jpg</itemPath>
+        <itemPath>data/training/0176.jpg</itemPath>
+        <itemPath>data/training/0177.jpg</itemPath>
+        <itemPath>data/training/0178.jpg</itemPath>
+        <itemPath>data/training/0179.jpg</itemPath>
+        <itemPath>data/training/0180.jpg</itemPath>
+        <itemPath>data/training/0181.jpg</itemPath>
+        <itemPath>data/training/0182.jpg</itemPath>
+        <itemPath>data/training/0183.jpg</itemPath>
+        <itemPath>data/training/0184.jpg</itemPath>
+        <itemPath>data/training/0185.jpg</itemPath>
+        <itemPath>data/training/0186.jpg</itemPath>
+        <itemPath>data/training/0187.jpg</itemPath>
+        <itemPath>data/training/0188.jpg</itemPath>
+        <itemPath>data/training/0189.jpg</itemPath>
+        <itemPath>data/training/0190.jpg</itemPath>
+        <itemPath>data/training/0191.jpg</itemPath>
+        <itemPath>data/training/0192.jpg</itemPath>
+        <itemPath>data/training/0193.jpg</itemPath>
+        <itemPath>data/training/0194.jpg</itemPath>
+        <itemPath>data/training/0195.jpg</itemPath>
+        <itemPath>data/training/0196.jpg</itemPath>
+        <itemPath>data/training/0197.jpg</itemPath>
+        <itemPath>data/training/0198.jpg</itemPath>
+        <itemPath>data/training/0199.jpg</itemPath>
+        <itemPath>data/training/0200.jpg</itemPath>
+        <itemPath>data/training/0201.jpg</itemPath>
+        <itemPath>data/training/0202.jpg</itemPath>
+        <itemPath>data/training/0203.jpg</itemPath>
+        <itemPath>data/training/0204.jpg</itemPath>
+        <itemPath>data/training/0205.jpg</itemPath>
+        <itemPath>data/training/0206.jpg</itemPath>
+        <itemPath>data/training/0207.jpg</itemPath>
+        <itemPath>data/training/0208.jpg</itemPath>
+        <itemPath>data/training/0209.jpg</itemPath>
+        <itemPath>data/training/0210.jpg</itemPath>
+        <itemPath>data/training/0211.jpg</itemPath>
+        <itemPath>data/training/0212.jpg</itemPath>
+        <itemPath>data/training/0213.jpg</itemPath>
+        <itemPath>data/training/0214.jpg</itemPath>
+        <itemPath>data/training/0215.jpg</itemPath>
+        <itemPath>data/training/0216.jpg</itemPath>
+        <itemPath>data/training/0217.jpg</itemPath>
+        <itemPath>data/training/0218.jpg</itemPath>
+        <itemPath>data/training/0219.jpg</itemPath>
+        <itemPath>data/training/0220.jpg</itemPath>
+        <itemPath>data/training/0221.jpg</itemPath>
+        <itemPath>data/training/0222.jpg</itemPath>
+        <itemPath>data/training/0223.jpg</itemPath>
+        <itemPath>data/training/0224.jpg</itemPath>
+        <itemPath>data/training/0225.jpg</itemPath>
+        <itemPath>data/training/0226.jpg</itemPath>
+        <itemPath>data/training/0227.jpg</itemPath>
+        <itemPath>data/training/0228.jpg</itemPath>
+        <itemPath>data/training/0229.jpg</itemPath>
+        <itemPath>data/training/0230.jpg</itemPath>
+        <itemPath>data/training/0231.jpg</itemPath>
+        <itemPath>data/training/0232.jpg</itemPath>
+        <itemPath>data/training/0233.jpg</itemPath>
+        <itemPath>data/training/0234.jpg</itemPath>
+        <itemPath>data/training/0235.jpg</itemPath>
+        <itemPath>data/training/0236.jpg</itemPath>
+        <itemPath>data/training/0237.jpg</itemPath>
+        <itemPath>data/training/0238.jpg</itemPath>
+        <itemPath>data/training/0239.jpg</itemPath>
+        <itemPath>data/training/0240.jpg</itemPath>
+        <itemPath>data/training/0241.jpg</itemPath>
+        <itemPath>data/training/0242.jpg</itemPath>
+        <itemPath>data/training/0243.jpg</itemPath>
+        <itemPath>data/training/0244.jpg</itemPath>
+        <itemPath>data/training/0245.jpg</itemPath>
+        <itemPath>data/training/0246.jpg</itemPath>
+        <itemPath>data/training/0247.jpg</itemPath>
+        <itemPath>data/training/0248.jpg</itemPath>
+        <itemPath>data/training/0249.jpg</itemPath>
+        <itemPath>data/training/0250.jpg</itemPath>
+        <itemPath>data/training/0251.jpg</itemPath>
+        <itemPath>data/training/0252.jpg</itemPath>
+        <itemPath>data/training/0253.jpg</itemPath>
+        <itemPath>data/training/0254.jpg</itemPath>
+        <itemPath>data/training/0255.jpg</itemPath>
+        <itemPath>data/training/0256.jpg</itemPath>
+        <itemPath>data/training/0257.jpg</itemPath>
+        <itemPath>data/training/0258.jpg</itemPath>
+        <itemPath>data/training/0259.jpg</itemPath>
+        <itemPath>data/training/0260.jpg</itemPath>
+        <itemPath>data/training/0261.jpg</itemPath>
+        <itemPath>data/training/0262.jpg</itemPath>
+        <itemPath>data/training/0263.jpg</itemPath>
+        <itemPath>data/training/0264.jpg</itemPath>
+        <itemPath>data/training/0265.jpg</itemPath>
+        <itemPath>data/training/0266.jpg</itemPath>
+        <itemPath>data/training/0267.jpg</itemPath>
+        <itemPath>data/training/0268.jpg</itemPath>
+        <itemPath>data/training/0269.jpg</itemPath>
+        <itemPath>data/training/0270.jpg</itemPath>
+        <itemPath>data/training/0271.jpg</itemPath>
+        <itemPath>data/training/0272.jpg</itemPath>
+        <itemPath>data/training/0273.jpg</itemPath>
+        <itemPath>data/training/0274.jpg</itemPath>
+        <itemPath>data/training/0275.jpg</itemPath>
+        <itemPath>data/training/0276.jpg</itemPath>
+        <itemPath>data/training/0277.jpg</itemPath>
+        <itemPath>data/training/0278.jpg</itemPath>
+        <itemPath>data/training/0279.jpg</itemPath>
+        <itemPath>data/training/0280.jpg</itemPath>
+        <itemPath>data/training/0281.jpg</itemPath>
+        <itemPath>data/training/0282.jpg</itemPath>
+        <itemPath>data/training/0283.jpg</itemPath>
+        <itemPath>data/training/0284.jpg</itemPath>
+        <itemPath>data/training/0285.jpg</itemPath>
+        <itemPath>data/training/0286.jpg</itemPath>
+        <itemPath>data/training/0287.jpg</itemPath>
+        <itemPath>data/training/0288.jpg</itemPath>
+        <itemPath>data/training/0289.jpg</itemPath>
+        <itemPath>data/training/0290.jpg</itemPath>
+        <itemPath>data/training/0291.jpg</itemPath>
+        <itemPath>data/training/0292.jpg</itemPath>
+        <itemPath>data/training/0293.jpg</itemPath>
+        <itemPath>data/training/0294.jpg</itemPath>
+        <itemPath>data/training/0295.jpg</itemPath>
+        <itemPath>data/training/0296.jpg</itemPath>
+        <itemPath>data/training/0297.jpg</itemPath>
+        <itemPath>data/training/0298.jpg</itemPath>
+        <itemPath>data/training/0299.jpg</itemPath>
+        <itemPath>data/training/0300.jpg</itemPath>
+        <itemPath>data/training/0301.jpg</itemPath>
+        <itemPath>data/training/0302.jpg</itemPath>
+        <itemPath>data/training/0303.jpg</itemPath>
+        <itemPath>data/training/0304.jpg</itemPath>
+        <itemPath>data/training/0305.jpg</itemPath>
+        <itemPath>data/training/0306.jpg</itemPath>
+        <itemPath>data/training/0307.jpg</itemPath>
+        <itemPath>data/training/0308.jpg</itemPath>
+        <itemPath>data/training/0309.jpg</itemPath>
+        <itemPath>data/training/0310.jpg</itemPath>
+        <itemPath>data/training/0311.jpg</itemPath>
+        <itemPath>data/training/0312.jpg</itemPath>
+        <itemPath>data/training/0313.jpg</itemPath>
+        <itemPath>data/training/0314.jpg</itemPath>
+        <itemPath>data/training/0315.jpg</itemPath>
+        <itemPath>data/training/0316.jpg</itemPath>
+        <itemPath>data/training/0317.jpg</itemPath>
+        <itemPath>data/training/0318.jpg</itemPath>
+        <itemPath>data/training/0319.jpg</itemPath>
+        <itemPath>data/training/0320.jpg</itemPath>
+        <itemPath>data/training/0321.jpg</itemPath>
+        <itemPath>data/training/0322.jpg</itemPath>
+        <itemPath>data/training/0323.jpg</itemPath>
+        <itemPath>data/training/0324.jpg</itemPath>
+        <itemPath>data/training/0325.jpg</itemPath>
+        <itemPath>data/training/0326.jpg</itemPath>
+        <itemPath>data/training/0327.jpg</itemPath>
+        <itemPath>data/training/0328.jpg</itemPath>
+        <itemPath>data/training/0329.jpg</itemPath>
+        <itemPath>data/training/0330.jpg</itemPath>
+        <itemPath>data/training/0331.jpg</itemPath>
+        <itemPath>data/training/0332.jpg</itemPath>
+        <itemPath>data/training/0333.jpg</itemPath>
+        <itemPath>data/training/0334.jpg</itemPath>
+        <itemPath>data/training/0335.jpg</itemPath>
+        <itemPath>data/training/0336.jpg</itemPath>
+        <itemPath>data/training/0337.jpg</itemPath>
+        <itemPath>data/training/0338.jpg</itemPath>
+        <itemPath>data/training/0339.jpg</itemPath>
+        <itemPath>data/training/0340.jpg</itemPath>
+        <itemPath>data/training/0341.jpg</itemPath>
+        <itemPath>data/training/0342.jpg</itemPath>
+        <itemPath>data/training/0343.jpg</itemPath>
+        <itemPath>data/training/0344.jpg</itemPath>
+        <itemPath>data/training/0345.jpg</itemPath>
+        <itemPath>data/training/0346.jpg</itemPath>
+        <itemPath>data/training/0347.jpg</itemPath>
+        <itemPath>data/training/0348.jpg</itemPath>
+        <itemPath>data/training/0349.jpg</itemPath>
+        <itemPath>data/training/0350.jpg</itemPath>
+        <itemPath>data/training/0351.jpg</itemPath>
+        <itemPath>data/training/0352.jpg</itemPath>
+        <itemPath>data/training/0353.jpg</itemPath>
+        <itemPath>data/training/0354.jpg</itemPath>
+        <itemPath>data/training/0355.jpg</itemPath>
+        <itemPath>data/training/0356.jpg</itemPath>
+        <itemPath>data/training/0357.jpg</itemPath>
+        <itemPath>data/training/0358.jpg</itemPath>
+        <itemPath>data/training/0359.jpg</itemPath>
+        <itemPath>data/training/0360.jpg</itemPath>
+        <itemPath>data/training/0361.jpg</itemPath>
+        <itemPath>data/training/0362.jpg</itemPath>
+        <itemPath>data/training/0363.jpg</itemPath>
+        <itemPath>data/training/0364.jpg</itemPath>
+        <itemPath>data/training/0365.jpg</itemPath>
+        <itemPath>data/training/0366.jpg</itemPath>
+        <itemPath>data/training/0367.jpg</itemPath>
+        <itemPath>data/training/0368.jpg</itemPath>
+        <itemPath>data/training/0369.jpg</itemPath>
+        <itemPath>data/training/0370.jpg</itemPath>
+        <itemPath>data/training/0371.jpg</itemPath>
+        <itemPath>data/training/0372.jpg</itemPath>
+        <itemPath>data/training/0373.jpg</itemPath>
+        <itemPath>data/training/0374.jpg</itemPath>
+        <itemPath>data/training/0375.jpg</itemPath>
+        <itemPath>data/training/0376.jpg</itemPath>
+        <itemPath>data/training/0377.jpg</itemPath>
+        <itemPath>data/training/0378.jpg</itemPath>
+        <itemPath>data/training/0379.jpg</itemPath>
+        <itemPath>data/training/0380.jpg</itemPath>
+        <itemPath>data/training/0381.jpg</itemPath>
+        <itemPath>data/training/0382.jpg</itemPath>
+        <itemPath>data/training/0383.jpg</itemPath>
+        <itemPath>data/training/0384.jpg</itemPath>
+        <itemPath>data/training/0385.jpg</itemPath>
+        <itemPath>data/training/0386.jpg</itemPath>
+        <itemPath>data/training/0387.jpg</itemPath>
+        <itemPath>data/training/0388.jpg</itemPath>
+        <itemPath>data/training/0389.jpg</itemPath>
+        <itemPath>data/training/0390.jpg</itemPath>
+        <itemPath>data/training/0391.jpg</itemPath>
+        <itemPath>data/training/0392.jpg</itemPath>
+        <itemPath>data/training/0393.jpg</itemPath>
+        <itemPath>data/training/0394.jpg</itemPath>
+        <itemPath>data/training/0395.jpg</itemPath>
+        <itemPath>data/training/0396.jpg</itemPath>
+        <itemPath>data/training/0397.jpg</itemPath>
+        <itemPath>data/training/0398.jpg</itemPath>
+        <itemPath>data/training/0399.jpg</itemPath>
+        <itemPath>data/training/0400.jpg</itemPath>
+      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
@@ -44,6 +847,10 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>data/holding</Elem>
+    <Elem>data/training</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="Debug" type="1">
@@ -60,10 +867,1608 @@
           </incDir>
         </ccTool>
         <linkerTool>
-          <commandLine>-lopencv_core -lopencv_highgui -lopencv_imgproc</commandLine>
+          <commandLine>-lboost_system -lboost_filesystem -lopencv_core -lopencv_highgui -lopencv_imgproc</commandLine>
         </linkerTool>
       </compileType>
-      <item path="data/image.jpg" ex="false" tool="3" flavor2="0">
+      <item path="data/holding/0401.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0402.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0403.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0404.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0405.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0406.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0407.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0408.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0409.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0410.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0411.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0412.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0413.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0414.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0415.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0416.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0417.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0418.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0419.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0420.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0421.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0422.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0423.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0424.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0425.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0426.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0427.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0428.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0429.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0430.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0431.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0432.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0433.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0434.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0435.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0436.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0437.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0438.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0439.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0440.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0441.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0442.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0443.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0444.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0445.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0446.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0447.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0448.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0449.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0450.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0451.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0452.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0453.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0454.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0455.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0456.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0457.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0458.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0459.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0460.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0461.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0462.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0463.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0464.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0465.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0466.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0467.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0468.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0469.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0470.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0471.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0472.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0473.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0474.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0475.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0476.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0477.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0478.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0479.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0480.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0481.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0482.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0483.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0484.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0485.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0486.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0487.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0488.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0489.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0490.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0491.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0492.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0493.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0494.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0495.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0496.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0497.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0498.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0499.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0500.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0501.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0502.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0503.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0504.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0505.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0506.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0507.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0508.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0509.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0510.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0511.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0512.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0513.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0514.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0515.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0516.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0517.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0518.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0519.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0520.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0521.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0522.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0523.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0524.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0525.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0526.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0527.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0528.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0529.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0530.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0531.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0532.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0533.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0534.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0535.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0536.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0537.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0538.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0539.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0540.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0541.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0542.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0543.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0544.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0545.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0546.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0547.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0548.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0549.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0550.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0551.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0552.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0553.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0554.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0555.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0556.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0557.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0558.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0559.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0560.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0561.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0562.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0563.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0564.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0565.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0566.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0567.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0568.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0569.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0570.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0571.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0572.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0573.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0574.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0575.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0576.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0577.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0578.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0579.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0580.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0581.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0582.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0583.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0584.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0585.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0586.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0587.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0588.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0589.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0590.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0591.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0592.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0593.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0594.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0595.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0596.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0597.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0598.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0599.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0600.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0601.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0602.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0603.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0604.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0605.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0606.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0607.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0608.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0609.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0610.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0611.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0612.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0613.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0614.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0615.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0616.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0617.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0618.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0619.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0620.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0621.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0622.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0623.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0624.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0625.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0626.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0627.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0628.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0629.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0630.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0631.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0632.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0633.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0634.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0635.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0636.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0637.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0638.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0639.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0640.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0641.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0642.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0643.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0644.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0645.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0646.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0647.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0648.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0649.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0650.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0651.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0652.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0653.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0654.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0655.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0656.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0657.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0658.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0659.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0660.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0661.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0662.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0663.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0664.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0665.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0666.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0667.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0668.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0669.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0670.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0671.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0672.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0673.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0674.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0675.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0676.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0677.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0678.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0679.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0680.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0681.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0682.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0683.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0684.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0685.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0686.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0687.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0688.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0689.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0690.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0691.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0692.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0693.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0694.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0695.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0696.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0697.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0698.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0699.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0700.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0701.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0702.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0703.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0704.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0705.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0706.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0707.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0708.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0709.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0710.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0711.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0712.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0713.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0714.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0715.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0716.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0717.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0718.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0719.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0720.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0721.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0722.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0723.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0724.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0725.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0726.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0727.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0728.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0729.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0730.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0731.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0732.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0733.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0734.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0735.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0736.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0737.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0738.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0739.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0740.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0741.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0742.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0743.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0744.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0745.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0746.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0747.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0748.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0749.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0750.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0751.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0752.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0753.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0754.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0755.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0756.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0757.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0758.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0759.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0760.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0761.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0762.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0763.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0764.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0765.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0766.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0767.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0768.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0769.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0770.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0771.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0772.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0773.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0774.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0775.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0776.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0777.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0778.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0779.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0780.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0781.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0782.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0783.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0784.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0785.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0786.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0787.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0788.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0789.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0790.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0791.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0792.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0793.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0794.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0795.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0796.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0797.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0798.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0799.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0800.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0001.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0002.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0003.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0004.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0005.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0006.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0007.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0008.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0009.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0010.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0011.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0012.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0013.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0014.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0015.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0016.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0017.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0018.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0019.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0020.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0021.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0022.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0023.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0024.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0025.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0026.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0027.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0028.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0029.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0030.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0031.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0032.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0033.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0034.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0035.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0036.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0037.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0038.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0039.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0040.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0041.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0042.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0043.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0044.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0045.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0046.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0047.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0048.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0049.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0050.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0051.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0052.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0053.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0054.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0055.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0056.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0057.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0058.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0059.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0060.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0061.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0062.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0063.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0064.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0065.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0066.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0067.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0068.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0069.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0070.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0071.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0072.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0073.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0074.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0075.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0076.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0077.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0078.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0079.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0080.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0081.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0082.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0083.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0084.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0085.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0086.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0087.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0088.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0089.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0090.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0091.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0092.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0093.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0094.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0095.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0096.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0097.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0098.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0099.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0100.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0101.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0102.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0103.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0104.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0105.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0106.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0107.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0108.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0109.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0110.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0111.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0112.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0113.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0114.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0115.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0116.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0117.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0118.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0119.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0120.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0121.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0122.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0123.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0124.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0125.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0126.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0127.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0128.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0129.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0130.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0131.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0132.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0133.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0134.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0135.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0136.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0137.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0138.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0139.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0140.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0141.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0142.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0143.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0144.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0145.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0146.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0147.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0148.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0149.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0150.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0151.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0152.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0153.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0154.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0155.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0156.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0157.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0158.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0159.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0160.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0161.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0162.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0163.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0164.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0165.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0166.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0167.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0168.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0169.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0170.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0171.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0172.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0173.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0174.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0175.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0176.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0177.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0178.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0179.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0180.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0181.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0182.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0183.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0184.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0185.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0186.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0187.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0188.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0189.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0190.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0191.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0192.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0193.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0194.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0195.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0196.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0197.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0198.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0199.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0200.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0201.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0202.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0203.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0204.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0205.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0206.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0207.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0208.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0209.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0210.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0211.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0212.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0213.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0214.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0215.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0216.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0217.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0218.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0219.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0220.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0221.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0222.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0223.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0224.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0225.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0226.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0227.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0228.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0229.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0230.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0231.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0232.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0233.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0234.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0235.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0236.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0237.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0238.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0239.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0240.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0241.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0242.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0243.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0244.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0245.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0246.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0247.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0248.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0249.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0250.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0251.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0252.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0253.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0254.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0255.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0256.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0257.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0258.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0259.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0260.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0261.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0262.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0263.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0264.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0265.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0266.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0267.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0268.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0269.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0270.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0271.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0272.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0273.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0274.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0275.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0276.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0277.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0278.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0279.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0280.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0281.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0282.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0283.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0284.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0285.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0286.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0287.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0288.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0289.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0290.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0291.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0292.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0293.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0294.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0295.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0296.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0297.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0298.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0299.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0300.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0301.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0302.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0303.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0304.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0305.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0306.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0307.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0308.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0309.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0310.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0311.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0312.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0313.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0314.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0315.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0316.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0317.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0318.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0319.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0320.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0321.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0322.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0323.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0324.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0325.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0326.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0327.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0328.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0329.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0330.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0331.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0332.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0333.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0334.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0335.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0336.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0337.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0338.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0339.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0340.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0341.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0342.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0343.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0344.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0345.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0346.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0347.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0348.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0349.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0350.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0351.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0352.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0353.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0354.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0355.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0356.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0357.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0358.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0359.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0360.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0361.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0362.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0363.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0364.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0365.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0366.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0367.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0368.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0369.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0370.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0371.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0372.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0373.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0374.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0375.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0376.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0377.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0378.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0379.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0380.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0381.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0382.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0383.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0384.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0385.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0386.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0387.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0388.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0389.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0390.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0391.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0392.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0393.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0394.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0395.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0396.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0397.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0398.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0399.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0400.jpg" ex="false" tool="3" flavor2="0">
       </item>
       <item path="hdr/AdaBoost.hpp" ex="false" tool="3" flavor2="0">
       </item>
@@ -122,7 +2527,1605 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="data/image.jpg" ex="false" tool="3" flavor2="0">
+      <item path="data/holding/0401.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0402.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0403.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0404.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0405.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0406.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0407.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0408.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0409.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0410.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0411.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0412.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0413.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0414.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0415.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0416.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0417.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0418.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0419.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0420.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0421.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0422.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0423.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0424.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0425.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0426.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0427.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0428.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0429.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0430.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0431.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0432.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0433.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0434.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0435.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0436.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0437.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0438.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0439.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0440.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0441.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0442.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0443.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0444.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0445.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0446.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0447.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0448.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0449.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0450.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0451.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0452.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0453.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0454.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0455.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0456.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0457.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0458.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0459.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0460.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0461.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0462.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0463.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0464.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0465.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0466.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0467.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0468.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0469.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0470.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0471.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0472.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0473.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0474.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0475.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0476.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0477.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0478.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0479.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0480.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0481.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0482.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0483.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0484.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0485.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0486.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0487.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0488.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0489.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0490.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0491.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0492.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0493.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0494.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0495.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0496.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0497.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0498.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0499.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0500.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0501.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0502.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0503.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0504.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0505.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0506.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0507.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0508.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0509.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0510.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0511.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0512.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0513.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0514.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0515.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0516.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0517.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0518.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0519.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0520.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0521.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0522.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0523.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0524.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0525.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0526.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0527.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0528.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0529.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0530.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0531.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0532.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0533.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0534.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0535.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0536.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0537.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0538.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0539.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0540.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0541.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0542.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0543.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0544.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0545.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0546.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0547.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0548.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0549.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0550.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0551.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0552.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0553.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0554.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0555.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0556.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0557.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0558.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0559.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0560.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0561.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0562.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0563.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0564.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0565.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0566.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0567.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0568.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0569.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0570.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0571.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0572.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0573.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0574.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0575.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0576.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0577.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0578.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0579.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0580.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0581.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0582.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0583.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0584.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0585.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0586.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0587.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0588.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0589.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0590.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0591.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0592.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0593.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0594.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0595.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0596.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0597.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0598.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0599.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0600.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0601.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0602.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0603.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0604.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0605.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0606.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0607.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0608.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0609.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0610.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0611.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0612.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0613.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0614.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0615.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0616.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0617.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0618.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0619.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0620.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0621.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0622.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0623.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0624.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0625.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0626.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0627.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0628.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0629.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0630.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0631.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0632.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0633.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0634.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0635.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0636.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0637.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0638.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0639.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0640.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0641.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0642.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0643.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0644.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0645.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0646.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0647.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0648.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0649.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0650.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0651.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0652.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0653.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0654.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0655.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0656.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0657.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0658.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0659.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0660.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0661.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0662.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0663.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0664.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0665.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0666.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0667.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0668.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0669.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0670.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0671.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0672.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0673.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0674.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0675.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0676.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0677.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0678.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0679.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0680.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0681.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0682.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0683.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0684.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0685.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0686.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0687.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0688.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0689.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0690.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0691.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0692.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0693.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0694.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0695.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0696.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0697.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0698.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0699.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0700.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0701.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0702.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0703.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0704.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0705.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0706.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0707.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0708.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0709.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0710.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0711.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0712.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0713.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0714.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0715.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0716.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0717.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0718.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0719.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0720.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0721.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0722.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0723.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0724.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0725.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0726.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0727.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0728.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0729.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0730.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0731.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0732.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0733.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0734.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0735.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0736.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0737.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0738.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0739.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0740.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0741.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0742.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0743.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0744.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0745.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0746.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0747.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0748.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0749.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0750.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0751.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0752.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0753.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0754.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0755.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0756.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0757.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0758.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0759.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0760.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0761.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0762.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0763.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0764.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0765.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0766.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0767.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0768.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0769.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0770.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0771.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0772.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0773.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0774.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0775.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0776.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0777.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0778.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0779.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0780.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0781.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0782.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0783.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0784.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0785.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0786.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0787.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0788.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0789.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0790.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0791.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0792.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0793.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0794.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0795.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0796.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0797.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0798.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0799.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/holding/0800.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0001.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0002.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0003.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0004.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0005.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0006.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0007.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0008.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0009.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0010.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0011.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0012.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0013.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0014.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0015.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0016.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0017.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0018.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0019.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0020.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0021.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0022.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0023.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0024.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0025.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0026.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0027.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0028.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0029.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0030.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0031.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0032.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0033.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0034.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0035.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0036.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0037.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0038.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0039.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0040.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0041.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0042.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0043.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0044.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0045.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0046.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0047.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0048.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0049.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0050.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0051.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0052.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0053.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0054.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0055.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0056.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0057.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0058.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0059.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0060.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0061.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0062.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0063.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0064.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0065.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0066.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0067.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0068.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0069.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0070.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0071.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0072.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0073.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0074.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0075.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0076.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0077.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0078.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0079.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0080.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0081.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0082.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0083.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0084.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0085.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0086.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0087.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0088.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0089.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0090.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0091.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0092.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0093.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0094.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0095.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0096.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0097.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0098.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0099.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0100.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0101.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0102.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0103.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0104.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0105.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0106.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0107.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0108.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0109.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0110.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0111.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0112.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0113.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0114.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0115.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0116.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0117.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0118.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0119.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0120.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0121.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0122.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0123.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0124.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0125.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0126.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0127.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0128.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0129.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0130.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0131.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0132.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0133.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0134.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0135.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0136.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0137.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0138.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0139.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0140.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0141.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0142.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0143.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0144.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0145.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0146.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0147.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0148.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0149.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0150.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0151.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0152.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0153.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0154.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0155.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0156.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0157.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0158.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0159.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0160.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0161.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0162.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0163.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0164.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0165.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0166.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0167.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0168.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0169.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0170.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0171.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0172.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0173.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0174.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0175.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0176.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0177.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0178.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0179.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0180.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0181.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0182.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0183.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0184.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0185.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0186.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0187.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0188.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0189.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0190.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0191.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0192.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0193.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0194.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0195.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0196.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0197.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0198.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0199.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0200.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0201.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0202.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0203.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0204.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0205.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0206.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0207.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0208.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0209.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0210.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0211.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0212.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0213.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0214.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0215.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0216.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0217.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0218.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0219.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0220.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0221.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0222.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0223.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0224.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0225.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0226.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0227.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0228.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0229.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0230.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0231.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0232.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0233.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0234.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0235.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0236.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0237.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0238.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0239.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0240.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0241.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0242.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0243.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0244.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0245.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0246.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0247.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0248.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0249.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0250.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0251.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0252.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0253.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0254.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0255.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0256.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0257.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0258.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0259.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0260.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0261.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0262.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0263.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0264.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0265.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0266.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0267.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0268.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0269.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0270.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0271.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0272.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0273.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0274.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0275.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0276.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0277.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0278.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0279.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0280.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0281.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0282.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0283.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0284.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0285.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0286.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0287.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0288.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0289.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0290.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0291.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0292.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0293.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0294.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0295.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0296.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0297.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0298.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0299.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0300.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0301.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0302.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0303.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0304.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0305.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0306.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0307.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0308.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0309.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0310.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0311.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0312.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0313.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0314.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0315.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0316.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0317.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0318.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0319.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0320.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0321.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0322.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0323.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0324.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0325.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0326.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0327.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0328.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0329.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0330.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0331.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0332.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0333.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0334.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0335.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0336.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0337.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0338.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0339.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0340.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0341.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0342.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0343.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0344.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0345.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0346.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0347.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0348.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0349.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0350.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0351.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0352.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0353.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0354.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0355.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0356.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0357.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0358.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0359.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0360.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0361.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0362.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0363.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0364.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0365.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0366.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0367.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0368.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0369.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0370.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0371.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0372.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0373.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0374.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0375.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0376.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0377.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0378.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0379.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0380.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0381.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0382.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0383.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0384.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0385.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0386.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0387.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0388.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0389.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0390.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0391.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0392.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0393.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0394.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0395.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0396.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0397.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0398.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0399.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="data/training/0400.jpg" ex="false" tool="3" flavor2="0">
       </item>
       <item path="hdr/AdaBoost.hpp" ex="false" tool="3" flavor2="0">
       </item>

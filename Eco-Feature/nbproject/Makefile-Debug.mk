@@ -68,7 +68,7 @@ LDLIBSOPTIONS=
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/eco-feature: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/eco-feature ${OBJECTFILES} ${LDLIBSOPTIONS} -lopencv_core -lopencv_highgui -lopencv_imgproc
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/eco-feature ${OBJECTFILES} ${LDLIBSOPTIONS} -lboost_system -lboost_filesystem -lopencv_core -lopencv_highgui -lopencv_imgproc
 
 ${OBJECTDIR}/src/AdaBoost.o: src/AdaBoost.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src

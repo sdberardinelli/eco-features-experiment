@@ -15,6 +15,8 @@
 ********************************************************************************/
 #include "Subregion.hpp"
 #include "Transform.hpp"
+#include "Perceptron.hpp"
+#include <opencv2/core/core.hpp>
 #include <string>
 
 /*******************************************************************************
@@ -56,7 +58,9 @@ class Creature
         Subregions::Subregion&  get_subregion ( void );     
       
         void        set_transforms ( TRANSORMS );
-        TRANSORMS & get_transforms ( void );  
+        TRANSORMS & get_transforms ( void );
+        void        perform_transforms ( cv::Mat );
+        void        train_perceptron ( void );
         
         
         std::string to_string ( void );
@@ -64,5 +68,6 @@ class Creature
         double                fitness;
         Subregions::Subregion subregion;
         TRANSORMS             transforms;
+        Perceptron            perceptron;
 };
 #endif

@@ -16,6 +16,7 @@
 #include "Creature.hpp"
 #include <opencv2/core/core.hpp>
 #include <vector>
+#include <string>
 
 /*******************************************************************************
 *  DEFINES
@@ -47,11 +48,12 @@ class GA
         ~GA ( void );
         
         /* functions */
-        Creature crossover  ( Creature, Creature );
-        void     mutate     ( Creature );
-        double   fitness    ( Creature );
+        Creature crossover ( Creature, Creature );
+        void     mutate ( Creature );
+        double   fitness ( Creature );
         void     initialize ( int );
-        void     run        ( int );
+        void     run ( int );
+        void     load_images ( std::string, std::string );
         
     private:
         std::vector<Creature> population;
