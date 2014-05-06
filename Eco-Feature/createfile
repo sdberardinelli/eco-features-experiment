@@ -3,5 +3,5 @@
 FILENAME=$1
 
 touch ./src/$FILENAME.cpp
-touch ./hdr/$FILENAME.hpp
+touch ./src/include/$FILENAME.hpp
 
