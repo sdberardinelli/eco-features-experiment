@@ -110,6 +110,17 @@ double Creature::get_fitness ( void )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
+void Creature::compute_fitness ( double p )
+{
+    fitness =  tp*500.0/(fn+tp) + tn*500.0/(p*fp+tn);
+}
+/*******************************************************************************
+* Function     : 
+* Description  : 
+* Arguments    : 
+* Returns      : 
+* Remarks      : 
+********************************************************************************/
 void Creature::initialize ( void )
 {
     vector<double> weights;
@@ -123,6 +134,10 @@ void Creature::initialize ( void )
     perceptron.set_learningrate(0.1);
     perceptron.set_threshold(0.0);
     perceptron.set_bias(0.0);
+    tp = 0;
+    tn = 0;
+    fn = 0;
+    fp = 0;
 }
 /*******************************************************************************
 * Function     : 
@@ -196,8 +211,17 @@ void Creature::perform_transforms ( Mat _image )
         
     for ( vector<int>::size_type i = 0; i < transforms.size();  i++ )
     {
-        transforms[i].perform_transform(image);
-        image = transforms[i].get_transform();  
+        try
+        {
+            transforms[i].perform_transform(image);
+            image = transforms[i].get_transform();  
+        }
+        catch (cv::Exception e)
+        {
+            cout << endl;
+            cout << "TRANSFORM " << (int)transforms[i].get_transform_type() << " FAILED :: ";
+            cout << e.err << endl;
+        }
     }
     
     feature = image;    
@@ -251,7 +275,7 @@ void Creature::train_perceptron ( void )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-void Creature::train_perceptron ( void )
+void Creature::output_perceptron ( bool img )
 {    
     vector<double> inputs(MAXIMUM_WIDTH*MAXIMUM_HEIGHT);
     
@@ -285,6 +309,23 @@ void Creature::train_perceptron ( void )
     
     perceptron.set_inputs(inputs);
     perceptron.compute_output();
+    bool output = (bool)perceptron.get_output();
+    if (  output == false && img  == false  )
+    {
+        tn++; // True negative = correctly rejected
+    }
+    else if ( output == true && img  == false  )
+    {
+        fp++; // False positive = incorrectly identified  
+    }
+    else if ( output == false && img  == true  )
+    {
+        fn++; // False negative = incorrectly rejected
+    }
+    else //( output == true && img  == true  )
+    {
+        tp++; // True positive = correctly identified
+    }
 }
 /*******************************************************************************
 * Function     : 

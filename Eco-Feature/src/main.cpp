@@ -40,12 +40,11 @@ using namespace cv;
 ********************************************************************************/
 int main ( int argc, char* argv[] ) 
 {        
-    GA ga;
-    
+    GA ga(10,1000,1.0,1);
+
     ga.load_images("data/training", "data/holding");
-    
-    ga.initialize(100);
-    ga.run(1000);
+    ga.initialize();
+    ga.run();
     
     cout << "Done." << endl;
     

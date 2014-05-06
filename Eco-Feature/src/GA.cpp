@@ -43,6 +43,20 @@ using namespace boost::filesystem;
 ********************************************************************************/
 GA::GA ( void ) { ; }
 /*******************************************************************************
+* Constructor  : 
+* Description  : 
+* Arguments    : 
+* Remarks      : 
+********************************************************************************/
+GA::GA ( int population_size, int number_generations, 
+         double fitness_penalty, int fitness_threshold )
+{ 
+    pop_size = population_size;
+    num_gen  = number_generations;
+    fit_pen  = fitness_penalty;
+    fit_thresh  = fitness_threshold;
+}
+/*******************************************************************************
 * Constructor  : (Copy)
 * Description  : 
 * Arguments    : 
@@ -92,19 +106,25 @@ void GA::mutate ( Creature a )
 ********************************************************************************/
 Creature GA::crossover ( Creature a, Creature b )
 {
+    cout << "performing crossover" << endl;
     Creature child;
+    
+    cout << "Parent A: " << a.to_string() << endl;
+    cout << "Parent B: " << b.to_string() << endl;
+    
+    TRANSORMS child_transforms;
+    TRANSORMS a_transforms = a.get_transforms();
+    TRANSORMS b_transforms = b.get_transforms();
+    
+    //hchild_transforms.reverse(1+b_transforms.size()-1);
+    child_transforms.insert( child_transforms.end(), 
+                             a_transforms.begin(), 
+                             a_transforms.begin()+1 );
+    child_transforms.insert( child_transforms.end(), 
+                             b_transforms.begin()+1, 
+                             b_transforms.end() );
+    
     return child;
-}
-/*******************************************************************************
-* Function     : 
-* Description  : 
-* Arguments    : 
-* Returns      : 
-* Remarks      : 
-********************************************************************************/
-double GA::fitness ( Creature a )
-{
-    return 0.0;
 }
 /*******************************************************************************
 * Function     : 
@@ -144,7 +164,7 @@ void GA::load_images ( string pth_train, string pth_hold )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-void GA::initialize ( int size )
+void GA::initialize ( void )
 {
     
     cout << "initalizing" << endl;
@@ -155,7 +175,7 @@ void GA::initialize ( int size )
     uniform_int_distribution<int> trans1_dist(MINIMUM_TRANFORMS,MAXIMUM_TRANFORMS);
     uniform_int_distribution<int> param_dist(0,360);
     
-    for ( int i = 0; i < size; i++ )
+    for ( int i = 0; i < pop_size; i++ )
     {
         Creature current_creature;       
         TRANSORMS transforms;
@@ -196,35 +216,63 @@ void GA::initialize ( int size )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-void GA::run ( int generations )
+void GA::run ( void )
 {
+    random_device rd;
+    mt19937 rnd(rd());
+    
     cout << "running" << endl;
-    for ( int generation = 0; generation < generations; generation++ )
+    for ( int generation = 0; generation < num_gen; generation++ )
     {
         for ( vector<int>::size_type creature_i = 0; 
               creature_i < population.size(); 
               creature_i++ )
         {
+            cout << "initializing creature " << creature_i;
+            population[creature_i].initialize();
+            cout << " . training ";
+            cout << population[creature_i].to_string() << endl;
+            cout << "     creature " << creature_i << " at " ;
             for ( vector<int>::size_type training_images_i = 0; 
                  training_images_i < training_images.size(); 
                  training_images_i++ )
             {
-                cout << population[creature_i].to_string() << endl;
+                cout << training_images_i << ",";
+                cout.flush();
                 population[creature_i].perform_transforms(training_images[training_images_i]);
                 population[creature_i].train_perceptron();
-                
-//                imshow("feautre",population[creature_i].get_feature());
-//                waitKey(0);
-//                destroyWindow("feautre");
             }
+            cout << endl;
 
-            for ( vector<int>::size_type holding_images_i = 0; 
-                 holding_images_i < holding_images.size(); 
-                 holding_images_i++ )
-            {
-                population[creature_i].perform_transforms(holding_images[holding_images]);
-                population[creature_i].output_perceptron();
-            }            
+//            for ( vector<int>::size_type holding_images_i = 0; 
+//                 holding_images_i < holding_images.size(); 
+//                 holding_images_i++ )
+//            {
+//                population[creature_i].perform_transforms(holding_images[holding_images]);
+//                population[creature_i].output_perceptron(true);
+//            }            
+            population[creature_i].compute_fitness(fit_pen);
+            
+            cout << "     fitness = " << population[creature_i].get_fitness();
+//            if ( population[creature_i].get_fitness() < fit_thresh )
+//            {
+//                cout << " deleted";
+//                population.erase(population.begin()+creature_i);
+//            }
+            cout << endl;
+        }
+        
+        for ( vector<int>::size_type creature_i = 0; 
+              creature_i < pop_size - population.size(); 
+              creature_i++ )
+        {
+            uniform_int_distribution<int> pop_dist(0,population.size());
+            Creature a ( crossover(population[pop_dist(rnd)],population[pop_dist(rnd)]) );
+            
+            cout << "created: " << a.to_string() << endl;
+            population.push_back(a);
+            
+            getchar();
         }
     }
 }

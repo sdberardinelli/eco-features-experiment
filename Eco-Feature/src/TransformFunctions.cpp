@@ -36,8 +36,8 @@ using namespace Transforms;
 ********************************************************************************/
 void Transform::gabor_filter ( Mat src )
 {
-    Mat tmp;    
-    src.convertTo(tmp, CV_32F, 1.0/255.0, 0);
+    Mat tmp = src.clone(); 
+    tmp.convertTo(tmp, CV_32F, 1.0/255.0, 0);
 
     if ( paramaters.size() != GABOR_FILTER_PARAMETER_NUMBER )
         return;
@@ -90,7 +90,7 @@ void Transform::gabor_filter ( Mat src )
     
     tmp.convertTo(tmp,CV_8UC1);
     
-    transformed_image = tmp;
+    transformed_image = tmp.clone();
 }
 /*******************************************************************************
 * Function     : 
@@ -101,8 +101,8 @@ void Transform::gabor_filter ( Mat src )
 ********************************************************************************/
 void Transform::morphological_erode ( Mat src )
 {
-    Mat tmp;    
-    src.convertTo(tmp, CV_32F, 1.0/255.0, 0);
+    Mat tmp = src.clone(); 
+    tmp.convertTo(tmp, CV_32F, 1.0/255.0, 0);
 
     if ( paramaters.size() != MORPHOLOGICAL_ERODE_PARAMETER_NUMBER )
         return;
@@ -134,7 +134,7 @@ void Transform::morphological_erode ( Mat src )
                                             point ) );
     
     tmp.convertTo(tmp,CV_8UC1);
-    transformed_image = tmp;
+    transformed_image = tmp.clone();
 }
 /*******************************************************************************
 * Function     : 
@@ -145,8 +145,8 @@ void Transform::morphological_erode ( Mat src )
 ********************************************************************************/
 void Transform::gaussian_blur ( Mat src )
 {
-    Mat tmp;    
-    src.convertTo(tmp, CV_32F, 1.0/255.0, 0);
+    Mat tmp = src.clone(); 
+    tmp.convertTo(tmp, CV_32F, 1.0/255.0, 0);
 
     if ( paramaters.size() != GAUSSIAN_BLUR_PARAMETER_NUMBER )
         return;
@@ -174,7 +174,10 @@ void Transform::gaussian_blur ( Mat src )
     int sigmaX = paramaters[1]; 
     int sigmaY = paramaters[2];
      
-    GaussianBlur( tmp, transformed_image, Size( size, size ), sigmaX, sigmaY );
+    GaussianBlur( tmp, tmp, Size( size, size ), sigmaX, sigmaY );
+    
+    tmp.convertTo(tmp,CV_8UC1);
+    transformed_image = tmp.clone();    
 }
 /*******************************************************************************
 * Function     : 
@@ -185,16 +188,16 @@ void Transform::gaussian_blur ( Mat src )
 ********************************************************************************/
 void Transform::histogram ( Mat src )
 {
-    Mat tmp;    
-    src.convertTo(tmp, CV_8U, 1.0/255.0, 0);
+    Mat tmp = src.clone(); 
+    tmp.convertTo(tmp, CV_8UC1);
 
     if ( paramaters.size() != HISTOGRAM_PARAMETER_NUMBER )
         return;
-    
+        
     equalizeHist(tmp, tmp);
     
     tmp.convertTo(tmp,CV_8UC1);
-    transformed_image = tmp;
+    transformed_image = tmp.clone();
 }
 /*******************************************************************************
 * Function     : 
@@ -205,8 +208,9 @@ void Transform::histogram ( Mat src )
 ********************************************************************************/
 void Transform::hough_circles ( Mat src )
 {
-    Mat tmp = src;
-
+    Mat tmp = src.clone();
+    tmp.convertTo(tmp,CV_8UC1);
+    
     if ( paramaters.size() != HOUGH_CIRCLES_PARAMETER_NUMBER )
         return;
     
@@ -253,7 +257,7 @@ void Transform::hough_circles ( Mat src )
      }    
     
     tmp1.convertTo(tmp1,CV_8UC1);
-    transformed_image = tmp1;
+    transformed_image = tmp1.clone();
 }
 /*******************************************************************************
 * Function     : 
@@ -264,8 +268,8 @@ void Transform::hough_circles ( Mat src )
 ********************************************************************************/
 void Transform::normalize ( Mat src )
 {    
-    Mat tmp;    
-    src.convertTo(tmp, CV_32F, 1.0/255.0, 0);
+    Mat tmp = src.clone();    
+    tmp.convertTo(tmp, CV_32F, 1.0/255.0, 0);
 
     if ( paramaters.size() != NORMALIZE_PARAMETER_NUMBER )
         return;
@@ -289,7 +293,9 @@ void Transform::normalize ( Mat src )
     int beta = paramaters[1];
     int norm = paramaters[2];
     
-    cv::normalize(tmp, transformed_image, alpha, beta, norm);    
+    cv::normalize(tmp, tmp, alpha, beta, norm);    
+    tmp.convertTo(tmp,CV_8UC1);
+    transformed_image = tmp.clone();    
 }
 /*******************************************************************************
 * Function     : 
@@ -300,7 +306,7 @@ void Transform::normalize ( Mat src )
 ********************************************************************************/
 void Transform::discrete_fourier_transform ( Mat src )
 {
-    Mat tmp = src;    
+    Mat tmp = src.clone();    
     
     if ( paramaters.size() != DISCRETE_FOURIER_TRANSFORM_PARAMETER_NUMBER )
         return;    
@@ -311,7 +317,7 @@ void Transform::discrete_fourier_transform ( Mat src )
         paramaters[0] = 10; 
     
     tmp.convertTo(tmp,CV_8UC1);
-    transformed_image = tmp;    
+    transformed_image = tmp.clone();    
 //   
 //    int threshold = paramaters[0];    
 //    
@@ -375,17 +381,17 @@ void Transform::discrete_fourier_transform ( Mat src )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-void Transform::square_root ( cv::Mat src )
+void Transform::square_root ( Mat src )
 {
-    Mat tmp;    
-    src.convertTo(tmp, CV_32F, 1.0/255.0, 0);
+    Mat tmp = src.clone();    
+    tmp.convertTo(tmp, CV_32F, 1.0/255.0, 0);
 
     if ( paramaters.size() != SQUARE_ROOT_PARAMETER_NUMBER )
         return;        
     
     cv::sqrt(tmp,tmp);
     tmp.convertTo(tmp,CV_8UC1);
-    transformed_image = tmp;
+    transformed_image = tmp.clone(); 
 }
 /*******************************************************************************
 * Function     : 
@@ -396,8 +402,8 @@ void Transform::square_root ( cv::Mat src )
 ********************************************************************************/
 void Transform::canny_edge ( Mat src )
 {
-    Mat tmp;
-    src.convertTo(tmp, CV_32F, 1.0/255.0, 0);
+    Mat tmp = src.clone();
+    tmp.convertTo(tmp, CV_32F, 1.0/255.0, 0);
 
     if ( paramaters.size() != CANNY_EDGE_PARAMETER_NUMBER )
         return; 
@@ -414,7 +420,7 @@ void Transform::canny_edge ( Mat src )
     Canny( tmp, tmp, threshold, threshold*3, 3 );
     
     tmp.convertTo(tmp,CV_8UC1);
-    transformed_image = tmp;   
+    transformed_image = tmp.clone();   
 }
 /*******************************************************************************
 * Function     : 
@@ -425,8 +431,8 @@ void Transform::canny_edge ( Mat src )
 ********************************************************************************/
 void Transform::integral_image ( cv::Mat src )
 {
-    Mat tmp;    
-    src.convertTo(tmp, CV_32F, 1.0/255.0, 0); 
+    Mat tmp = src.clone();    
+    tmp.convertTo(tmp, CV_32F, 1.0/255.0, 0); 
     
     if ( paramaters.size() != INTEGRAL_IMAGE_PARAMETER_NUMBER )
         return;   
@@ -447,13 +453,13 @@ void Transform::integral_image ( cv::Mat src )
     switch ( type )
     {
         case 1:
-            transformed_image = tmp1;
+            transformed_image = tmp1.clone();
             break;
         case 2:
-            transformed_image = tmp1;
+            transformed_image = tmp1.clone();
             break;
         case 3:
-            transformed_image = tmp1;
+            transformed_image = tmp1.clone();
             break;
     }
     
@@ -467,8 +473,8 @@ void Transform::integral_image ( cv::Mat src )
 ********************************************************************************/
 void Transform::difference_gaussians ( Mat src )
 {
-    Mat tmp;    
-    src.convertTo(tmp, CV_32F, 1.0/255.0, 0);    
+    Mat tmp = src.clone();    
+    tmp.convertTo(tmp, CV_32F, 1.0/255.0, 0);    
     
     if ( paramaters.size() != DIFFERENCE_GAUSSIANS_PARAMETER_NUMBER )
         return;   
@@ -496,8 +502,9 @@ void Transform::difference_gaussians ( Mat src )
     GaussianBlur(tmp, g2, Size(kern2,kern2), 0);
     
     tmp = g1-g2;
+    
     tmp.convertTo(tmp,CV_8UC1);
-    transformed_image = tmp;
+    transformed_image = tmp.clone();
 }
 /*******************************************************************************
 * Function     : 
@@ -508,7 +515,7 @@ void Transform::difference_gaussians ( Mat src )
 ********************************************************************************/
 void Transform::census_transform ( Mat src )
 {
-    Mat tmp = src,tmp1; 
+    Mat tmp = src.clone(),tmp1; 
     
     if ( paramaters.size() != CENSUS_TRANSFORM_PARAMETER_NUMBER )
         return;  
@@ -560,7 +567,7 @@ void Transform::census_transform ( Mat src )
     
     tmp1.convertTo(tmp1,CV_8UC1);
     
-    transformed_image = tmp1;
+    transformed_image = tmp1.clone();
 }
 /*******************************************************************************
 * Function     : 
@@ -571,7 +578,7 @@ void Transform::census_transform ( Mat src )
 ********************************************************************************/
 void Transform::sobel_operator ( Mat src )
 {
-    Mat tmp = src;
+    Mat tmp = src.clone();
     
     if ( paramaters.size() != SOBEL_OPERATOR_PARAMETER_NUMBER )
         return;  
@@ -636,7 +643,7 @@ void Transform::sobel_operator ( Mat src )
     addWeighted( abs_grad_x, x_weight, abs_grad_y, y_weight, 0, tmp );
     
     tmp.convertTo(tmp,CV_8UC1);
-    transformed_image = tmp;
+    transformed_image = tmp.clone();
 }
 /*******************************************************************************
 * Function     : 
@@ -647,7 +654,7 @@ void Transform::sobel_operator ( Mat src )
 ********************************************************************************/
 void Transform::morphological_dilate ( Mat src )
 {
-    Mat tmp = src;
+    Mat tmp = src.clone();
 
     if ( paramaters.size() != MORPHOLOGICAL_ERODE_PARAMETER_NUMBER )
         return;
@@ -679,7 +686,7 @@ void Transform::morphological_dilate ( Mat src )
                                              point ) );    
     
     tmp.convertTo(tmp,CV_8UC1);
-    transformed_image = tmp;
+    transformed_image = tmp.clone();
 }
 /*******************************************************************************
 * Function     : 
@@ -690,7 +697,7 @@ void Transform::morphological_dilate ( Mat src )
 ********************************************************************************/
 void Transform::adaptive_thresholding ( Mat src )
 {
-    Mat tmp = src;
+    Mat tmp = src.clone();
     
     if ( paramaters.size() != ADAPTIVE_THRESHOLDING_PARAMETER_NUMBER )
         return;
@@ -728,9 +735,9 @@ void Transform::adaptive_thresholding ( Mat src )
     int blocksize = paramaters[3];
     int c = paramaters[4];
     
-    src.convertTo(tmp,CV_8UC1);
+    tmp.convertTo(tmp,CV_8UC1);
     adaptiveThreshold( tmp, tmp, threshold, method, type, blocksize, c);
-    transformed_image = tmp;
+    transformed_image = tmp.clone();
 }
 /*******************************************************************************
 * Function     : 
@@ -741,13 +748,13 @@ void Transform::adaptive_thresholding ( Mat src )
 ********************************************************************************/
 void Transform::hough_lines ( Mat src )
 {
-    Mat tmp = src;
+    Mat tmp = src.clone();
     
     if ( paramaters.size() != HOUGH_LINES_PARAMETER_NUMBER )
         return;    
     
-    if ( paramaters[0] < 0 )
-        paramaters[0] = 0;
+    if ( paramaters[0] < 1 )
+        paramaters[0] = 1;
     if ( paramaters[0] > 100 )
         paramaters[0] = 100;
     
@@ -784,7 +791,7 @@ void Transform::hough_lines ( Mat src )
     }    
     
     tmp1.convertTo(tmp1,CV_8UC1);
-    transformed_image = tmp1;
+    transformed_image = tmp1.clone();
 }
 /*******************************************************************************
 * Function     : 
@@ -826,7 +833,7 @@ void Transform::harris_corner_strength ( Mat src )
     convertScaleAbs( tmp, tmp );
     
     tmp.convertTo(tmp,CV_8UC1);
-    transformed_image = tmp;
+    transformed_image = tmp.clone();
 }
 /*******************************************************************************
 * Function     : 
@@ -837,14 +844,16 @@ void Transform::harris_corner_strength ( Mat src )
 ********************************************************************************/
 void Transform::histogram_equalization ( Mat src )
 {
-    Mat tmp = src;
+    Mat tmp = src.clone();
+    tmp.convertTo(tmp,CV_8UC1);
     
     if ( paramaters.size() != HISTOGRAM_EQUALIZATION_PARAMETER_NUMBER )
         return;      
     
-    src.convertTo(tmp,CV_8UC1);
     equalizeHist( tmp, tmp );
-    transformed_image = tmp;
+    
+    tmp.convertTo(tmp,CV_8UC1);
+    transformed_image = tmp.clone();
 }
 /*******************************************************************************
 * Function     : 
@@ -855,7 +864,7 @@ void Transform::histogram_equalization ( Mat src )
 ********************************************************************************/
 void Transform::log ( Mat src )
 {
-    Mat tmp = src; 
+    Mat tmp = src.clone();; 
     
     if ( paramaters.size() != LOG_PARAMETER_NUMBER )
         return; 
@@ -864,7 +873,7 @@ void Transform::log ( Mat src )
     cv::log(tmp, tmp);
     
     tmp.convertTo(tmp,CV_8UC1);
-    transformed_image = tmp;
+    transformed_image = tmp.clone();;
 }
 /*******************************************************************************
 * Function     : 
@@ -875,7 +884,8 @@ void Transform::log ( Mat src )
 ********************************************************************************/
 void Transform::median_blur ( Mat src )
 {
-    Mat tmp = src;
+    Mat tmp = src.clone();;
+    tmp.convertTo(tmp,CV_8UC1);
     
     if ( paramaters.size() != MEDIAN_BLUR_PARAMETER_NUMBER )
         return;     
@@ -890,10 +900,10 @@ void Transform::median_blur ( Mat src )
     
     int ksize = paramaters[0];
     
-    src.convertTo(tmp,CV_8U);
+    src.convertTo(tmp,CV_8UC1);
     medianBlur(tmp, tmp, ksize);
     
-    transformed_image = tmp;
+    transformed_image = tmp.clone();
 }
 /*******************************************************************************
 * Function     : 
@@ -904,7 +914,7 @@ void Transform::median_blur ( Mat src )
 ********************************************************************************/
 void Transform::distance_transform ( Mat src )
 {
-    Mat tmp1,tmp = src;
+    Mat tmp1 = src.clone(),tmp = src.clone();
     
     if ( paramaters.size() != DISTANCE_TRANSFORM_PARAMETER_NUMBER )
         return;    
@@ -933,8 +943,8 @@ void Transform::distance_transform ( Mat src )
     distanceTransform(tmp, tmp1, dist, mask); 
     cv::normalize(tmp1, tmp1, 0, 1.0, NORM_MINMAX);
     
-    tmp1.convertTo(tmp1,CV_8U);
-    transformed_image = tmp1;
+    tmp1.convertTo(tmp1,CV_8UC1);
+    transformed_image = tmp1.clone();
 }
 /*******************************************************************************
 * Function     : 
@@ -945,7 +955,7 @@ void Transform::distance_transform ( Mat src )
 ********************************************************************************/
 void Transform::laplacian_edged_detection ( cv::Mat src )
 {
-    Mat tmp = src;
+    Mat tmp = src.clone();
     
     if ( paramaters.size() != DISTANCE_TRANSFORM_PARAMETER_NUMBER )
         return;    
@@ -976,5 +986,5 @@ void Transform::laplacian_edged_detection ( cv::Mat src )
     convertScaleAbs( tmp, tmp );
     
     tmp.convertTo(tmp,CV_8UC1);
-    transformed_image = tmp;
+    transformed_image = tmp.clone();
 }

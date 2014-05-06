@@ -1,128 +1,79 @@
-#
-#  There exist several targets which are by default empty and which can be 
-#  used for execution of your targets. These targets are usually executed 
-#  before and after some main targets. They are: 
-#
-#     .build-pre:              called before 'build' target
-#     .build-post:             called after 'build' target
-#     .clean-pre:              called before 'clean' target
-#     .clean-post:             called after 'clean' target
-#     .clobber-pre:            called before 'clobber' target
-#     .clobber-post:           called after 'clobber' target
-#     .all-pre:                called before 'all' target
-#     .all-post:               called after 'all' target
-#     .help-pre:               called before 'help' target
-#     .help-post:              called after 'help' target
-#
-#  Targets beginning with '.' are not intended to be called on their own.
-#
-#  Main targets can be executed directly, and they are:
-#  
-#     build                    build a specific configuration
-#     clean                    remove built files from a configuration
-#     clobber                  remove all built files
-#     all                      build all configurations
-#     help                     print help mesage
-#  
-#  Targets .build-impl, .clean-impl, .clobber-impl, .all-impl, and
-#  .help-impl are implemented in nbproject/makefile-impl.mk.
-#
-#  Available make variables:
-#
-#     CND_BASEDIR                base directory for relative paths
-#     CND_DISTDIR                default top distribution directory (build artifacts)
-#     CND_BUILDDIR               default top build directory (object files, ...)
-#     CONF                       name of current configuration
-#     CND_PLATFORM_${CONF}       platform name (current configuration)
-#     CND_ARTIFACT_DIR_${CONF}   directory of build artifact (current configuration)
-#     CND_ARTIFACT_NAME_${CONF}  name of build artifact (current configuration)
-#     CND_ARTIFACT_PATH_${CONF}  path to build artifact (current configuration)
-#     CND_PACKAGE_DIR_${CONF}    directory of package (current configuration)
-#     CND_PACKAGE_NAME_${CONF}   name of package (current configuration)
-#     CND_PACKAGE_PATH_${CONF}   path to package (current configuration)
-#
-# NOCDDL
+app = eco-feature
+
+srcExt = cpp
+srcDir = src
+objDir = build/obj
+binDir = build
+inc = src/include
+
+debug = 0
+
+CFlags = -Wall -std=gnu++11
+LDFlags = -lboost_system -lboost_filesystem -lopencv_core -lopencv_highgui -lopencv_imgproc
+libs = 
+libDir =
 
 
-# Environment 
-MKDIR=mkdir
-CP=cp
-CCADMIN=CCadmin
+#************************ DO NOT EDIT BELOW THIS LINE! ************************
+
+ifeq ($(debug),1)
+	debug=-g
+else
+	debug=
+endif
+inc := $(addprefix -I,$(inc))
+libs := $(addprefix -l,$(libs))
+libDir := $(addprefix -L,$(libDir))
+CFlags += -c $(debug) $(inc) $(libDir) $(libs)
+sources := $(shell find $(srcDir) -name '*.$(srcExt)')
+srcDirs := $(shell find . -name '*.$(srcExt)' -exec dirname {} \; | uniq)
+objects := $(patsubst %.$(srcExt),$(objDir)/%.o,$(sources))
+
+ifeq ($(srcExt),cpp)
+	CC = $(CXX)
+else
+	CFlags += -std=gnu99
+endif
+
+.phony: all clean distclean
 
 
-# build
-build: .build-post
+all: $(binDir)/$(app)
 
-.build-pre:
-# Add your pre 'build' code here...
+$(binDir)/$(app): buildrepo $(objects)
+	@mkdir -p `dirname $@`
+	@echo "Linking $@..."
+	@$(CC) $(objects) $(LDFlags) -o $@
 
-.build-post: .build-impl
-# Add your post 'build' code here...
+$(objDir)/%.o: %.$(srcExt)
+	@echo "Generating dependencies for $<..."
+	@$(call make-depend,$<,$@,$(subst .o,.d,$@))
+	@echo "Compiling $<..."
+	@$(CC) $(CFlags) $< -o $@
 
+clean:
+	$(RM) -r $(objDir)
 
-# clean
-clean: .clean-post
+distclean: clean
+	$(RM) -r $(binDir)/$(app)
 
-.clean-pre:
-# Add your pre 'clean' code here...
+buildrepo:
+	@$(call make-repo)
 
-.clean-post: .clean-impl
-# Add your post 'clean' code here...
-
-
-# clobber
-clobber: .clobber-post
-
-.clobber-pre:
-# Add your pre 'clobber' code here...
-
-.clobber-post: .clobber-impl
-# Add your post 'clobber' code here...
-
-
-# all
-all: .all-post
-
-.all-pre:
-# Add your pre 'all' code here...
-
-.all-post: .all-impl
-# Add your post 'all' code here...
+define make-repo
+   for dir in $(srcDirs); \
+   do \
+	mkdir -p $(objDir)/$$dir; \
+   done
+endef
 
 
-# build tests
-build-tests: .build-tests-post
-
-.build-tests-pre:
-# Add your pre 'build-tests' code here...
-
-.build-tests-post: .build-tests-impl
-# Add your post 'build-tests' code here...
-
-
-# run tests
-test: .test-post
-
-.test-pre: build-tests
-# Add your pre 'test' code here...
-
-.test-post: .test-impl
-# Add your post 'test' code here...
-
-
-# help
-help: .help-post
-
-.help-pre:
-# Add your pre 'help' code here...
-
-.help-post: .help-impl
-# Add your post 'help' code here...
-
-
-
-# include project implementation makefile
-include nbproject/Makefile-impl.mk
-
-# include project make variables
-include nbproject/Makefile-variables.mk
+# usage: $(call make-depend,source-file,object-file,depend-file)
+define make-depend
+  $(CC) -MM       \
+        -MF $3    \
+        -MP       \
+        -MT $2    \
+        $(CFlags) \
+        $1
+endef
