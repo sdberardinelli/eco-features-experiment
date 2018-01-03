@@ -1,27 +1,23 @@
 /******************************************************************************
- * Filename      : GA.hpp
- * Source File(s): GA.cpp
+ * Filename      : Perceptron.hpp
+ * Source File(s): Perceptron.cpp
  * Description   :
  * Authors(s)    : 
  * Date Created  : 
  * Date Modified :
  * Modifier(s)   :
  *******************************************************************************/
-#ifndef GA_H
-#define GA_H
+#ifndef PERCEPTRON_H
+#define PERCEPTRON_H
 
 /*******************************************************************************
 *  INCLUDES
 ********************************************************************************/
-#include "Creature.hpp"
-#include <opencv2/core/core.hpp>
 #include <vector>
-#include <string>
 
 /*******************************************************************************
 *  DEFINES
 ********************************************************************************/
-#define MUTATION_RATE 0.05
 
 /*******************************************************************************
 *  MACROS
@@ -31,37 +27,50 @@
 *  DATA TYPES
 ********************************************************************************/
 
-/*******************************************************************************
+/******************************************************************************* 
 *  EXTERNALS
 ********************************************************************************/
 
 /*******************************************************************************
 *  CLASS DEFINITIONS
 ********************************************************************************/
-class GA
+class Perceptron
 {
     public: 
         /* constructors */
-        GA ( void ); /* default */
-        GA ( int,int,double,int );
-        GA ( GA& ); /* copy */
-        GA& operator= ( const GA& ); /* assign */
-        ~GA ( void );
-        
+        Perceptron ( void ); /* default */
+        Perceptron ( Perceptron& ); /* copy */
+        Perceptron& operator= ( const Perceptron& ); /* assign */
+        ~Perceptron ( void );
         /* functions */
-        Creature crossover ( Creature, Creature );
-        void     mutate ( Creature );
-        void     initialize ( void );
-        void     run ( void );
-        void     load_images ( std::string, std::string );
+        void train ( int );
+        
+        std::vector<double>& get_weights ( void );
+        void set_weights ( std::vector<double>& );
+        
+        std::vector<double>& get_inputs ( void );
+        void set_inputs ( std::vector<double>& );
+        
+        double get_output ( void );
+        void set_output ( double );
+        
+        double get_bias ( void );
+        void set_bias ( double );
+        
+        double get_learningrate ( void );
+        void set_learningrate ( double );
+
+        void compute_output ( void );
+
+        bool is_initalized ( void );
         
     private:
-        int                   pop_size;
-        int                   num_gen;
-        double                fit_pen;
-        int                   fit_thresh;
-        std::vector<Creature> population;
-        std::vector<cv::Mat>  training_images;
-        std::vector<cv::Mat>  holding_images;
+        double                 bias;
+        double                 learning_rate;
+        std::vector<double>    weights;
+        std::vector<double>    inputs;
+        double                 output;
+        bool                   initialized;
+        double                 alpha;
 };
 #endif

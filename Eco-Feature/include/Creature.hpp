@@ -44,6 +44,7 @@ class Creature
     public: 
         /* constructors */
         Creature ( void ); /* default */
+        Creature( int );
         Creature ( const Creature& ); /* copy */
         Creature& operator= ( const Creature& ); /* assign */
         ~Creature ( void );
@@ -59,14 +60,24 @@ class Creature
       
         void        set_transforms ( TRANSORMS );
         TRANSORMS & get_transforms ( void );
-        void        perform_transforms ( cv::Mat );
-        void        train_perceptron ( void );
-        void        output_perceptron ( bool );
+        void        perform_transforms ( cv::Mat& );
+        void        train_perceptron ( int );
+        void        output_perceptron ( int );
+
+        Perceptron& get_perception ( void );
+        void set_perception ( Perceptron& );
         
-        cv::Mat&    get_feature ( void );
+        std::vector<double> get_feature ( void );
         
         std::string to_string ( void );
-        
+
+        int        get_id ( void );
+        void       set_id ( int );
+
+        void       reset ( void );
+        void       compute_output ( void );
+        int        get_output ( void );
+
 
     private:
         cv::Mat               feature;
@@ -77,6 +88,7 @@ class Creature
         double                tp; // True positive = correctly identified
         double                tn; // True negative = correctly rejected
         double                fn; // False negative = incorrectly rejected
-        double                fp; // False positive = incorrectly identified        
+        double                fp; // False positive = incorrectly identified
+        int                   id;
 };
 #endif

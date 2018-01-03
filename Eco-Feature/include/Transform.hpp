@@ -24,15 +24,14 @@ namespace Transforms
 #define GABOR_FILTER_PARAMETER_NUMBER 6
 #define MORPHOLOGICAL_ERODE_PARAMETER_NUMBER 2
 #define GAUSSIAN_BLUR_PARAMETER_NUMBER 3
-#define HISTOGRAM_PARAMETER_NUMBER 0
+#define HISTOGRAM_PARAMETER_NUMBER 2
 #define HOUGH_CIRCLES_PARAMETER_NUMBER 2
 #define NORMALIZE_PARAMETER_NUMBER 3
-#define DISCRETE_FOURIER_TRANSFORM_PARAMETER_NUMBER 1
 #define SQUARE_ROOT_PARAMETER_NUMBER 0
-#define CANNY_EDGE_PARAMETER_NUMBER 1
+#define CANNY_EDGE_PARAMETER_NUMBER 2
 #define INTEGRAL_IMAGE_PARAMETER_NUMBER 1
 #define DIFFERENCE_GAUSSIANS_PARAMETER_NUMBER 2
-#define CENSUS_TRANSFORM_PARAMETER_NUMBER 1
+#define CENSUS_TRANSFORM_PARAMETER_NUMBER 2
 #define SOBEL_OPERATOR_PARAMETER_NUMBER 4
 #define MORPHOLOGICAL_DILATE_PARAMETER_NUMBER 2
 #define ADAPTIVE_THRESHOLDING_PARAMETER_NUMBER 5
@@ -43,11 +42,7 @@ namespace Transforms
 #define MEDIAN_BLUR_PARAMETER_NUMBER 1
 #define DISTANCE_TRANSFORM_PARAMETER_NUMBER 3
 #define LAPLACIAN_EDGED_ETECTION_PARAMETER_NUMBER 3
-#define RANK_TRANSFORM_PARAMETER_NUMBER 0
-#define CONVERT_PARAMETER_NUMBER 0
-    
-#define MINIMUM_TRANFORMS 2
-#define MAXIMUM_TRANFORMS 8
+
 /*******************************************************************************
 *  MACROS
 ********************************************************************************/
@@ -63,26 +58,25 @@ typedef enum _TRANFORM_TYPE {
     HISTOGRAM                   =4,
     HOUGH_CIRCLES               =5,
     NORMALIZE                   =6,
-    DISCRETE_FOURIER_TRANSFORM  =7,
-    SQUARE_ROOT                 =8,
-    CANNY_EDGE                  =9,
-    INTEGRAL_IMAGE              =10,
-    DIFFERENCE_GAUSSIANS        =11,
-    CENSUS_TRANSFORM            =12,
-    SOBEL_OPERATOR              =13,
-    MORPHOLOGICAL_DILATE        =14,
-    ADAPTIVE_THRESHOLDING       =15,
-    HOUGH_LINES                 =16,
-    HARRIS_CORNER_STRENGTH      =17,
-    HISTOGRAM_EQUALIZATION      =18,
-    LOG                         =19,
-    MEDIAN_BLUR                 =20,
-    DISTANCE_TRANSFORM          =21,
-    LAPLACIAN_EDGED_ETECTION    =22,
+    SQUARE_ROOT                 =7,
+    CANNY_EDGE                  =8,
+    INTEGRAL_IMAGE              =9,
+    DIFFERENCE_GAUSSIANS        =10,
+    CENSUS_TRANSFORM            =11,
+    SOBEL_OPERATOR              =12,
+    MORPHOLOGICAL_DILATE        =13,
+    ADAPTIVE_THRESHOLDING       =14,
+    HOUGH_LINES                 =15,
+    HARRIS_CORNER_STRENGTH      =16,
+    HISTOGRAM_EQUALIZATION      =17,
+    LOG                         =18,
+    MEDIAN_BLUR                 =19,
+    DISTANCE_TRANSFORM          =20,
+    LAPLACIAN_EDGED_ETECTION    =21,
     TRANSORM_NUM
 }TRANFORM_TYPE;
 
-inline int ParamterSize ( TRANFORM_TYPE in )
+inline int parametersize ( TRANFORM_TYPE in )
 {
     switch ( in )
     {
@@ -92,7 +86,6 @@ inline int ParamterSize ( TRANFORM_TYPE in )
         case HISTOGRAM:                   return HISTOGRAM_PARAMETER_NUMBER;
         case HOUGH_CIRCLES:               return HOUGH_CIRCLES_PARAMETER_NUMBER;
         case NORMALIZE:                   return NORMALIZE_PARAMETER_NUMBER;
-        case DISCRETE_FOURIER_TRANSFORM:  return DISCRETE_FOURIER_TRANSFORM_PARAMETER_NUMBER;
         case SQUARE_ROOT:                 return SQUARE_ROOT_PARAMETER_NUMBER;
         case CANNY_EDGE:                  return CANNY_EDGE_PARAMETER_NUMBER;
         case INTEGRAL_IMAGE:              return INTEGRAL_IMAGE_PARAMETER_NUMBER;
@@ -137,39 +130,59 @@ class Transform
         cv::Mat get_transform ( void );
         void set_transform_type ( TRANFORM_TYPE );
         TRANFORM_TYPE get_transform_type ( void );
+        std::string to_string ( void );
         
         void set_parameter ( int, double );
         void set_parameters ( std::valarray<double>& );
-        std::valarray<double>& get_paramaters ( void );       
-        
+        std::valarray<double>& get_paramaters ( void );
+        void randomize_parameters ( int );
+        int get_paramater_size ( void );
+
     private:
         
         std::valarray<double> paramaters;
         TRANFORM_TYPE transform_type;
         cv::Mat transformed_image;
-        
+
+        void randomize_gabor_filter_parameters ( int );
         void gabor_filter ( cv::Mat );
+        void randomize_morphological_erode_parameters ( int );
         void morphological_erode ( cv::Mat );
+        void randomize_gaussian_blur_parameters ( int );
         void gaussian_blur ( cv::Mat );
+        void randomize_histogram_parameters ( int );
         void histogram ( cv::Mat );
+        void randomize_hough_circles_parameters ( int );
         void hough_circles ( cv::Mat );
+        void randomize_normalize_parameters ( int );
         void normalize  ( cv::Mat );
-        void discrete_fourier_transform ( cv::Mat );
         void square_root ( cv::Mat );
+        void randomize_canny_edge_parameters ( int );
         void canny_edge ( cv::Mat );
+        void randomize_integral_image_parameters ( int );
         void integral_image ( cv::Mat );
+        void randomize_difference_gaussians_parameters ( int );
         void difference_gaussians ( cv::Mat );
+        void randomize_census_transform_parameters ( int );
         void census_transform ( cv::Mat );
+        void randomize_sobel_operator_parameters ( int );
         void sobel_operator ( cv::Mat );
+        void randomize_morphological_dilate_parameters ( int );
         void morphological_dilate ( cv::Mat );
+        void randomize_adaptive_thresholding_parameters ( int );
         void adaptive_thresholding ( cv::Mat );
+        void randomize_hough_lines_parameters ( int );
         void hough_lines ( cv::Mat );
+        void randomize_harris_corner_strength_parameters ( int );
         void harris_corner_strength ( cv::Mat );
         void histogram_equalization ( cv::Mat );
         void log ( cv::Mat );
+        void randomize_median_blur_parameters ( int );
         void median_blur ( cv::Mat );
+        void randomize_distance_transform_parameters ( int );
         void distance_transform ( cv::Mat );
-        void laplacian_edged_detection ( cv::Mat );    
-};
+        void randomize_laplacian_edged_detection_parameters ( int );
+        void laplacian_edged_detection ( cv::Mat );
+    };
 }
 #endif

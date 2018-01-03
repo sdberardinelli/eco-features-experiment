@@ -1,29 +1,29 @@
 /******************************************************************************
- * Filename      : Subregion.hpp
- * Source File(s): Subregion.cpp
+ * Filename      : DataList.hpp
+ * Source File(s): DataList.cpp
  * Description   :
- * Authors(s)    : 
- * Date Created  : 
+ * Authors(s)    :
+ * Date Created  :
  * Date Modified :
  * Modifier(s)   :
  *******************************************************************************/
-#ifndef SUBREGION_H
-#define SUBREGION_H
+#ifndef DATALIST_H
+#define DATALIST_H
 
 /*******************************************************************************
 *  INCLUDES
 ********************************************************************************/
+#include <string>
+#include <vector>
+#include <map>
 #include <opencv2/core/core.hpp>
-#include <valarray>
+#include "Image.hpp"
 
 /*******************************************************************************
 *  DEFINES
 ********************************************************************************/
-namespace Subregions
+namespace Data
 {
-#define MAXIMUM_WIDTH  1000
-#define MAXIMUM_HEIGHT 749
-    
 /*******************************************************************************
 *  MACROS
 ********************************************************************************/
@@ -39,36 +39,24 @@ namespace Subregions
 /*******************************************************************************
 *  CLASS DEFINITIONS
 ********************************************************************************/
-class Subregion
+class DataList
 {
-    public: 
+    public:
         /* constructors */
-        Subregion ( void ); /* default */
-        Subregion ( cv::Mat ); 
-        Subregion ( int,int,int,int ); 
-        Subregion ( cv::Mat,int,int,int,int ); 
-        Subregion ( const Subregion& ); /* copy */
-        Subregion& operator= ( const Subregion& ); /* assign */
-        ~Subregion ( void );
-        
+        DataList ( void ); /* default */
+        DataList ( const DataList& ); /* copy */
+        DataList& operator= ( const DataList& ); /* assign */
+        ~DataList ( void );
+
         /* functions */
-        void    set_original  ( cv::Mat );
-        void    set_subregion ( cv::Mat, int,int,int,int );
-        void    set_subregion ( int,int,int,int );
-        cv::Mat get_subregion ( void );   
-        std::valarray<int> get_subregion_values ( void );
-        int get_area ( void );
-        cv::Rect get_rect ( void );
-        
+        void load_images ( std::string );
+
+        std::vector<Image>& get ( void );
+
+        inline size_t get_size ( void ) { return list.size(); };
+
     private:
-        
-        void    construct_subregion ( void );
-        int     x1;
-        int     x2;
-        int     y1;
-        int     y2;      
-        cv::Mat original;
-        cv::Mat subregion;      
+        std::vector<Image> list;
 };
 }
 #endif

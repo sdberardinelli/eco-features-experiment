@@ -30,7 +30,7 @@ using namespace std;
 * Arguments    : 
 * Remarks      : 
 ********************************************************************************/
-Perceptron::Perceptron ( void ) { ; }
+Perceptron::Perceptron ( void ) { initialized = false; alpha = 0.1; }
 /*******************************************************************************
 * Constructor  : (Copy)
 * Description  : 
@@ -38,14 +38,14 @@ Perceptron::Perceptron ( void ) { ; }
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-Perceptron::Perceptron ( Perceptron& obj )
-{ 
+Perceptron::Perceptron ( Perceptron& obj ) {
     this->bias = obj.bias;
     this->learning_rate = obj.learning_rate;
-    this->threshold = obj.threshold;
     this->weights = obj.weights;
     this->inputs = obj.inputs;
     this->output = obj.output;
+    this->initialized = obj.initialized;
+    this->alpha = obj.alpha;
 }
 /*******************************************************************************
 * Deconstructor: 
@@ -53,8 +53,7 @@ Perceptron::Perceptron ( Perceptron& obj )
 * Arguments    : 
 * Remarks      : 
 ********************************************************************************/
-Perceptron::~Perceptron ( void )
-{ 
+Perceptron::~Perceptron ( void ) {
     weights.resize(0);
     inputs.resize(0);
 }
@@ -65,16 +64,16 @@ Perceptron::~Perceptron ( void )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-Perceptron& Perceptron::operator=( const Perceptron& obj ) 
-{
+Perceptron& Perceptron::operator=( const Perceptron& obj ) {
     if (this != &obj) // prevent self-assignment
     {
         this->bias = obj.bias;
         this->learning_rate = obj.learning_rate;
-        this->threshold = obj.threshold;
         this->weights = obj.weights;
         this->inputs = obj.inputs;
         this->output = obj.output;
+        this->initialized = obj.initialized;
+        this->alpha = obj.alpha;
     }
     return *this;
 }
@@ -85,9 +84,9 @@ Perceptron& Perceptron::operator=( const Perceptron& obj )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-void Perceptron::set_weights ( vector<double>& _weigths )
-{
-    weights = _weigths;  
+void Perceptron::set_weights ( vector<double>& _weigths ) {
+    weights = _weigths;
+    initialized = true;
 }
 /*******************************************************************************
 * Function     : 
@@ -96,8 +95,7 @@ void Perceptron::set_weights ( vector<double>& _weigths )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-vector<double>& Perceptron::get_weights ( void )
-{
+vector<double>& Perceptron::get_weights ( void ) {
     return weights;
 }
 /*******************************************************************************
@@ -107,8 +105,7 @@ vector<double>& Perceptron::get_weights ( void )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-void Perceptron::set_inputs ( vector<double>& _input )
-{
+void Perceptron::set_inputs ( vector<double>& _input ) {
     inputs = _input; 
 }
 /*******************************************************************************
@@ -118,8 +115,7 @@ void Perceptron::set_inputs ( vector<double>& _input )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-vector<double>& Perceptron::get_inputs ( void )
-{
+vector<double>& Perceptron::get_inputs ( void ) {
     return inputs;
 }
 /*******************************************************************************
@@ -140,9 +136,18 @@ void Perceptron::set_output ( double _output )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-double Perceptron::get_output ( void )
-{
-    return output;
+double Perceptron::get_output ( void ) {
+    return alpha;
+}
+/*******************************************************************************
+* Function     :
+* Description  :
+* Arguments    :
+* Returns      :
+* Remarks      :
+********************************************************************************/
+bool Perceptron::is_initalized ( void ) {
+    return initialized;
 }
 /*******************************************************************************
 * Function     : 
@@ -195,50 +200,30 @@ double Perceptron::get_learningrate ( void )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-void Perceptron::set_threshold ( double _threshold )
-{
-    threshold = _threshold;
-}
-/*******************************************************************************
-* Function     : 
-* Description  : 
-* Arguments    : 
-* Returns      : 
-* Remarks      : 
-********************************************************************************/
-double Perceptron::get_threshold ( void )
-{
-    return threshold;
-}
-/*******************************************************************************
-* Function     : 
-* Description  : 
-* Arguments    : 
-* Returns      : 
-* Remarks      : 
-********************************************************************************/
-int Perceptron::compute_output ( void )
-{
-    int output = 0;
+void Perceptron::compute_output ( void ) {
+    output = 0;
+
+    if (weights.size() != inputs.size()) {
+        return;
+    }
     
-    if (weights.size() != inputs.size() )
-        return output;
-    
-    for ( vector<int>::size_type i = 0; i < inputs.size(); i++ )
+    for ( size_t i = 0; i < inputs.size(); i++ )
     {
         output += weights[i]*inputs[i];
     }
-    
-    if ( output + bias > threshold )
+
+    output += bias;
+
+    output = tanh(output);
+
+    if ( output > 0 )
     {
-        output = 1;
+        alpha = 1;
     }
     else
     {
-        output = 0;
+        alpha = 0;
     }
-    
-    return output;
 }
 /*******************************************************************************
 * Function     : 
@@ -249,11 +234,11 @@ int Perceptron::compute_output ( void )
 ********************************************************************************/
 void Perceptron::train ( int goal )
 {
-    for ( vector<int>::size_type i = 0; i < weights.size(); i++ )    
+    compute_output();
+    for ( size_t i = 0; i < weights.size(); i++ )
     {
-        weights[i] += (goal-output)*learning_rate*inputs[i];
+        weights[i] += learning_rate*(goal-alpha)*inputs[i];
     }
-    output = compute_output();          
 }
 /*******************************************************************************
 * Function     : 

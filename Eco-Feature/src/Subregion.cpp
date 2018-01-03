@@ -34,19 +34,15 @@ using namespace Subregions;
 * Arguments    : 
 * Remarks      : 
 ********************************************************************************/
-Subregion::Subregion ( void ) { ; }
+Subregion::Subregion ( void ) { x1 = 0; x2 = 0; y1 = 0; y2 = 0; }
 /*******************************************************************************
 * Constructor  : 
 * Description  : 
 * Arguments    : 
 * Remarks      : 
 ********************************************************************************/
-Subregion::Subregion ( int _x1, int _x2, int _y1, int _y2 ) 
-{ 
-    x1 = _x1;
-    x2 = _x2;
-    y1 = _y1;
-    y2 = _y2;
+Subregion::Subregion ( int _x1, int _x2, int _y1, int _y2 ) {
+    set_subregion(_x1,_x2,_y1,_y2);
 }
 /*******************************************************************************
 * Constructor  :
@@ -72,9 +68,9 @@ Subregion::Subregion ( Mat _original )
 * Arguments    : 
 * Remarks      : 
 ********************************************************************************/
-Subregion::Subregion ( Mat _original, int _x1, int _x2, int _y1, int _y2 ) 
+Subregion::Subregion ( Mat& _original, int _x1, int _x2, int _y1, int _y2 )
 { 
-    Mat croppedRef(_original);
+    Mat croppedRef = _original.clone();
     croppedRef.copyTo(original);
   
     x1 = _x1;
@@ -91,8 +87,7 @@ Subregion::Subregion ( Mat _original, int _x1, int _x2, int _y1, int _y2 )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-Subregion::Subregion ( const Subregion& obj )
-{ 
+Subregion::Subregion ( const Subregion& obj ) {
     this->x1 = obj.x1;
     this->x2 = obj.x2;
     this->x1 = obj.x1;
@@ -106,8 +101,7 @@ Subregion::Subregion ( const Subregion& obj )
 * Arguments    : 
 * Remarks      : 
 ********************************************************************************/
-Subregion::~Subregion ( void )
-{ 
+Subregion::~Subregion ( void ) {
     this->original.release();
     this->subregion.release();
 }
@@ -118,8 +112,7 @@ Subregion::~Subregion ( void )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-Subregion& Subregion::operator=( const Subregion& obj ) 
-{
+Subregion& Subregion::operator=( const Subregion& obj ) {
     if (this != &obj) // prevent self-assignment
     {
         this->x1 = obj.x1;
@@ -138,10 +131,11 @@ Subregion& Subregion::operator=( const Subregion& obj )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-void Subregion::set_original ( Mat _original )
+void Subregion::set_original ( Mat& _original )
 {
-    Mat croppedRef(_original);
-    croppedRef.copyTo(original);
+    //Mat croppedRef(_original);
+    //croppedRef.copyTo(original);
+    original = _original.clone();
 }
 /*******************************************************************************
 * Function     : 
@@ -152,14 +146,8 @@ void Subregion::set_original ( Mat _original )
 ********************************************************************************/
 void Subregion::set_subregion ( Mat _original, int _x1, int _x2, int _y1, int _y2 )
 {
-    Mat croppedRef(_original);
-    croppedRef.copyTo(original);
-    
-    x1 = _x1;
-    x2 = _x2;
-    y1 = _y1;
-    y2 = _y2;
-    
+    set_subregion(_x1,_x2,_y1,_y2);
+
     construct_subregion(); 
 }
 /*******************************************************************************
@@ -169,8 +157,7 @@ void Subregion::set_subregion ( Mat _original, int _x1, int _x2, int _y1, int _y
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-void Subregion::set_subregion ( int _x1, int _x2, int _y1, int _y2 )
-{
+void Subregion::set_subregion ( int _x1, int _x2, int _y1, int _y2 ) {
     x1 = _x1;
     x2 = _x2;
     y1 = _y1;
@@ -183,8 +170,7 @@ void Subregion::set_subregion ( int _x1, int _x2, int _y1, int _y2 )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-Mat Subregion::get_subregion ( void )
-{       
+Mat Subregion::get_subregion ( void ) {
     construct_subregion(); 
     
     return subregion;
@@ -196,17 +182,16 @@ Mat Subregion::get_subregion ( void )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-void Subregion::construct_subregion ( void )
-{       
+void Subregion::construct_subregion ( void ) {
     // Setup a rectangle to define your region of interest
     Rect crop(x2-x1, y2-y1, x1, y1);
-    
+
     // Crop the full image to that image contained by the rectangle myROI
     // Note that this doesn't copy the data
     Mat croppedRef(original, crop);
 
     // Copy the data into new matrix
-    croppedRef.copyTo(subregion); 
+    croppedRef.copyTo(subregion);
 }
 /*******************************************************************************
 * Function     : 
@@ -216,12 +201,14 @@ void Subregion::construct_subregion ( void )
 * Remarks      : 
 ********************************************************************************/
 valarray<int> Subregion::get_subregion_values ( void )
-{   
+{
     valarray<int> subregion_values(4);
+
     subregion_values[0] = x1;
     subregion_values[1] = x2;
     subregion_values[2] = y1;
-    subregion_values[3] = y2;    
+    subregion_values[3] = y2;
+
     return subregion_values;
 }
 /*******************************************************************************
@@ -231,9 +218,9 @@ valarray<int> Subregion::get_subregion_values ( void )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-int Subregion::get_area ( void )
-{
-    Rect crop(x2-x1, y2-y1, x1, y1);    
+int Subregion::get_area ( void ) {
+    Rect crop(x2-x1, y2-y1, x1, y1);
+
     return crop.area();
 }
 /*******************************************************************************
@@ -243,10 +230,27 @@ int Subregion::get_area ( void )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-Rect Subregion::get_rect ( void )
-{
-    Rect rect(x2-x1, y2-y1, x1, y1);    
+Rect Subregion::get_rect ( void ) {
+    Rect rect(x2-x1, y2-y1, x1, y1);
     return rect;
+}
+/*******************************************************************************
+* Function     :
+* Description  :
+* Arguments    :
+* Returns      :
+* Remarks      :
+********************************************************************************/
+string Subregion::to_string ( void ) {
+    stringstream ss;
+
+    ss << "[";
+    for (auto&& i : get_subregion_values()) {
+        ss << i << ",";
+    }
+    ss << "] ";
+
+    return ss.str();
 }
 /*******************************************************************************
 * Function     : 

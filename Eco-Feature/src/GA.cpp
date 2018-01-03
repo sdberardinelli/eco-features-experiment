@@ -10,14 +10,8 @@
 /************************************
  * Included Headers 
  ************************************/
+#include "main.hpp"
 #include "GA.hpp"
-#include "Creature.hpp"
-#include "Subregion.hpp"
-#include "Transform.hpp"
-#include <vector>
-#include <opencv2/core/core.hpp>
-#include <opencv2/highgui/highgui.hpp>
-#include <opencv2/imgproc/imgproc.hpp>
 #include <boost/filesystem.hpp>
 #include <random>
 #include <iostream>
@@ -28,8 +22,10 @@
 using namespace std;
 using namespace Subregions;
 using namespace Transforms;
+using namespace Data;
 using namespace cv;
 using namespace boost::filesystem;
+
 
 /************************************
  * Local Variables 
@@ -48,13 +44,15 @@ GA::GA ( void ) { ; }
 * Arguments    : 
 * Remarks      : 
 ********************************************************************************/
-GA::GA ( int population_size, int number_generations, 
-         double fitness_penalty, int fitness_threshold )
-{ 
+GA::GA ( int population_size, double _growth_rate, int number_generations,
+         double fitness_penalty, double _mutation_rate, double fitness_threshold, int _learning_label ) {
     pop_size = population_size;
     num_gen  = number_generations;
+    growth_rate = _growth_rate;
     fit_pen  = fitness_penalty;
     fit_thresh  = fitness_threshold;
+    learning_label = _learning_label;
+    mutation_rate = _mutation_rate;
 }
 /*******************************************************************************
 * Constructor  : (Copy)
@@ -63,7 +61,18 @@ GA::GA ( int population_size, int number_generations,
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-GA::GA ( GA& obj ) { ; }
+GA::GA ( GA& obj ) {
+    pop_size = obj.pop_size;
+    num_gen = obj.num_gen;
+    fit_pen = obj.fit_pen;
+    fit_thresh = obj.fit_thresh;
+    population = obj.population;
+    learning_label = obj.learning_label;
+    mutation_rate = obj.mutation_rate;
+    population_total = obj.population_total;
+    growth_rate = obj.growth_rate;
+    creature_iterations = obj.creature_iterations;
+}
 /*******************************************************************************
 * Deconstructor: 
 * Description  : 
@@ -78,24 +87,31 @@ GA::~GA ( void ) { ; }
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-GA& GA::operator=( const GA& obj ) 
-{
+GA& GA::operator=( const GA& obj ) {
     if (this != &obj) // prevent self-assignment
     {
-        ;
+        pop_size = obj.pop_size;
+        num_gen = obj.num_gen;
+        fit_pen = obj.fit_pen;
+        fit_thresh = obj.fit_thresh;
+        population = obj.population;
+        learning_label = obj.learning_label;
+        mutation_rate = obj.mutation_rate;
+        population_total = obj.population_total;
+        growth_rate = obj.growth_rate;
+        creature_iterations = obj.creature_iterations;
     }
     return *this;
 }
 /*******************************************************************************
-* Function     : 
-* Description  : 
-* Arguments    : 
-* Returns      : 
-* Remarks      : 
+* Function     :
+* Description  :
+* Arguments    :
+* Returns      :
+* Remarks      :
 ********************************************************************************/
-void GA::mutate ( Creature a )
-{
-    ;
+POPULTATION& GA::get_population ( void ) {
+    return population;
 }
 /*******************************************************************************
 * Function     : 
@@ -104,26 +120,96 @@ void GA::mutate ( Creature a )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-Creature GA::crossover ( Creature a, Creature b )
-{
-    cout << "performing crossover" << endl;
+void GA::mutate ( Creature& a ) {
+#if GA_MUTATE_SEED
+    mt19937 rnd(GA_SEED+GA_MUTATE_SEED);
+#else
+    random_device rd;
+    mt19937 rnd(rd());
+#endif
+    TRANSORMS& a_transorms = a.get_transforms();
+
+    uniform_int_distribution<int> _choice(0,(int)a_transorms.size()-1);
+
+    int transform_choice = _choice(rnd);
+
+    Transform a_transform = a_transorms[transform_choice];
+
+    if ( a_transform.get_paramater_size() == 0 ) {
+        return;
+    }
+
+    //cout << "Mutating Creature " << a.get_id() << ": " << a.to_string() << endl;
+
+    Transform transform((a_transform.get_transform_type()));
+    transform.randomize_parameters(GA_MUTATE_SEED+a.get_id());
+
+    valarray<double>& original_parameters = a_transorms[transform_choice].get_paramaters();
+    valarray<double>& parameters = transform.get_paramaters();
+
+    _choice = uniform_int_distribution<int>(0,a_transform.get_paramater_size()-1);
+
+    int parameters_choice = _choice(rnd);
+
+    original_parameters[parameters_choice] = parameters[parameters_choice];
+
+    //cout << "                  " << a.get_id() << ": " << a.to_string() << endl;
+    cout << "creature " << a.get_id() << " mutated" << endl;
+}
+/*******************************************************************************
+* Function     : 
+* Description  : 
+* Arguments    : 
+* Returns      : 
+* Remarks      : 
+********************************************************************************/
+Creature GA::crossover ( Creature& a, Creature& b ) {
+#if GA_SEED
+    //mt19937 rnd(SEED+(unsigned long)(a.get_id() + b.get_id()));
+    mt19937 rnd(GA_SEED+GA_CROSSOVER_SEED);
+#else
+    random_device rd;
+    mt19937 rnd(rd());
+#endif
     Creature child;
-    
-    cout << "Parent A: " << a.to_string() << endl;
-    cout << "Parent B: " << b.to_string() << endl;
-    
-    TRANSORMS child_transforms;
-    TRANSORMS a_transforms = a.get_transforms();
-    TRANSORMS b_transforms = b.get_transforms();
-    
-    //hchild_transforms.reverse(1+b_transforms.size()-1);
-    child_transforms.insert( child_transforms.end(), 
-                             a_transforms.begin(), 
-                             a_transforms.begin()+1 );
-    child_transforms.insert( child_transforms.end(), 
-                             b_transforms.begin()+1, 
-                             b_transforms.end() );
-    
+    uniform_int_distribution<int> _choice(0,1);
+
+    //cout << "Crossing Creature " << a.get_id() << ": " << a.to_string() << endl;
+    //cout << "         Creature " << b.get_id() << ": " << b.to_string() << endl;
+
+    Subregion subregion;
+    TRANSORMS& a_transorms = a.get_transforms();
+    TRANSORMS& b_transorms = b.get_transforms();
+    TRANSORMS transforms;
+    Perceptron perceptron;
+    if ( _choice(rnd) == 0 ) {
+        subregion = a.get_subregion();
+        perceptron = a.get_perception();
+        child.set_perception(perceptron);
+    } else {
+        subregion = b.get_subregion();
+        perceptron = b.get_perception();
+    }
+    child.set_perception(perceptron);
+
+    _choice = uniform_int_distribution<int>(0,(int)a_transorms.size()-1);
+    for ( int i = 0; i < _choice(rnd); i++) {
+        transforms.push_back(a_transorms[i]);
+    }
+
+    _choice = uniform_int_distribution<int>(0,(int)b_transorms.size()-1);
+    for ( int i = _choice(rnd); i < (int)b_transorms.size(); i++) {
+        transforms.push_back(b_transorms[i]);
+    }
+
+    child.set_subregion(subregion);
+    child.set_transforms(transforms);
+
+    child.set_id(population_total);
+    population_total++;
+
+    cout << "crossing " << a.get_id() << " (x) " << b.get_id() << " = " <<  child.get_id() << endl;
+    //cout << "Child Creature: " << child.get_id() << ": " << child.to_string() << endl;
     return child;
 }
 /*******************************************************************************
@@ -133,74 +219,35 @@ Creature GA::crossover ( Creature a, Creature b )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-void GA::load_images ( string pth_train, string pth_hold )
-{
-    cout << "loading images" << endl;
-    
-    Mat image;     
-    directory_iterator end ;
+void GA::initialize ( void ) {
+    cout << "initalizing creatures" << endl;
 
-    for( directory_iterator iter(pth_train) ; iter != end ; ++iter )
-    {
-         if ( !is_directory( *iter ) )
-         {
-            image = imread(iter->path().c_str(), CV_LOAD_IMAGE_COLOR);
-            training_images.push_back(image);
-         }
-    }
-    for( directory_iterator iter(pth_hold) ; iter != end ; ++iter )
-    {
-         if ( !is_directory( *iter ) )
-         {
-            image = imread(iter->path().c_str(), CV_LOAD_IMAGE_COLOR);
-            holding_images.push_back(image);
-         }
-    }
-}
-/*******************************************************************************
-* Function     : 
-* Description  : 
-* Arguments    : 
-* Returns      : 
-* Remarks      : 
-********************************************************************************/
-void GA::initialize ( void )
-{
-    
-    cout << "initalizing" << endl;
-    
+#if GA_INIT_SEED
+    mt19937 rnd(GA_SEED+GA_INIT_SEED);
+#else
     random_device rd;
     mt19937 rnd(rd());
-    uniform_int_distribution<int> trans_dist(1,TRANSORM_NUM-1);
-    uniform_int_distribution<int> trans1_dist(MINIMUM_TRANFORMS,MAXIMUM_TRANFORMS);
-    uniform_int_distribution<int> param_dist(0,360);
-    
-    for ( int i = 0; i < pop_size; i++ )
-    {
-        Creature current_creature;       
-        TRANSORMS transforms;
-        int transform_count = trans1_dist(rnd);
-        for ( int j = 0; j < transform_count; j++ )
-        {
-            Transform transform((TRANFORM_TYPE)trans_dist(rnd));  
-            
-            valarray<double> parameters(ParamterSize(transform.get_transform_type()));
+#endif
 
-            for ( int k = 0; k < parameters.size(); k++ )
-            {
-                parameters[k] = param_dist(rnd);
-            }
-            transform.set_parameters(parameters);
-            
+    uniform_int_distribution<int> transformation_choice(1,TRANSORM_NUM-1);
+    uniform_int_distribution<int> transformation_count(MINIMUM_TRANFORMS,MAXIMUM_TRANFORMS);
+
+    for ( int i = 0; i < pop_size; i++ ) {
+        Creature current_creature(i);
+        TRANSORMS transforms;
+        int count = transformation_count(rnd);
+        for ( int j = 0; j < count; j++ ) {
+            Transform transform((TRANFORM_TYPE)transformation_choice(rnd));
+            transform.randomize_parameters(i+j);
             transforms.push_back(transform);
         }
-        uniform_int_distribution<int> x1_dist(0,MAXIMUM_WIDTH);
+        uniform_int_distribution<int> x1_dist(2,MAXIMUM_WIDTH-2);
         int x1 = x1_dist(rnd);
-        uniform_int_distribution<int> x2_dist(x1,MAXIMUM_WIDTH);
+        uniform_int_distribution<int> x2_dist(x1+1,MAXIMUM_WIDTH-1);
         int x2 = x2_dist(rnd);
-        uniform_int_distribution<int> y1_dist(0,MAXIMUM_HEIGHT);        
+        uniform_int_distribution<int> y1_dist(2,MAXIMUM_HEIGHT-2);
         int y1 = y1_dist(rnd);
-        uniform_int_distribution<int> y2_dist(y1,MAXIMUM_HEIGHT);        
+        uniform_int_distribution<int> y2_dist(y1+1,MAXIMUM_HEIGHT-1);
         int y2 = y2_dist(rnd);
         Subregion subregion(x1,x2,y1,y2);
         current_creature.set_subregion(subregion);
@@ -208,6 +255,8 @@ void GA::initialize ( void )
         current_creature.initialize();
         population.push_back(current_creature);
     }
+
+    population_total = pop_size;
 }
 /*******************************************************************************
 * Function     : 
@@ -216,63 +265,116 @@ void GA::initialize ( void )
 * Returns      : 
 * Remarks      : 
 ********************************************************************************/
-void GA::run ( void )
-{
+void GA::run ( DataList& training_list, DataList& holding_list ) {
+#if GA_RUN_SEED
+    mt19937 rnd(GA_SEED+GA_RUN_SEED);
+#else
     random_device rd;
     mt19937 rnd(rd());
-    
-    cout << "running" << endl;
-    for ( int generation = 0; generation < num_gen; generation++ )
-    {
-        for ( vector<int>::size_type creature_i = 0; 
-              creature_i < population.size(); 
-              creature_i++ )
-        {
-            cout << "initializing creature " << creature_i;
-            population[creature_i].initialize();
-            cout << " . training ";
-            cout << population[creature_i].to_string() << endl;
-            cout << "     creature " << creature_i << " at " ;
-            for ( vector<int>::size_type training_images_i = 0; 
-                 training_images_i < training_images.size(); 
-                 training_images_i++ )
-            {
-                cout << training_images_i << ",";
-                cout.flush();
-                population[creature_i].perform_transforms(training_images[training_images_i]);
-                population[creature_i].train_perceptron();
+#endif
+    int gen = 0;
+    while ( true ) {
+
+        clock_t start = std::clock();
+
+        int i = 0;
+        for (auto&& creature : population) {
+
+            stringstream out;
+            out << "training... creature " << creature.get_id() << " (" << (i++ +1) << "/" <<population.size() << ") in generation " << gen + 1;
+            string line = out.str();
+            cout << "\r" << line;
+            cout.flush();
+            if ( i < population.size()-1 ){ string freshline = "\r"; for (int j = 0; j < line.length(); j++ ) { freshline += " "; }; cout << freshline;}
+
+            for ( int j = 0; j < creature_iterations; j++ ) {
+                for (auto &&obj : training_list.get()) {
+                    Mat image = obj.get_image();
+                    creature.perform_transforms(image);
+                    int label = (obj.get_label() == learning_label) ? 1 : 0;
+                    creature.train_perceptron(label);
+                }
+            }
+            for (auto &&obj : holding_list.get()) {
+                Mat image = obj.get_image();
+                creature.perform_transforms(image);
+                int label = ( obj.get_label() == learning_label ) ? 1 : 0;
+                creature.output_perceptron(label);
+            }
+            creature.compute_fitness(fit_pen);
+        }
+        cout << endl;
+        cout << "time: " << ((clock() - start) / (double)(CLOCKS_PER_SEC / 1000.)) / 1000. << " sec" << endl;
+
+        for ( auto creature = population.begin(); creature != population.end(); ) {
+            auto fitness = creature->get_fitness();
+            cout << "creature " << creature->get_id() << ": " << fitness;
+
+            if ( creature->get_fitness() < fit_thresh ) {
+                cout << " (removed)";
+
+                creature = population.erase(creature);
+
+                if ( population.empty() ) {
+                    cout << endl << "population count: " << population.size() << endl;
+                    return;
+                }
+            } else {
+                ++creature;
             }
             cout << endl;
-
-//            for ( vector<int>::size_type holding_images_i = 0; 
-//                 holding_images_i < holding_images.size(); 
-//                 holding_images_i++ )
-//            {
-//                population[creature_i].perform_transforms(holding_images[holding_images]);
-//                population[creature_i].output_perceptron(true);
-//            }            
-            population[creature_i].compute_fitness(fit_pen);
-            
-            cout << "     fitness = " << population[creature_i].get_fitness();
-//            if ( population[creature_i].get_fitness() < fit_thresh )
-//            {
-//                cout << " deleted";
-//                population.erase(population.begin()+creature_i);
-//            }
-            cout << endl;
+            creature->reset();
         }
-        
-        for ( vector<int>::size_type creature_i = 0; 
-              creature_i < pop_size - population.size(); 
-              creature_i++ )
-        {
-            uniform_int_distribution<int> pop_dist(0,population.size());
-            Creature a ( crossover(population[pop_dist(rnd)],population[pop_dist(rnd)]) );
-            
-            cout << "created: " << a.to_string() << endl;
-            population.push_back(a);
-            
-            getchar();
+
+        if ( ++gen >= num_gen ) {
+            break;
+        }
+
+        if ( population.size() >= 2 ) {
+
+            uniform_int_distribution<int> pick_dist(0, (int) population.size() - 1);
+
+            auto growth = (population.size() + (double) population.size() * log(1 + growth_rate));
+            growth -= population.size();
+            growth = (int)growth;
+
+            auto original_size = (int)population.size();
+
+            vector<Creature> new_generation;
+
+            while (growth) {
+                //Select creatures that make it to next generation
+                int idx1 = pick_dist(rnd);
+                int idx2 = pick_dist(rnd);
+
+                while (idx2 == idx1) {
+                    idx2 = pick_dist(rnd);
+                }
+
+                Creature a = population[idx1];
+                Creature b = population[idx2];
+
+                //Create new creatures using cross over
+                Creature child = crossover(a, b);
+
+                new_generation.push_back(child);
+                growth--;
+            }
+
+            // add creatures to the population
+            for ( auto&& creature : new_generation ) {
+                population.push_back(creature);
+            }
+
+            cout << "population growth from " << original_size << " to " << population.size() << endl;
+        }
+
+        uniform_real_distribution<double> mutate_dist(0,1);
+        //Apply mutations to the population
+        for (auto &&creature : population) {
+            if ( mutate_dist(rnd) < mutation_rate ) {
+                mutate(creature);
+            }
         }
     }
 }
@@ -282,4 +384,24 @@ void GA::run ( void )
 * Arguments    : 
 * Returns      : 
 * Remarks      : 
+********************************************************************************/
+void GA::set_creature_iterations ( int _creature_iterations ) {
+    creature_iterations = _creature_iterations;
+}
+/*******************************************************************************
+* Function     :
+* Description  :
+* Arguments    :
+* Returns      :
+* Remarks      :
+********************************************************************************/
+int GA::get_creature_iterations ( void ) {
+    return creature_iterations;
+}
+/*******************************************************************************
+* Function     :
+* Description  :
+* Arguments    :
+* Returns      :
+* Remarks      :
 ********************************************************************************/

@@ -1,7 +1,0 @@
-#!/bin/bash
-
-FILENAME=$1
-
-touch ./src/$FILENAME.cpp
-touch ./src/include/$FILENAME.hpp
-
